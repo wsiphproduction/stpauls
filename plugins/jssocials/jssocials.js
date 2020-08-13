@@ -552,3 +552,8 @@
 
 }(window, jQuery, window.jsSocials));
 
+$('#article-social').jsSocials({
+    showLabel: false,
+    showCount: false,
+    shares: ['twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest']
+});

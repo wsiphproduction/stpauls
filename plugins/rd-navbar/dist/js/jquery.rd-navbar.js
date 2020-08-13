@@ -172,9 +172,9 @@
         threshold = (typeof stickUpOffset === 'string' ? (stickUpOffset.indexOf('%') > 0 ? parseFloat(stickUpOffset) * ctx.height / 100 : parseFloat(stickUpOffset)) : stickUpOffset);
         if (stickUp) {
           if ((scrollTop >= threshold && !ctx.isStuck) || (scrollTop < threshold && ctx.isStuck)) {
-            // ctx.$element.add(ctx.$clone).find('[data-rd-navbar-toggle]').each(function () {
-            //   $.proxy(ctx.closeToggle, this)(ctx, false);
-            // }).end().find('.rd-navbar-submenu').removeClass('opened').removeClass('focus');
+            ctx.$element.add(ctx.$clone).find('[data-rd-navbar-toggle]').each(function () {
+              $.proxy(ctx.closeToggle, this)(ctx, false);
+            }).end();//.find('.rd-navbar-submenu').removeClass('opened').removeClass('focus');
             if (scrollTop >= threshold && !ctx.isStuck && !ctx.$element.hasClass('rd-navbar-fixed')) {
               if (ctx.options.callbacks.onStuck) {
                 ctx.options.callbacks.onStuck.call(ctx);
@@ -230,9 +230,15 @@
           }
           ctx.height = ctx.$element.outerHeight();
           if (e.type === 'resize') {
-            $wrap.addClass('rd-navbar--no-transition').css('height', ctx.height);
-            // $wrap[0].offsetHeight;
-            return $wrap.removeClass('rd-navbar--no-transition');
+            if ($("#col1").hasClass("col-lg-3") || $("#col2").hasClass("col-6")) {
+              $wrap.addClass('rd-navbar--no-transition').css('height', 'auto');
+              // $wrap[0].offsetHeight;
+              return $wrap.removeClass('rd-navbar--no-transition');
+            } else {
+              $wrap.addClass('rd-navbar--no-transition').css('height', ctx.height);
+              // $wrap[0].offsetHeight;
+              return $wrap.removeClass('rd-navbar--no-transition');
+            }
           } else {
             return $wrap.css('height', ctx.height);
           }
@@ -717,3 +723,10 @@
   }
 
 }).call(this);
+
+$(document).ready(function() {
+  $(".rd-navbar").RDNavbar({
+    stickUpClone: false,
+    stickUpOffset: 170
+  });
+});

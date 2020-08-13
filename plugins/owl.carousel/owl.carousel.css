@@ -217,7 +217,7 @@
 
 .carousel-banner img {display: none;}
 
-#preloader {
+#preloader, #pre-loader {
   position: absolute !important;
   bottom: 0 !important;
   width: 100% !important;
@@ -236,7 +236,7 @@
   left: 50%;
   width:200px;
   height:200px;
-  background-image: url(loader.gif);
+  background-image: url(ajax-loader.gif);
   background-repeat: no-repeat;
   background-position: center;
   margin: -100px 0 0 -100px;

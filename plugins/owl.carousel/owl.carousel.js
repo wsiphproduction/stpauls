@@ -123,7 +123,7 @@
 		 */
 		this._invalidated = {};
 
-		/**
+		/*
 		 * Ordered list of workers for the update process.
 		 * @protected
 		 */
