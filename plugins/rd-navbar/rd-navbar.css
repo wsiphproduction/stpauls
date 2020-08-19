@@ -6389,3 +6389,9 @@ textarea.form-input {
 .custom-control-label::before {
     border: 1px solid #ccc;
 }
+
+.active-user {
+    font-weight: bold !important;
+    color: #b82e24 !important;
+    padding: 5px 0;
+}   
