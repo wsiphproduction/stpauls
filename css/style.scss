@@ -1887,6 +1887,24 @@
                     width: auto !important;
                 }
             }
+            .review-wrap {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 40px;
+
+                .review-body {
+                    padding: 25px 0;
+                    border-bottom: 1px solid #ddd;
+
+                    .vcard {
+                        h3 {
+                            font-size: .95em;
+                        }
+                        span {
+                            font-size: .85em !important;
+                        }
+                    }
+                }
+            }
         }
     }
     
