@@ -281,6 +281,9 @@
   #responsiveTabs2.r-tabs > .r-tabs-nav .r-tabs-state-active .r-tabs-anchor .title {
     display: inline-block !important;
   }
+  .tab + label {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
