@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="plugins/linearicon/linearicon.min.css" />
     <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
     <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="plugins/datatables/datatables.min.css" />
     <link rel="stylesheet" href="plugins/vanilla-zoom/vanilla-zoom.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
@@ -476,7 +477,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="w-25">Type</th>
-                                                    <th class="w-30 d-none d-sm-table-cell">Description</th>
+                                                    <th class="w-30 d-none d-md-table-cell">Description</th>
                                                     <th class="w-15 text-center">QNTY</th>
                                                     <th class="w-15 text-right">Unit Price</th>
                                                     <th class="w-15 text-right">Amount</th>
@@ -485,36 +486,10 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">The Friend of the Bridegroom</a></td>
-                                                    <td class="d-none d-sm-table-cell tx-color-03">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</td>
                                                     <td class="text-center">
-                                                        <div class="checkout-quantity">
-                                                            <select name="quantity" id="quantity">
-                                  <option value="1">1</option>
-                                  <option value="2" selected>2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                                  <option value="7">7</option>
-                                  <option value="8">8</option>
-                                  <option value="9">9</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                                  <option value="13">13</option>
-                                  <option value="14">14</option>
-                                  <option value="15">15</option>
-                                  <option value="16">16</option>
-                                  <option value="17">17</option>
-                                  <option value="18">18</option>
-                                  <option value="19">19</option>
-                                  <option value="20">20</option>
-                                  <option value="21">21</option>
-                                  <option value="22">22</option>
-                                  <option value="23">23</option>
-                                  <option value="24">24</option>
-                                  <option value="25">25</option>
-                                </select>
+                                                        <div class="quantity">
+                                                            <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
                                                         </div>
                                                     </td>
                                                     <td class="text-right">₱ 150.00</td>
@@ -522,36 +497,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">PESAH</a></td>
-                                                    <td class="d-none d-sm-table-cell tx-color-03">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque...</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque...</td>
                                                     <td class="text-center">
-                                                        <div class="checkout-quantity">
-                                                            <select name="quantity" id="quantity">
-                                  <option value="1" selected>1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                                  <option value="7">7</option>
-                                  <option value="8">8</option>
-                                  <option value="9">9</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                                  <option value="13">13</option>
-                                  <option value="14">14</option>
-                                  <option value="15">15</option>
-                                  <option value="16">16</option>
-                                  <option value="17">17</option>
-                                  <option value="18">18</option>
-                                  <option value="19">19</option>
-                                  <option value="20">20</option>
-                                  <option value="21">21</option>
-                                  <option value="22">22</option>
-                                  <option value="23">23</option>
-                                  <option value="24">24</option>
-                                  <option value="25">25</option>
-                                </select>
+                                                        <div class="quantity">
+                                                            <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
                                                         </div>
                                                     </td>
                                                     <td class="text-right">₱ 1,200.00</td>
@@ -559,36 +508,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">HeartLines</a></td>
-                                                    <td class="d-none d-sm-table-cell tx-color-03">Et harum quidem rerum facilis est et expedita distinctio</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">Et harum quidem rerum facilis est et expedita distinctio</td>
                                                     <td class="text-center">
-                                                        <div class="checkout-quantity">
-                                                            <select name="quantity" id="quantity">
-                                  <option value="1">1</option>
-                                  <option value="2" selected>2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                                  <option value="7">7</option>
-                                  <option value="8">8</option>
-                                  <option value="9">9</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                                  <option value="13">13</option>
-                                  <option value="14">14</option>
-                                  <option value="15">15</option>
-                                  <option value="16">16</option>
-                                  <option value="17">17</option>
-                                  <option value="18">18</option>
-                                  <option value="19">19</option>
-                                  <option value="20">20</option>
-                                  <option value="21">21</option>
-                                  <option value="22">22</option>
-                                  <option value="23">23</option>
-                                  <option value="24">24</option>
-                                  <option value="25">25</option>
-                                </select>
+                                                        <div class="quantity">
+                                                            <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
                                                         </div>
                                                     </td>
                                                     <td class="text-right">₱ 850.00</td>
@@ -596,36 +519,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">Pandasal Set 2020</a></td>
-                                                    <td class="d-none d-sm-table-cell tx-color-03">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</td>
                                                     <td class="text-center">
-                                                        <div class="checkout-quantity">
-                                                            <select name="quantity" id="quantity">
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3" selected>3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                                  <option value="7">7</option>
-                                  <option value="8">8</option>
-                                  <option value="9">9</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                                  <option value="13">13</option>
-                                  <option value="14">14</option>
-                                  <option value="15">15</option>
-                                  <option value="16">16</option>
-                                  <option value="17">17</option>
-                                  <option value="18">18</option>
-                                  <option value="19">19</option>
-                                  <option value="20">20</option>
-                                  <option value="21">21</option>
-                                  <option value="22">22</option>
-                                  <option value="23">23</option>
-                                  <option value="24">24</option>
-                                  <option value="25">25</option>
-                                </select>
+                                                        <div class="quantity">
+                                                            <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
                                                         </div>
                                                     </td>
                                                     <td class="text-right">₱ 850.00</td>
@@ -805,6 +702,7 @@
     </script>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="plugins/datatables/datatables.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

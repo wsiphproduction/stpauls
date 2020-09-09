@@ -379,3 +379,7 @@ $('a.remove').click(function() {
 $(".rd-navbar-listing-close-toggle").on("click", function() {
     $(".listing-filter-wrap").removeClass("active");
 });
+
+$(document).ready(function () {
+    $('#example').DataTable();
+});
