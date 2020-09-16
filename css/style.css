@@ -8,14 +8,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Linearicons-Free';
-  src: url("../plugins/linearicon/fonts/Linearicons-Free.eot?7y0ygv");
-  src: url("../plugins/linearicon/fonts/Linearicons-Free.eot?#iefix7y0ygv") format("embedded-opentype"), url("../plugins/linearicon/fonts/Linearicons-Free.woff2?7y0ygv") format("woff2"), url("../plugins/linearicon/fonts/Linearicons-Free.woff?7y0ygv") format("woff"), url("../plugins/linearicon/fonts/Linearicons-Free.ttf?7y0ygv") format("truetype"), url("../plugins/linearicon/fonts/Linearicons-Free.svg?7y0ygv#Linearicons-Free") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --first-color: #b82e24;
   --second-color: #333333;
@@ -699,6 +691,7 @@ p {
 
 .bordered-img {
   border: 1px solid #cccccc;
+  width: 100%;
 }
 
 .white-spc {
@@ -775,8 +768,8 @@ p {
   white-space: nowrap;
 }
 
-.owl-product-prev,
-.owl-product-next,
+.product-prev,
+.product-next,
 .owl-reco-title-prev,
 .owl-reco-title-next,
 .owl-item-sale-prev,
@@ -790,8 +783,8 @@ p {
   margin: 0 3px;
 }
 
-.owl-product-prev:hover,
-.owl-product-next:hover,
+.product-prev:hover,
+.product-next:hover,
 .owl-reco-title-prev:hover,
 .owl-reco-title-next:hover,
 .owl-item-sale-prev:hover,
@@ -802,8 +795,8 @@ p {
   color: white;
 }
 
-.owl-product-prev:focus,
-.owl-product-next:focus,
+.product-prev:focus,
+.product-next:focus,
 .owl-reco-title-prev:focus,
 .owl-reco-title-next:focus,
 .owl-item-sale-prev:focus,
@@ -1118,6 +1111,7 @@ p {
 
 .product-link {
   display: block;
+  padding: 0 15px;
 }
 
 .product-link:last-child {
@@ -3513,14 +3507,6 @@ p {
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Linearicons-Free';
-  src: url("../plugins/linearicon/fonts/Linearicons-Free.eot?7y0ygv");
-  src: url("../plugins/linearicon/fonts/Linearicons-Free.eot?#iefix7y0ygv") format("embedded-opentype"), url("../plugins/linearicon/fonts/Linearicons-Free.woff2?7y0ygv") format("woff2"), url("../plugins/linearicon/fonts/Linearicons-Free.woff?7y0ygv") format("woff"), url("../plugins/linearicon/fonts/Linearicons-Free.ttf?7y0ygv") format("truetype"), url("../plugins/linearicon/fonts/Linearicons-Free.svg?7y0ygv#Linearicons-Free") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   --first-color: #b82e24;
   --second-color: #333333;
@@ -3611,8 +3597,8 @@ p {
     font-size: .85em !important;
     padding: 0.5rem .65rem;
   }
-  .owl-product-prev,
-  .owl-product-next,
+  .product-prev,
+  .product-next,
   .owl-reco-title-prev,
   .owl-reco-title-next,
   .owl-item-sale-prev,
@@ -3846,13 +3832,13 @@ p {
   .category-nav-2 {
     margin-top: -8px !important;
   }
-  .owl-product-nav {
+  .product-nav {
     margin-left: auto;
     background: white;
     padding-left: 5px;
   }
-  .owl-product-prev,
-  .owl-product-next,
+  .product-prev,
+  .product-next,
   .owl-reco-title-prev,
   .owl-reco-title-next,
   .owl-item-sale-prev,

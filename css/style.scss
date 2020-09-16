@@ -575,6 +575,7 @@ $gaps: 10,
 
 .bordered-img {
     border: 1px solid #cccccc;
+    width: 100%;
 }
 
 .white-spc {
@@ -652,8 +653,8 @@ $gaps: 10,
     white-space: nowrap;
 }
 
-.owl-product-prev,
-.owl-product-next,
+.product-prev,
+.product-next,
 .owl-reco-title-prev,
 .owl-reco-title-next,
 .owl-item-sale-prev,
@@ -981,6 +982,7 @@ $gaps: 10,
 
 .product-link {
     display: block;
+    padding: 0 15px;
 
     &:last-child {
         margin-right: 1px;
