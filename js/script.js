@@ -45,35 +45,65 @@ function include(scriptUrl) {
 
 
 
-// @module Owl Carousel
-// @description Enables Owl Carousel Plugin
+// // @module Owl Carousel
+// // @description Enables Owl Carousel Plugin
 
-(function($) {
-    var o = $(".owl-carousel");
+// (function($) {
+//     var o = $(".owl-carousel");
+//     if (o.length > 0) {
+//         include("plugins/owl.carousel/owl.carousel.extension.js");
+//         include("plugins/owl.carousel/owl.carousel.js");
+//         $(window).on("load", function() {
+//             setTimeout(function() {
+//                 $("#preloader").fadeOut("slow");
+//                 $("#load").fadeOut("slow");
+//                 $("#pre-loader").fadeOut("slow");
+//             }, 100);
+//         });
+
+//         $(document).ready(function() {
+//             $("#pills-bible-tab").on("click", function() {
+//                 $("#pills-bible #pre-loader")
+//                     .delay(600)
+//                     .fadeOut("slow");
+//             });
+
+//             $("#pills-devotional-tab").on("click", function() {
+//                 $("#pills-devotional #pre-loader")
+//                     .delay(600)
+//                     .fadeOut("slow");
+//             });
+//         });
+//     }
+// })(jQuery);
+
+
+
+
+(function ($) {
+    var o = $(".slick-slider");
     if (o.length > 0) {
-        include("plugins/owl.carousel/owl.carousel.extension.js");
-        include("plugins/owl.carousel/owl.carousel.js");
-        $(window).on("load", function() {
-            setTimeout(function() {
+        $(window).on("load", function () {
+            setTimeout(function () {
                 $("#preloader").fadeOut("slow");
                 $("#load").fadeOut("slow");
                 $("#pre-loader").fadeOut("slow");
             }, 100);
         });
 
-        $(document).ready(function() {
-            $("#pills-bible-tab").on("click", function() {
-                $("#pills-bible #pre-loader")
-                    .delay(600)
-                    .fadeOut("slow");
-            });
+        // $(document).ready(function () {
+        //     $("#pills-bible-tab").on("click", function () {
+        //         $("#pills-bible #pre-loader")
+        //             .delay(600)
+        //             .fadeOut("slow");
+        //     });
 
-            $("#pills-devotional-tab").on("click", function() {
-                $("#pills-devotional #pre-loader")
-                    .delay(600)
-                    .fadeOut("slow");
-            });
-        });
+        //     $("#pills-devotional-tab").on("click", function () {
+        //         $("#pills-devotional #pre-loader")
+        //             .delay(600)
+        //             .fadeOut("slow");
+        //     });
+        // });
     }
 })(jQuery);
 
@@ -380,6 +410,6 @@ $(".rd-navbar-listing-close-toggle").on("click", function() {
     $(".listing-filter-wrap").removeClass("active");
 });
 
-$(document).ready(function () {
-    $('#example').DataTable();
-});
+// $(document).ready(function () {
+//     $('#example').DataTable();
+// });

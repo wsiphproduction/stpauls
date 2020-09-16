@@ -770,7 +770,7 @@ p {
   margin: 0;
 }
 
-.owl-product-nav {
+.product-nav {
   position: relative;
   white-space: nowrap;
 }
@@ -3492,6 +3492,17 @@ p {
 
 #salesTransaction {
   font-size: 0.85rem;
+}
+
+.tab-content .tab-pane {
+  display: block !important;
+  visibility: hidden;
+  height: 0px !important;
+}
+
+.tab-content .tab-pane.active {
+  visibility: visible !important;
+  height: auto !important;
 }
 
 @font-face {

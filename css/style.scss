@@ -647,7 +647,7 @@ $gaps: 10,
 }
 
 // PREV/NEXT BUTTONS
-.owl-product-nav {
+.product-nav {
     position: relative;
     white-space: nowrap;
 }
@@ -3214,6 +3214,17 @@ $tabs: 1,
 
 #salesTransaction {
     font-size: 0.85rem;
+}
+
+.tab-content .tab-pane {
+    display: block !important;
+    visibility: hidden;
+    height: 0px !important;
+}
+
+.tab-content .tab-pane.active {
+    visibility: visible !important;
+    height: auto !important;
 }
 
 @import "responsive";
