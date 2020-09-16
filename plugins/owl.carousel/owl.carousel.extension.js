@@ -144,6 +144,40 @@ $(document).ready(function() {
         owl3.trigger('next.owl');
     });
 
+    var owl4 = $("#owl-product-6");
+    owl4.owlCarousel({
+        dots: false,
+        margin: 25,
+        responsive: {
+            1200: {
+                items: 3
+            },
+            992: {
+                items: 3
+            },
+            760: {
+                items: 2
+            },
+            740: {
+                items: 2
+            },
+            640: {
+                items: 2
+            },
+            300: {
+                items: 1
+            }
+        }
+    });
+
+    $('.owl-recently-viewed-prev').click(function () {
+        owl4.trigger('prev.owl');
+    });
+    // Go to the previous item
+    $('.owl-recently-viewed-next').click(function () {
+        owl4.trigger('next.owl');
+    });
+
     $(".brand-logo").owlCarousel({
         nav: true,
         center: true,

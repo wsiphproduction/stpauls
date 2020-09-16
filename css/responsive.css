@@ -110,7 +110,9 @@
   .owl-reco-title-prev,
   .owl-reco-title-next,
   .owl-item-sale-prev,
-  .owl-item-sale-next {
+  .owl-item-sale-next,
+  .owl-recently-viewed-prev,
+  .owl-recently-viewed-next {
     font-size: 1.1em !important;
   }
 }
@@ -348,7 +350,9 @@
   .owl-reco-title-prev,
   .owl-reco-title-next,
   .owl-item-sale-prev,
-  .owl-item-sale-next {
+  .owl-item-sale-next,
+  .owl-recently-viewed-prev,
+  .owl-recently-viewed-next {
     font-size: 1em !important;
     padding: 5px 11px;
     margin: 0 1px;
