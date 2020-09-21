@@ -361,6 +361,10 @@
   .tab+label {
     width: 100%;
   }
+
+  .error404 {
+    font-size: 180px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -577,6 +581,10 @@
         }
       }
     }
+  }
+
+  .error404 {
+    font-size: 120px;
   }
 }
 

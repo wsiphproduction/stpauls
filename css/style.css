@@ -3499,6 +3499,15 @@ p {
   height: auto !important;
 }
 
+.error404 {
+  display: block;
+  font-size: 216px;
+  font-weight: 700;
+  color: #DDD;
+  line-height: 1.35;
+  letter-spacing: 4px;
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../plugins/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3");
@@ -3778,6 +3787,9 @@ p {
   .tab + label {
     width: 100%;
   }
+  .error404 {
+    font-size: 180px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3935,6 +3947,9 @@ p {
   .product-wrap .product-detail .product-btn .add-cart-alt2-btn,
   .product-wrap .product-detail .product-btn .buy-now-btn {
     font-size: .75em;
+  }
+  .error404 {
+    font-size: 120px;
   }
 }
 
