@@ -8,19 +8,17 @@
     <title>Home | Catholic Online Bookstore in Philippines | ST PAULS Online</title>
     <link rel="shortcut icon" href="images/misc/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.theme.default.min.css" />
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="plugins/linearicon/linearicon.min.css" />
+    <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
+    <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
     <link rel="stylesheet" href="css/tagsinput.min.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
-    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.min.css">
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <script src="js/jquery-3.4.1.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -131,8 +129,8 @@
                                 <div class="rd-navbar-n-search rd-navbar-search_not-collapsable">
                                     <form class="rd-n-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="rd-navbar-n-search-form-input" type="text" name="s" autocomplete="off">
-                                            <label class="form-label rd-input-label" for="rd-navbar-n-search-form-input">Search a product</label>
+                                            <input class="form-input" id="rd-navbar-n-search-form-input" type="text"
+                                                name="s" autocomplete="off" placeholder="Search a product">
                                             <div class="rd-n-search-results-live" id="rd-n-search-results-live"></div>
                                         </div>
                                         <button class="rd-n-search__submit" type="submit"></button>
@@ -404,13 +402,15 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8 col-sm-12">
                                         <h2 class="lgin-title">Welcome to St Pauls! Please Login.</h2>
+
                                     </div>
                                     <div class="col-md-4 col-sm-12">
-                                        <p class="text-right" id="new-mem">New member? <a href="#">Register</a> here.</p>
+                                        <p class="text-right" id="new-mem">New member? <a href="signup.htm">Register</a> here.</p>
                                     </div>
                                 </div>
+                                <div class="gap-20"></div>
                                 <div id="form-wrapper">
-                                    <form>
+                                    <form action="customer-dashboard.htm">
                                         <div class="row form-style-login">
                                             <div class="form-group col-md-7">
                                                 <p>Phone Number of Email*</p>

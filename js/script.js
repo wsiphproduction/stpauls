@@ -22,7 +22,6 @@ function include(scriptUrl) {
             var patt = /bootstrap/i;
             var result = attr.match(patt);
             if (result) {
-                include("plugins/bootstrap/js/popper.js");
                 include("plugins/bootstrap/js/bootstrap.min.js");
             }
         }

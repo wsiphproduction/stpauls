@@ -5952,7 +5952,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-n-search .rd-n-search__submit::before {
-    content: "\e86f";
+    content: "\ec22";
     position: absolute;
     top: 0;
     right: 0;
@@ -5960,7 +5960,7 @@ html.rd-navbar-fixed-linked .page {
     left: 0;
     width: inherit;
     height: inherit;
-    font: 400 19px Linearicons-Free;
+    font: 400 19px Linearicons;
     line-height: inherit;
     text-align: center;
     color: white;
@@ -5988,7 +5988,7 @@ html.rd-navbar-fixed-linked .page {
     left: 0;
     display: inline-block;
     padding: 2px;
-    font-family: Linearicons-Free;
+    font-family: Linearicons;
     font-weight: 600;
     line-height: 24px;
     text-align: center;
@@ -5999,13 +5999,13 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar .rd-navbar-n-search__toggle::before {
     margin-right: -2px;
-    content: "\e86f";
+    content: "\ec22";
     font-size: 19px;
 }
 
 .rd-navbar .rd-navbar-n-search__toggle::after {
     margin-top: -1px;
-    content: "\e870";
+    content: "\ec35";
     font-size: 22px;
 }
 
@@ -6087,12 +6087,12 @@ html.rd-navbar-fixed-linked .page {
     border-color: #ddd;
 }
 
-textarea.form-input {
+/* textarea.form-input {
     height: 216px;
     min-height: 60px;
     max-height: 367px;
     resize: vertical
-}
+} */
 
 .form-wrap_icon::before {
     position: absolute;

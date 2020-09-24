@@ -655,12 +655,12 @@ $gaps: 10,
 
 .product-prev,
 .product-next,
-.owl-reco-title-prev,
-.owl-reco-title-next,
-.owl-item-sale-prev,
-.owl-item-sale-next,
-.owl-recently-viewed-prev,
-.owl-recently-viewed-next {
+.reco-title-prev,
+.reco-title-next,
+.item-sale-prev,
+.item-sale-next,
+.recently-viewed-prev,
+.recently-viewed-next {
     background: $first-color;
     color: $fourth-color;
     padding: 7px 13px;
@@ -982,7 +982,6 @@ $gaps: 10,
 
 .product-link {
     display: block;
-    padding: 0 15px;
 
     &:last-child {
         margin-right: 1px;
@@ -990,11 +989,11 @@ $gaps: 10,
 }
 
 .product-card {
-    background: #f9f9f9;
+    background: #ffffff;
     padding: 30px;
     text-align: center;
     width: 100%;
-    border: 1px solid #f9f9f9;
+    border: 1px solid #dfdfdf;
     transition: all 0.5s ease-out;
     margin: 1rem 0;
 
@@ -1003,7 +1002,6 @@ $gaps: 10,
         width: auto !important;
         height: auto !important;
         margin: 15px auto;
-        box-shadow: 0px 0px 15px 0px rgba(180, 180, 180, 0.75);
     }
 
     .product-price {
@@ -1304,14 +1302,14 @@ $gaps: 10,
         display: block;
         width: 100%;
         min-height: 50px;
-        padding: 17px 19px;
+        padding: 12px 15px;
         font-size: 1em;
         font-weight: 400;
         line-height: 24px;
         color: black;
         background-color: $fourth-color;
         background-image: none;
-        border: 1px solid #dfe3e9;
+        border: 1px solid #ced4da;
         border-radius: 2px;
         -webkit-appearance: none;
         transition: .3s ease-in-out;
@@ -1323,11 +1321,19 @@ $gaps: 10,
     }
 
     textarea.form-input {
-        height: 216px;
-        min-height: 50px;
-        max-height: 367px;
         resize: vertical;
         line-height: 24px;
+    }
+
+    select.form-input:after {
+        content: "\ec22";
+        font: 600 14px 'Linearicons';
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        z-index: 20;
+        border: 1px solid white;
+        background: transparent;
     }
 
     p,
@@ -1336,7 +1342,11 @@ $gaps: 10,
     }
 
     &.fs-sm {
-        font-size: .85em;
+        .form-input {
+            font-size: 0.85em !important;
+            min-height: 45px !important;
+            padding: 10px;
+        }
     }
 }
 
@@ -2696,7 +2706,7 @@ $gaps: 10,
         color: $third-color;
         position: relative;
         font-family: $font2;
-        font-size: 1em;
+        font-size: 0.9em;
         text-transform: uppercase;
         font-weight: 600;
     }
@@ -3227,6 +3237,71 @@ $tabs: 1,
 .tab-content .tab-pane.active {
     visibility: visible !important;
     height: auto !important;
+}
+
+.slick-slide .product-link {
+    padding: 0 15px;
+}
+
+.btn-group > .btn {
+    flex: 0 1 auto;
+}
+
+.text {
+  font-size: 10rem;
+  fill: none;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: $first-color;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: $first-color;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: $first-color;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: $first-color;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: $first-color;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+.title-404 {
+    font-size: 16rem;
+    line-height: 1;
+    text-align: center;
 }
 
 @import "responsive";

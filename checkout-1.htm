@@ -326,24 +326,24 @@
                                 <li>
                                     <a href="#tab-1">
                                         <span class="step">1</span>
-                                        <span class="title">Billing Information</span>
+                                        <span class="title">Billing Information and Shipping Options</span>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#tab-2">
                                         <span class="step">2</span>
                                         <span class="title">Shipping Options</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="#tab-3">
-                                        <span class="step">3</span>
+                                        <span class="step">2</span>
                                         <span class="title">Payment Method</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#tab-4">
-                                        <span class="step">4</span>
+                                        <span class="step">3</span>
                                         <span class="title">Review and Place Order</span>
                                     </a>
                                 </li>
@@ -351,41 +351,88 @@
 
                             <div id="tab-1">
                                 <div class="checkout-content">
-                                    <table class="customer-info">
-                                        <tr>
-                                            <td>Name</td>
-                                            <td>Stephen Curry</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E-mail Address</td>
-                                            <td>stephcurry30@email.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Contact Number</td>
-                                            <td>0917-123-4567</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Address</td>
-                                            <td>
-                                                7708 St. Paul Road, San Antonio Village<br> 1203 Makati City
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Country</td>
-                                            <td>Philippines</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zip Code</td>
-                                            <td>1611</td>
-                                        </tr>
-                                    </table>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="checkout-card form-style fs-sm">
+                                                <div class="form-group form-wrap">
+                                                    <p>Name *</p>
+                                                    <input required type="text" class="form-control form-input billing-info" name="customer" id="input_customer" value="John Doe">
+                                                    <p id="p_name" class="text-danger" style="display: none;"><small>The name field is required.</small></p>
+                                                </div>
+
+                                                <div class="gap-10"></div>
+                                                <div class="form-group form-wrap">
+                                                    <p>Email *</p>
+                                                    <input required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control form-input billing-info" name="email" id="input_email" value="johndoe@donotreply.com">
+                                                    <p id="p_email" class="text-danger" style="display: none;"><small>The email field is required.</small></p>
+                                                    <p id="p_email_invalid" class="text-danger" style="display: none;"><small>Invalid email format.</small></p>
+                                                </div>
+
+                                                <div class="gap-10"></div>
+                                                <div class="form-group form-wrap">
+                                                    <p>Mobile Number *</p>
+                                                    <input required type="text" class="form-control form-input billing-info" name="mobile" id="input_mobile" value="+639991234567" maxlength="13">
+                                                    <p id="p_mobile" class="text-danger" style="display: none;"><small>The mobile field is required.</small></p>
+                                                </div>
+
+                                                <div class="gap-10"></div>
+                                                <div class="form-group form-wrap">
+                                                    <p>Province *</p>
+                                                    <select required name="province" id="province" class="form-control">
+                                                        <option value="" selected disabled>-- Select Province --</option>
+                                                        <option value="0">Others</option>
+                                                    </select>
+                                                    <p id="p_province" class="text-danger" style="display: none;"><small>The province field is required.</small></p>
+                                                </div>
+                                                <div id="divaddress">
+                                                    <div class="gap-10"></div>
+                                                    <div class="form-group form-wrap">
+                                                        <p>City/Municipality *</p>
+                                                        <select required class="form-control form-input" name="city" id="city">
+                                                                <option value="0" selected disabled>-- Select City --</option>
+                                                                <option value="0">Others</option>
+                                                        </select>
+                                                        <p id="p_city" class="text-danger" style="display: none;"><small>The city field is required.</small></p>
+                                                    </div>
+
+                                                    <div class="gap-10"></div>
+                                                    <div class="form-group form-wrap">
+                                                        <p>Address Line 1 *</p>
+                                                        <input required type="text" class="form-control form-input" name="address" id="input_address" value="Sample Address Line 1">
+                                                        <p id="p_address" class="text-danger" style="display: none;"><small>The address line 1 field is required.</small></p>
+                                                    </div>
+
+                                                    <div class="gap-10"></div>
+                                                    <div class="form-group form-wrap">
+                                                        <p>Address Line 2 *</p>
+                                                        <input required type="text" class="form-control form-input" name="barangay" id="input_barangay" value="Sample Address Line 2">
+                                                        <p id="p_barangay" class="text-danger" style="display: none;"><small>The address line 2 field is required.</small></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="gap-10"></div>
+                                                <div class="form-group form-wrap" id="div_other" style="display: none;">
+                                                    <p>Other Address</p>
+                                                    <textarea name="other_address" class="form-control" rows="3" id="other_address"></textarea>
+                                                    <p id="p_other" class="text-danger" style="display: none;"><small>The other address field is required.</small></p>
+                                                </div>
+
+                                                <div class="gap-10"></div>
+                                                <div class="form-group form-wrap">
+                                                    <p>Other Instruction</p>
+                                                    <textarea name="other_instruction" class="form-control form-input" rows="3" id="other_instruction"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6"></div>
+                                    </div>
                                 </div>
                                 <div class="checkout-nav">
                                     <span></span>
                                     <a class="checkout-next-btn" href="">Next <span class="lnr lnr-chevron-right"></span></a>
                                 </div>
                             </div>
-                            <div id="tab-2">
+                            <!-- <div id="tab-2">
                                 <div class="checkout-content">
                                     <p class="mb-3">Select a shipping method:</p>
 
@@ -446,7 +493,7 @@
                                     <a class="checkout-back-btn" href=""><span class="lnr lnr-chevron-left"></span> Back</a>
                                     <a class="checkout-next-btn" href="">Next <span class="lnr lnr-chevron-right"></span></a>
                                 </div>
-                            </div>
+                            </div> -->
                             <div id="tab-3">
                                 <div class="checkout-content">
                                     <h3>Payment Method</h3>
@@ -572,6 +619,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        
                     </div>
                 </div>
             </section>
