@@ -3239,69 +3239,13 @@ $tabs: 1,
     height: auto !important;
 }
 
-.slick-slide .product-link {
-    padding: 0 15px;
-}
-
-.btn-group > .btn {
-    flex: 0 1 auto;
-}
-
-.text {
-  font-size: 10rem;
-  fill: none;
-  stroke-width: 1;
-  stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  animation: stroke 6s infinite linear;
-}
-
-.text:nth-child(5n + 1) {
-  stroke: $first-color;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
-}
-.text:nth-child(5n + 2) {
-  stroke: $first-color;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
-}
-
-.text:nth-child(5n + 3) {
-  stroke: $first-color;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
-}
-
-.text:nth-child(5n + 4) {
-  stroke: $first-color;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
-}
-
-.text:nth-child(5n + 5) {
-  stroke: $first-color;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
-}
-
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-
-.title-404 {
-    font-size: 16rem;
-    line-height: 1;
-    text-align: center;
+.error404 {
+    display: block;
+    font-size: 216px;
+    font-weight: 700;
+    color: #DDD;
+    line-height: 1.35;
+    letter-spacing: 4px;
 }
 
 @import "responsive";

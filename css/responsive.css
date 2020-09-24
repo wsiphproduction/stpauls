@@ -298,8 +298,8 @@
   .tab + label {
     width: 100%;
   }
-  .title-404 {
-    font-size: 10rem;
+  .error404 {
+    font-size: 180px;
   }
 }
 
@@ -458,6 +458,9 @@
   .product-wrap .product-detail .product-btn .add-cart-alt2-btn,
   .product-wrap .product-detail .product-btn .buy-now-btn {
     font-size: 0.75em;
+  }
+  .error404 {
+    font-size: 120px;
   }
 }
 
