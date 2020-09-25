@@ -2948,6 +2948,18 @@ $gaps: 10,
     list-style: none;
     background-color: #fff;
     margin: 40px 0;
+
+    &.horizontal {
+        label {
+            width: 25%;
+        }
+    }
+
+    &.vertical {
+        label {
+            width: 100%;
+        }
+    }
 }
 
 .tab {
@@ -3005,7 +3017,6 @@ $tabs: 1,
 
 .tab+label {
     border-bottom: 1px solid #dfe2e5;
-    width: 100%;
     cursor: pointer;
     display: block;
     text-decoration: none;
@@ -3208,6 +3219,50 @@ $tabs: 1,
     color: #DDD;
     line-height: 1.35;
     letter-spacing: 4px;
+}
+
+.flexMenu-popup {
+    transform: translateY(30px);
+    font-size: 1em;
+    line-height: 1.5 !important;
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, transform;
+    margin-top: 7px;
+    z-index: 5;
+    text-align: left;
+    padding: 15px 0px;
+    margin-left: -18px;
+    background: #b82e24;
+    box-shadow: 0 0px 12px rgba(136, 136, 136, 0.22);
+    border: 1px solid #b82e24;
+    transition: 0.3s all ease;
+    width: 240px;
+
+    &>li {
+        &>a {
+            color: white;
+            background: 0 0;
+            display: block;
+            padding: 7px 25px;
+            font-size: 14px;
+            position: relative;
+            width: 100%;
+            line-height: 1.7;
+            transition: 0.33s all ease;
+        }
+    }
+}
+
+.flexMenu-viewMore {
+    padding-bottom: 7px !important;
+    &.active {
+        &>.flexMenu-popup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+    }
 }
 
 @import "responsive";

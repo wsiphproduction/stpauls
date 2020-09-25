@@ -2698,7 +2698,7 @@ h3+.card-custom-group-wrap {
 .rd-navbar-static .rd-navbar-nav .rd-navbar-submenu.opened>.rd-navbar-megamenu,
 .rd-navbar-static .rd-navbar-nav .rd-navbar-submenu.focus>.rd-navbar-dropdown,
 .rd-navbar-static .rd-navbar-nav .rd-navbar-submenu.focus>.rd-navbar-megamenu {
-    transform: translateY(-1px);
+    transform: translateY(0px);
 }
 
 .rd-navbar-fullwidth .rd-navbar-nav .rd-navbar-submenu .rd-navbar-submenu.focus>.rd-navbar-dropdown,
@@ -2842,7 +2842,7 @@ h3+.card-custom-group-wrap {
 .rd-navbar-fullwidth .rd-navbar-dropdown .rd-navbar--has-dropdown>.rd-navbar-submenu-toggle::after,
 .rd-navbar-static .rd-navbar-dropdown .rd-navbar--has-dropdown>.rd-navbar-submenu-toggle::after {
     position: absolute;
-    top: 18px;
+    top: 9px;
     right: 25px;
     display: inline-block;
     width: auto;
@@ -3464,9 +3464,10 @@ h3+.card-custom-group-wrap {
 
 .rd-navbar-static .rd-navbar-nav>li>.rd-navbar-submenu-toggle,
 .rd-navbar-sidebar .rd-navbar-nav>li>.rd-navbar-submenu-toggle {
+    margin-top: -6px;
     display: inline-block;
     width: 17px;
-    line-height: 1;
+    line-height: inherit;
     text-align: center;
     cursor: pointer;
     color: var(--first-color);
@@ -3908,16 +3909,16 @@ h3+.card-custom-group-wrap {
 }
 
 .rd-navbar-static .rd-navbar-nav {
-    margin: -7px -15px 0;
-    font-size: 0;
-    line-height: 0;
+    margin: -7px -15px;
+    font-size: inherit;
+    line-height: inherit;
     position: relative;
     z-index: 5;
 }
 
 .rd-navbar-static .rd-navbar-nav>li {
     margin-top: 10px;
-    padding: 0 18px;
+    padding: 0 15px;
     position: relative;
 }
 
@@ -3928,7 +3929,7 @@ h3+.card-custom-group-wrap {
 
 .rd-navbar-static .rd-navbar-nav>li>.rd-navbar-dropdown,
 .rd-navbar-static .rd-navbar-nav>li .rd-navbar-megamenu {
-    margin-top: 22px;
+    margin-top: 7px;
 }
 
 .rd-navbar-static.rd-navbar_modern .rd-navbar-top-panel {
@@ -5101,7 +5102,7 @@ html.rd-navbar-fixed-linked .page {
 
 @media (max-width: 1299px) {
     .rd-navbar-static .rd-navbar-nav {
-        margin: -4px -15px 0;
+        margin: -2px -15px -7px;
     }
     .rd-navbar-static.rd-navbar_modern .rd-navbar-nav>li {
         padding-left: 12px !important;
@@ -5109,6 +5110,9 @@ html.rd-navbar-fixed-linked .page {
     }
     .rd-navbar .rd-navbar-nav>li>a {
         font-size: 13px !important;
+    }
+    .rd-navbar-static .rd-navbar-nav>li>.rd-navbar-submenu-toggle, .rd-navbar-sidebar .rd-navbar-nav>li>.rd-navbar-submenu-toggle {
+        margin-top: -8px;
     }
     .rd-navbar-static .rd-navbar-nav>li {
         padding: 0 10px;

@@ -119,13 +119,17 @@
   .product-wrap .product-detail .product-btn .buy-now-btn {
     font-size: 0.65em;
   }
-  #login .row [class^="col-md-"], #signup-wrapper .row [class^="col-md-"] {
+  #login .row [class^="col-md-"],
+  #signup-wrapper .row [class^="col-md-"] {
     -webkit-box-flex: 0 !important;
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
     max-width: 100%;
   }
-  #login #new-mem, #login #log-mem, #signup-wrapper #new-mem, #signup-wrapper #log-mem {
+  #login #new-mem,
+  #login #log-mem,
+  #signup-wrapper #new-mem,
+  #signup-wrapper #log-mem {
     text-align: left !important;
   }
 }
@@ -289,7 +293,7 @@
   #responsiveTabs2.r-tabs > .r-tabs-nav .r-tabs-state-active .r-tabs-anchor .title {
     display: inline-block !important;
   }
-  .tab + label {
+  .tab-wrap.horizontal label {
     width: 100%;
   }
   .error404 {

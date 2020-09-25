@@ -3170,6 +3170,14 @@ p {
   margin: 40px 0;
 }
 
+.tab-wrap.horizontal label {
+  width: 25%;
+}
+
+.tab-wrap.vertical label {
+  width: 100%;
+}
+
 .tab {
   display: none;
 }
@@ -3266,7 +3274,6 @@ p {
 
 .tab + label {
   border-bottom: 1px solid #dfe2e5;
-  width: 100%;
   cursor: pointer;
   display: block;
   text-decoration: none;
@@ -3478,6 +3485,52 @@ p {
   letter-spacing: 4px;
 }
 
+.flexMenu-popup {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  font-size: 1em;
+  line-height: 1.5 !important;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+  margin-top: 7px;
+  z-index: 5;
+  text-align: left;
+  padding: 15px 0px;
+  margin-left: -18px;
+  background: #b82e24;
+  -webkit-box-shadow: 0 0px 12px rgba(136, 136, 136, 0.22);
+          box-shadow: 0 0px 12px rgba(136, 136, 136, 0.22);
+  border: 1px solid #b82e24;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  width: 240px;
+}
+
+.flexMenu-popup > li > a {
+  color: white;
+  background: 0 0;
+  display: block;
+  padding: 7px 25px;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  line-height: 1.7;
+  -webkit-transition: 0.33s all ease;
+  transition: 0.33s all ease;
+}
+
+.flexMenu-viewMore {
+  padding-bottom: 7px !important;
+}
+
+.flexMenu-viewMore.active > .flexMenu-popup {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 @font-face {
   font-family: "FontAwesome";
   src: url("../plugins/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3");
@@ -3598,13 +3651,17 @@ p {
   .product-wrap .product-detail .product-btn .buy-now-btn {
     font-size: 0.65em;
   }
-  #login .row [class^="col-md-"], #signup-wrapper .row [class^="col-md-"] {
+  #login .row [class^="col-md-"],
+  #signup-wrapper .row [class^="col-md-"] {
     -webkit-box-flex: 0 !important;
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
     max-width: 100%;
   }
-  #login #new-mem, #login #log-mem, #signup-wrapper #new-mem, #signup-wrapper #log-mem {
+  #login #new-mem,
+  #login #log-mem,
+  #signup-wrapper #new-mem,
+  #signup-wrapper #log-mem {
     text-align: left !important;
   }
 }
@@ -3768,7 +3825,7 @@ p {
   #responsiveTabs2.r-tabs > .r-tabs-nav .r-tabs-state-active .r-tabs-anchor .title {
     display: inline-block !important;
   }
-  .tab + label {
+  .tab-wrap.horizontal label {
     width: 100%;
   }
   .error404 {
