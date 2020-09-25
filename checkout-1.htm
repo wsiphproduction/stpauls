@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
     <link rel="stylesheet" href="plugins/owl.carousel/owl.theme.default.min.css" />
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="plugins/linearicon/linearicon.min.css" />
+    <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
     <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
     <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="plugins/datatables/datatables.min.css" />
@@ -336,15 +336,15 @@
                                     </a>
                                 </li> -->
                                 <li>
-                                    <a href="#tab-3">
+                                    <a href="#tab-2">
                                         <span class="step">2</span>
-                                        <span class="title">Payment Method</span>
+                                        <span class="title">Review and Place Order</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab-4">
+                                    <a href="#tab-3">
                                         <span class="step">3</span>
-                                        <span class="title">Review and Place Order</span>
+                                        <span class="title">Payment Method</span>
                                     </a>
                                 </li>
                             </ul>
@@ -352,7 +352,7 @@
                             <div id="tab-1">
                                 <div class="checkout-content">
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 mb-sm-4">
                                             <div class="checkout-card form-style fs-sm">
                                                 <div class="form-group form-wrap">
                                                     <p>Name *</p>
@@ -378,9 +378,9 @@
                                                 <div class="gap-10"></div>
                                                 <div class="form-group form-wrap">
                                                     <p>Province *</p>
-                                                    <select required name="province" id="province" class="form-control">
-                                                        <option value="" selected disabled>-- Select Province --</option>
-                                                        <option value="0">Others</option>
+                                                    <select required name="province" id="province" class="form-control form-input">
+                                                        <option value="">-- Select Province --</option>
+                                                        <option value="Others">Others</option>
                                                     </select>
                                                     <p id="p_province" class="text-danger" style="display: none;"><small>The province field is required.</small></p>
                                                 </div>
@@ -389,9 +389,10 @@
                                                     <div class="form-group form-wrap">
                                                         <p>City/Municipality *</p>
                                                         <select required class="form-control form-input" name="city" id="city">
-                                                                <option value="0" selected disabled>-- Select City --</option>
-                                                                <option value="0">Others</option>
+                                                                <option value="" selected>-- Select City --</option>
+                                                                <option value="Others">Others</option>
                                                         </select>
+                                                        <span></span>
                                                         <p id="p_city" class="text-danger" style="display: none;"><small>The city field is required.</small></p>
                                                     </div>
 
@@ -424,7 +425,89 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6"></div>
+                                        <div class="col-lg-6">
+                                            <div class="checkout-card">
+                                                <p class="mb-3">Select a shipping method:</p>
+                                                
+                                                <div class="tab-wrap">
+                                                    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+                                                    <label for="tab1">Cash On Delivery (COD) <span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                    <div class="tab__content">
+                                                        <h3>Cash on Delivery</h3>
+                                                        <div class="alert alert-info" role="alert">
+                                                            <h4 class="alert-heading">Reminder!</h4>
+                                                        </div>
+                                                        <div class="form-row form-style fs-sm">
+                                                            <div class="col-lg-6 mb-sm-2">
+                                                                <label>Date *</label>
+                                                                <input type="date" name="pickup_date_1" onchange="pickupDate(1)" id="pickup_date1" class="form-control form-input"
+                                                                    min="{{date('Y-m-d',strtotime(today()))}}">
+                                                                <p id="cod_date" class="text-danger" style="display: none;"><small>The date field is required.</small></p>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <label>Time *</label>
+                                                                <input type="time" name="pickup_time_1" onchange="pickupTime(1)" id="pickup_time1" class="form-control form-input">
+                                                                <p id="cod_time" class="text-danger" style="display: none;"><small>The time field is required.</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <input type="radio" id="tab2" name="tabGroup1" class="tab">
+                                                    <label for="tab2">Store Pick-up <span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                    <div class="tab__content">
+                                                        <h3>Store Pick-up</h3>
+                                                        <div class="alert alert-info" role="alert">
+                                                            <h4 class="alert-heading">Reminder!</h4>
+                                                        </div>
+                                                        <div class="form-row form-style fs-sm">
+                                                            <div class="col">
+                                                                <label>Select Branch*</label>
+                                                                <select class="form-control form-input" name="branch" id="selbranch">
+                                                                    <option selected value="0">-- Select Branch --</option>
+                                                                    @foreach($branches as $branch)
+                                                                    <option value="{{$branch->id}}">{{ $branch->name }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                                <p id="stp_branch" class="text-danger" style="display: none;"><small>The branch field is required.</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="gap-10"></div>
+                                                        <div class="form-row form-style fs-sm">
+                                                            <div class="col-lg-6 mb-sm-2">
+                                                                <label>Date *</label>
+                                                                <input type="date" name="pickup_date_2" onchange="pickupDate(2)" id="pickup_date2" class="form-control form-input"
+                                                                    min="{{date('Y-m-d',strtotime(today()))}}">
+                                                                <p id="stp_date" class="text-danger" style="display: none;"><small>The date field is required.</small></p>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <label>Time *</label>
+                                                                <input type="time" name="pickup_time_2" onchange="pickupTime(2)" id="pickup_time2" class="form-control form-input">
+                                                                <p id="stp_time" class="text-danger" style="display: none;"><small>The date field is required.</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <input type="radio" id="tab3" name="tabGroup1" class="tab">
+                                                    <label for="tab3">Same Day Delivery <span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                    <div class="tab__content">
+                                                        <div class="alert alert-info" role="alert">
+                                                            <h4 class="alert-heading">Reminder!</h4>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <input type="radio" id="tab4" name="tabGroup1" class="tab">
+                                                    <label for="tab4">Door-to-door (D2D) <span class="fa fa-check-circle fa-icon ml-2"></span></label>
+                                                
+                                                    <div class="tab__content">
+                                                        <h3>Door-to-door</h3>
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="checkout-nav">
@@ -494,31 +577,21 @@
                                     <a class="checkout-next-btn" href="">Next <span class="lnr lnr-chevron-right"></span></a>
                                 </div>
                             </div> -->
-                            <div id="tab-3">
-                                <div class="checkout-content">
-                                    <h3>Payment Method</h3>
-                                    <p>[For integration]</p>
-                                    <div class="gap-20"></div>
-                                </div>
-                                <div class="checkout-nav">
-                                    <a class="checkout-back-btn" href=""><span class="lnr lnr-chevron-left"></span> Back</a>
-                                    <a class="checkout-next-btn" href="">Next <span class="lnr lnr-chevron-right"></span></a>
-                                </div>
-                            </div>
-                            <div id="tab-4">
+                            <div id="tab-2">
                                 <div class="checkout-content">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <label class="subtitle">Billed To</label>
                                             <h3 class="customer-name">Stephen Curry</h3>
-                                            <p class="customer-address">Unit 908 9th Floor, Antel Global Corporate Center, Julia Vargas Ave., Ortigas Center, Metro Manila, Philippines 1600</p>
+                                            <p class="customer-address">Unit 908 9th Floor, Antel Global Corporate Center, Julia Vargas Ave., Ortigas
+                                                Center, Metro Manila, Philippines 1600</p>
                                             <p class="customer-phone">Tel No: 324 445-4544</p>
                                             <p class="customer-email">Email: youremail@companyname.com</p>
                                         </div>
                                     </div>
-
+                                
                                     <div class="gap-40"></div>
-
+                                
                                     <div class="table-responsive mg-t-40">
                                         <table class="table table-invoice bd-b order-table">
                                             <thead>
@@ -528,12 +601,14 @@
                                                     <th class="w-15 text-center">QNTY</th>
                                                     <th class="w-15 text-right">Unit Price</th>
                                                     <th class="w-15 text-right">Amount</th>
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">The Friend of the Bridegroom</a></td>
-                                                    <td class="d-none d-md-table-cell tx-color-03">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam...</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">Sed ut perspiciatis unde omnis iste natus error sit
+                                                        voluptatem accusantium doloremque laudantium, totam rem aperiam...</td>
                                                     <td class="text-center">
                                                         <div class="quantity">
                                                             <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
@@ -541,10 +616,12 @@
                                                     </td>
                                                     <td class="text-right">₱ 150.00</td>
                                                     <td class="text-right">₱ 300.00</td>
+                                                    <td><a href="#" class="remove"><span class="lnr lnr-trash2"></span></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">PESAH</a></td>
-                                                    <td class="d-none d-md-table-cell tx-color-03">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque...</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">At vero eos et accusamus et iusto odio dignissimos
+                                                        ducimus qui blanditiis praesentium voluptatum deleniti atque...</td>
                                                     <td class="text-center">
                                                         <div class="quantity">
                                                             <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
@@ -552,10 +629,12 @@
                                                     </td>
                                                     <td class="text-right">₱ 1,200.00</td>
                                                     <td class="text-right">₱ 1,200.00</td>
+                                                    <td><a href="#" class="remove"><span class="lnr lnr-trash2"></span></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">HeartLines</a></td>
-                                                    <td class="d-none d-md-table-cell tx-color-03">Et harum quidem rerum facilis est et expedita distinctio</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">Et harum quidem rerum facilis est et expedita
+                                                        distinctio</td>
                                                     <td class="text-center">
                                                         <div class="quantity">
                                                             <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
@@ -563,10 +642,13 @@
                                                     </td>
                                                     <td class="text-right">₱ 850.00</td>
                                                     <td class="text-right">₱ 1,700.00</td>
+                                                    <td><a href="#" class="remove"><span class="lnr lnr-trash2"></span></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="tx-nowrap"><a href="">Pandasal Set 2020</a></td>
-                                                    <td class="d-none d-md-table-cell tx-color-03">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</td>
+                                                    <td class="d-none d-md-table-cell tx-color-03">Neque porro quisquam est, qui dolorem ipsum quia
+                                                        dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                                    </td>
                                                     <td class="text-center">
                                                         <div class="quantity">
                                                             <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
@@ -574,16 +656,19 @@
                                                     </td>
                                                     <td class="text-right">₱ 850.00</td>
                                                     <td class="text-right">₱ 2,550.00</td>
+                                                    <td><a href="#" class="remove"><span class="lnr lnr-trash2"></span></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-
+                                
                                     <div class="checkout-bt row justify-content-between">
                                         <div class="col-sm-12 col-lg-6 order-2 order-sm-0 mg-t-40 mg-sm-t-0">
                                             <div class="gap-30"></div>
                                             <label class="tx-sans tx-uppercase tx-10 tx-medium tx-spacing-1 tx-color-03">Notes</label>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                                                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                                explicabo.
                                             </p>
                                         </div>
                                         <!-- col -->
@@ -607,11 +692,35 @@
                                                     <strong>$5,987.50</strong>
                                                 </li>
                                             </ul>
-
+                                
                                             <!-- <button class="btn btn-block primary-btn mt-2"><span class="fa fa-check-circle fa-icon mr-2"></span> Place Order</button> -->
                                         </div>
                                         <!-- col -->
                                     </div>
+                                </div>
+                                <div class="checkout-nav">
+                                    <a class="checkout-back-btn" href=""><span class="lnr lnr-chevron-left"></span> Back</a>
+                                    <a class="checkout-next-btn" href="">Next <span class="lnr lnr-chevron-right"></span></a>
+                                </div>
+                            </div>
+                            <div id="tab-3">
+                                <div class="checkout-content">
+                                    <h3>Payment Method</h3>
+                                    @foreach($payment_method as $method)
+                                    <div>
+                                        <input type="radio" name="payment_method" value="{{ $method->id }}" id="method{{ $method->id }}"
+                                            name="groupOfDefaultRadios">
+                                        <label for="method{{ $method->id }}">{{ $method->name }}</label>
+                                        <div class="sub1">
+                                            @foreach($method->paymentList as $list)
+                                            <div>
+                                                <input type="radio" name="payment_option" value="{{$list->name}}" id="paylist{{$list->id}}" />
+                                                <label for="paylist{{$list->id}}">{{ $list->name }}</label>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    @endforeach
                                 </div>
                                 <div class="checkout-nav">
                                     <a class="checkout-back-btn" href=""><span class="lnr lnr-chevron-left"></span> Back</a>
