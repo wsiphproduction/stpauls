@@ -31,9 +31,9 @@
 	function collapseAllExcept($menuToAvoid) {
 		var $activeMenus,
 			$menusToCollapse;
-		$activeMenus = $('li.flexMenu-viewMore.active');
+		$activeMenus = $('li.flexMenu-viewMore.focus');
 		$menusToCollapse = $activeMenus.not($menuToAvoid);
-		$menusToCollapse.removeClass('active').find('> ul').hide();
+		$menusToCollapse.removeClass('focus').find('> ul').hide();
 	}
 	$(window).resize(function () {
 		clearTimeout(resizeTimeout);
@@ -86,7 +86,7 @@
 			}
 			if (needsMenu($lastItem) && numItems > s.threshold && !s.undo && $this.is(':visible')
 				&& (s.shouldApply())) {
-				var $popup = $('<ul class="flexMenu-popup" style="display:none;' + ((s.popupAbsolute) ? ' position: absolute;' : '') + '"></ul>');
+				var $popup = $('<ul class="flexMenu-popup rd-navbar-dropdown"></ul>');
 				// Add class if popupClass option is set
 				$popup.addClass(s.popupClass);
 				// Move all list items after the first to this new popup ul
@@ -109,7 +109,7 @@
 				if (allInPopup) {
 					$this.append('<li class="flexMenu-viewMore flexMenu-allInPopup"><a href="#" title="' + s.linkTitleAll + '">' + s.linkTextAll + '</a></li>');
 				} else {
-					$this.append('<li class="flexMenu-viewMore"><a href="#" title="' + s.linkTitle + '">' + s.linkText + '</a></li>');
+					$this.append('<li class="flexMenu-viewMore rd-navbar--has-dropdown rd-navbar-submenu"><a href="#" title="' + s.linkTitle + '">' + s.linkText + '</a></li>');
 				}
 				$moreItem = $this.find('> li.flexMenu-viewMore');
 				/// Check to see whether the more link has been pushed down. This might happen if the link immediately before it is especially wide.
@@ -127,18 +127,16 @@
 					collapseAllExcept($moreItem);
 					//Open and Set active the one being interacted with.
 					$popup.toggle();
-					$moreItem.toggleClass('active');
+					$moreItem.toggleClass('focus');
 					e.preventDefault();
 				});
 				if (s.showOnHover && (typeof Modernizr !== 'undefined') && !Modernizr.touch) { // If requireClick is false AND touch is unsupported, then show the menu on hover. If Modernizr is not available, assume that touch is unsupported. Through the magic of lazy evaluation, we can check for Modernizr and start using it in the same if statement. Reversing the order of these variables would produce an error.
 					$moreItem.hover(
 						function () {
-							$popup.show();
-							$(this).addClass('active');
+							$(this).addClass('focus');
 						},
 						function () {
-							$popup.hide();
-							$(this).removeClass('active');
+							$(this).removeClass('focus');
 						});
 				}
 			} else if (s.undo && $this.find('ul.flexMenu-popup')) {

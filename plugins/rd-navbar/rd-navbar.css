@@ -2698,7 +2698,7 @@ h3+.card-custom-group-wrap {
 .rd-navbar-static .rd-navbar-nav .rd-navbar-submenu.opened>.rd-navbar-megamenu,
 .rd-navbar-static .rd-navbar-nav .rd-navbar-submenu.focus>.rd-navbar-dropdown,
 .rd-navbar-static .rd-navbar-nav .rd-navbar-submenu.focus>.rd-navbar-megamenu {
-    transform: translateY(0px);
+    transform: translateY(-2px);
 }
 
 .rd-navbar-fullwidth .rd-navbar-nav .rd-navbar-submenu .rd-navbar-submenu.focus>.rd-navbar-dropdown,
@@ -2842,7 +2842,7 @@ h3+.card-custom-group-wrap {
 .rd-navbar-fullwidth .rd-navbar-dropdown .rd-navbar--has-dropdown>.rd-navbar-submenu-toggle::after,
 .rd-navbar-static .rd-navbar-dropdown .rd-navbar--has-dropdown>.rd-navbar-submenu-toggle::after {
     position: absolute;
-    top: 9px;
+    top: 18px;
     right: 25px;
     display: inline-block;
     width: auto;
@@ -3464,10 +3464,9 @@ h3+.card-custom-group-wrap {
 
 .rd-navbar-static .rd-navbar-nav>li>.rd-navbar-submenu-toggle,
 .rd-navbar-sidebar .rd-navbar-nav>li>.rd-navbar-submenu-toggle {
-    margin-top: -6px;
     display: inline-block;
     width: 17px;
-    line-height: inherit;
+    line-height: 1;
     text-align: center;
     cursor: pointer;
     color: var(--first-color);
@@ -3909,16 +3908,16 @@ h3+.card-custom-group-wrap {
 }
 
 .rd-navbar-static .rd-navbar-nav {
-    margin: -7px -15px;
-    font-size: inherit;
-    line-height: inherit;
+    margin: -7px -15px 0;
+    font-size: 0;
+    line-height: 0;
     position: relative;
     z-index: 5;
 }
 
 .rd-navbar-static .rd-navbar-nav>li {
     margin-top: 10px;
-    padding: 0 15px;
+    padding: 0 18px;
     position: relative;
 }
 
@@ -3929,7 +3928,7 @@ h3+.card-custom-group-wrap {
 
 .rd-navbar-static .rd-navbar-nav>li>.rd-navbar-dropdown,
 .rd-navbar-static .rd-navbar-nav>li .rd-navbar-megamenu {
-    margin-top: 7px;
+    margin-top: 22px;
 }
 
 .rd-navbar-static.rd-navbar_modern .rd-navbar-top-panel {
@@ -5102,7 +5101,7 @@ html.rd-navbar-fixed-linked .page {
 
 @media (max-width: 1299px) {
     .rd-navbar-static .rd-navbar-nav {
-        margin: -2px -15px -7px;
+        margin: -4px -15px 0;
     }
     .rd-navbar-static.rd-navbar_modern .rd-navbar-nav>li {
         padding-left: 12px !important;
@@ -5111,8 +5110,8 @@ html.rd-navbar-fixed-linked .page {
     .rd-navbar .rd-navbar-nav>li>a {
         font-size: 13px !important;
     }
-    .rd-navbar-static .rd-navbar-nav>li>.rd-navbar-submenu-toggle, .rd-navbar-sidebar .rd-navbar-nav>li>.rd-navbar-submenu-toggle {
-        margin-top: -8px;
+    .rd-navbar-static .rd-navbar-nav>li>a:hover:after, .rd-navbar-sidebar .rd-navbar-nav>li>a:hover:after, .rd-navbar-static .rd-navbar-nav>li.focus>a:after {
+        top: 22px;
     }
     .rd-navbar-static .rd-navbar-nav>li {
         padding: 0 10px;
@@ -5956,7 +5955,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-n-search .rd-n-search__submit::before {
-    content: "\ec22";
+    content: "\e86f";
     position: absolute;
     top: 0;
     right: 0;
@@ -5964,7 +5963,7 @@ html.rd-navbar-fixed-linked .page {
     left: 0;
     width: inherit;
     height: inherit;
-    font: 400 19px Linearicons;
+    font: 400 19px Linearicons-Free;
     line-height: inherit;
     text-align: center;
     color: white;
@@ -5992,7 +5991,7 @@ html.rd-navbar-fixed-linked .page {
     left: 0;
     display: inline-block;
     padding: 2px;
-    font-family: Linearicons;
+    font-family: Linearicons-Free;
     font-weight: 600;
     line-height: 24px;
     text-align: center;
@@ -6003,13 +6002,13 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar .rd-navbar-n-search__toggle::before {
     margin-right: -2px;
-    content: "\ec22";
+    content: "\e86f";
     font-size: 19px;
 }
 
 .rd-navbar .rd-navbar-n-search__toggle::after {
     margin-top: -1px;
-    content: "\ec35";
+    content: "\e870";
     font-size: 22px;
 }
 
@@ -6082,21 +6081,21 @@ html.rd-navbar-fixed-linked .page {
     border-radius: 2px;
     -webkit-appearance: none;
     transition: .3s ease-in-out;
-    border: 1px solid #ddd;
+    border: 1px solid #f8f8f8;
 }
 
 .form-input:focus {
     outline: 0;
     background: #fff;
-    border-color: #ddd;
+    border-color: #ececee
 }
 
-/* textarea.form-input {
+textarea.form-input {
     height: 216px;
     min-height: 60px;
     max-height: 367px;
     resize: vertical
-} */
+}
 
 .form-wrap_icon::before {
     position: absolute;
@@ -6389,13 +6388,3 @@ html.rd-navbar-fixed-linked .page {
     font-size: .65em;
     line-height: 1.85;
 }
-
-.custom-control-label::before {
-    border: 1px solid #ccc;
-}
-
-.active-user {
-    font-weight: bold !important;
-    color: #b82e24 !important;
-    padding: 5px 0;
-}   
