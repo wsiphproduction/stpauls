@@ -18,7 +18,7 @@
 		resizeTimeout;
 	// When the page is resized, adjust the flexMenus.
 	function adjustFlexMenu() {
-		if ($(window).width() !== windowWidth || $(window).height() !== windowHeight) {
+		if ($(window).width() !== windowWidth || $(window).height() !== windowHeight || $(window).width() <= 991) {
 			$(flexObjects).each(function () {
 				$(this).flexMenu({
 					'undo' : true
@@ -107,9 +107,9 @@
 					}
 				}
 				if (allInPopup) {
-					$this.append('<li class="flexMenu-viewMore flexMenu-allInPopup"><a href="#" title="' + s.linkTitleAll + '">' + s.linkTextAll + '</a></li>');
+					$this.append('<li class="flexMenu-viewMore flexMenu-allInPopup"><a href="" title="' + s.linkTitleAll + '">' + s.linkTextAll + '</a><span class="rd-navbar-submenu-toggle"></span></li>');
 				} else {
-					$this.append('<li class="flexMenu-viewMore rd-navbar--has-dropdown rd-navbar-submenu"><a href="#" title="' + s.linkTitle + '">' + s.linkText + '</a></li>');
+					$this.append('<li class="flexMenu-viewMore rd-navbar--has-dropdown rd-navbar-submenu"><a href="" title="' + s.linkTitle + '">' + s.linkText + '</a><span class="rd-navbar-submenu-toggle"></span></li>');
 				}
 				$moreItem = $this.find('> li.flexMenu-viewMore');
 				/// Check to see whether the more link has been pushed down. This might happen if the link immediately before it is especially wide.

@@ -1186,6 +1186,23 @@
                 linkTitle: "",
                 linkText: "Others"
             });
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            }
+        });
+        $(window).resize(function () {
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            } else {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    linkTitle: "",
+                    linkText: "Others"
+                });
+            }
         });
     </script>
     
