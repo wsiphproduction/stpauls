@@ -8,14 +8,14 @@
     <title>ST PAULS Online | Catholic Online Bookstore in Philippines</title>
     <link rel="shortcut icon" href="images/misc/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.theme.default.min.css" />
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="plugins/linearicon/linearicon.min.css" />
     <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
     <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
-    <link rel="stylesheet" href="plugins/vanilla-zoom/vanilla-zoom.css" />
+    <link rel="stylesheet" href="plugins/xZoom/src/xzoom.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
     <link rel="stylesheet" href="css/better-rating.css" />
@@ -406,39 +406,24 @@
                             <div class="product-wrap">
                                 <div class="row">
                                     <div class="col-lg-5">
-                                        <div class="easyzoom easyzoom--adjacent easyzoom--with-thumbnails">
-                                            <a href="images/misc/book1.jpg">
-                                                <img src="images/misc/book1.jpg" alt="" width="100%" height="100%" />
-                                            </a>
+                                        <div class="xzoom-container">
+                                            <img class="xzoom" id="xzoom-default" src="images/misc/book1.jpg"
+                                                xoriginal="images/misc/book1.jpg" />
                                         </div>
-
-                                        <ul class="thumbnails">
-                                            <li>
-                                                <a href="images/misc/book1.jpg" data-standard="images/misc/book1.jpg">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="images/misc/book1.jpg" data-standard="images/misc/book1.jpg">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="images/misc/book1.jpg" data-standard="images/misc/book1.jpg">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="images/misc/book1.jpg" data-standard="images/misc/book1.jpg">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="images/misc/book1.jpg" data-standard="images/misc/book1.jpg">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <div id="product-gallery-slider" class="slick-slider">
+                                            <a href="images/misc/book1.jpg" class="xzoom-link"><img class="xzoom-gallery"
+                                                    src="images/misc/book1.jpg" xpreview="images/misc/book1.jpg"></a>
+                                            <a href="images/misc/book1.jpg" class="xzoom-link"><img class="xzoom-gallery"
+                                                    src="images/misc/book1.jpg"></a>
+                                            <a href="images/misc/book1.jpg" class="xzoom-link"><img class="xzoom-gallery"
+                                                    src="images/misc/book1.jpg"></a>
+                                            <a href="images/misc/book1.jpg" class="xzoom-link"><img class="xzoom-gallery"
+                                                    src="images/misc/book1.jpg"></a>
+                                            <a href="images/misc/book1.jpg" class="xzoom-link"><img class="xzoom-gallery"
+                                                    src="images/misc/book1.jpg"></a>
+                                            <a href="images/misc/book1.jpg" class="xzoom-link"><img class="xzoom-gallery"
+                                                    src="images/misc/book1.jpg"></a>
+                                        </div>
                                     </div>
                                     <div class="col-lg-7">
                                         <form id="addToCart" data-source="addToCart">
@@ -885,10 +870,48 @@
         var bannerID = "banner";
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/rd-navbar/dist/js/jquery.rd-navbar.js"></script>
+    <script src="plugins/materialize/js/materialize.js"></script>
+    <script src="plugins/aos/dist/aos.js"></script>
+    <script src="plugins/jssocials/jssocials.js"></script>
+    <script src="plugins/slick/slick.js"></script>
+    <script src="plugins/slick/slick.extension.js"></script>
+    <script src="plugins/flexmenu/modernizr.custom.js"></script>
+    <script src="plugins/flexmenu/flexmenu.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                linkTitle: "",
+                linkText: "Others"
+            });
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            }
+        });
+        $(window).resize(function () {
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            } else {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    linkTitle: "",
+                    linkText: "Others"
+                });
+            }
+        });
+    </script>
+    
     <script src="js/script.js"></script>
 
-    <script src="plugins/easyzoom/src/easyzoom.js"></script>
+    <script src="plugins/xZoom/src/xzoom.js"></script>
+    <script src="plugins/xZoom/src/hammer.js/jquery.hammer.min.js"></script>
+    <!-- <script src="plugins/easyzoom/src/easyzoom.js"></script>
+
     <script>
         // Instantiate EasyZoom instances
         var $easyzoom = $('.easyzoom').easyZoom();
@@ -904,7 +927,7 @@
             // Use EasyZoom's `swap` method
             api1.swap($this.data('standard'), $this.attr('href'));
         });
-    </script>
+    </script> -->
 </body>
 
 </html>

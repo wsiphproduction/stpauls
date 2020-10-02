@@ -357,6 +357,7 @@ p {
     &:hover {
         transform: scale(1.1);
         transition: transform .3s ease-in-out;
+        color: $first-color;
     }
 }
 
@@ -982,6 +983,7 @@ $gaps: 10,
 
 .product-link {
     display: block;
+    padding: 0 15px;
 
     &:last-child {
         margin-right: 1px;
@@ -995,7 +997,6 @@ $gaps: 10,
     width: 100%;
     border: 1px solid #dfdfdf;
     transition: all 0.5s ease-out;
-    margin: 1rem 0;
 
     img {
         max-width: 100%;
@@ -1015,6 +1016,12 @@ $gaps: 10,
         margin: 0 !important;
         font-size: .75em !important;
         color: $second-color;
+        text-overflow: ellipsis;
+        min-height: 70px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
 
     &:hover {
@@ -1553,6 +1560,7 @@ $gaps: 10,
     img {
         width: 400px;
         margin: 20px 0;
+        width: 100%;
     }
 }
 
@@ -2081,6 +2089,10 @@ $gaps: 10,
 }
 
 .product-additional {
+    img {
+        width: 100%;
+    }
+    
     .nav {
         background: #e3e3e3;
 
@@ -3289,6 +3301,22 @@ $tabs: 1,
 
     a {
         color: $fifth-color;
+    }
+}
+
+.out-of-stock {
+    font-family: $font1;
+    font-size: 1em;
+    font-weight: 600;
+    background: transparent;
+    text-transform: uppercase;
+    color: $first-color;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+
+    &:hover {
+        color: $first-color;
     }
 }
 
