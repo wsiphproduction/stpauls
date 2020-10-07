@@ -982,6 +982,7 @@ $gaps: 10,
 
 .product-link {
     display: block;
+    padding: 0 15px;
 
     &:last-child {
         margin-right: 1px;
@@ -995,7 +996,6 @@ $gaps: 10,
     width: 100%;
     border: 1px solid #dfdfdf;
     transition: all 0.5s ease-out;
-    margin: 1rem 0;
 
     img {
         max-width: 100%;

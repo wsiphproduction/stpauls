@@ -450,6 +450,9 @@
   .privacy-policy-btn .default-btn {
     margin-left: 0px;
   }
+  .mb-xs-4 {
+    margin-bottom: 1.5rem !important;
+  }
 }
 
 @media (max-width: 560px) {

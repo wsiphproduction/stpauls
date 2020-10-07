@@ -1122,6 +1122,7 @@ p {
 
 .product-link {
   display: block;
+  padding: 0 15px;
 }
 
 .product-link:last-child {
@@ -1136,7 +1137,6 @@ p {
   border: 1px solid #dfdfdf;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-  margin: 1rem 0;
 }
 
 .product-card img {
@@ -4003,6 +4003,9 @@ p {
   }
   .privacy-policy-btn .default-btn {
     margin-left: 0px;
+  }
+  .mb-xs-4 {
+    margin-bottom: 1.5rem !important;
   }
 }
 
