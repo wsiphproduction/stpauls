@@ -75,7 +75,7 @@ $(document).ready(function () {
 
 	$(bookSlick).slick({
 		infinite: false,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
@@ -105,7 +105,7 @@ $(document).ready(function () {
 
 	$(bibleSlick).slick({
 		infinite: false,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
@@ -135,7 +135,7 @@ $(document).ready(function () {
 
 	$(devotionalSlick).slick({
 		infinite: false,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
@@ -189,7 +189,7 @@ $(document).ready(function () {
 
 	$(recoSlick).slick({
 		infinite: false,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
@@ -227,7 +227,7 @@ $(document).ready(function () {
 
 	$(saleSlick).slick({
 		infinite: false,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
@@ -258,5 +258,18 @@ $(document).ready(function () {
 
 	$(".item-sale-next").click(function () {
 		$(saleSlick).slick("slickNext");
+	});
+
+
+	var productGallerySlick = "#product-gallery-slider";
+	$(productGallerySlick)
+		.parent("div")
+		.prepend('<div id="pre-loader"></div>');
+
+	$(productGallerySlick).slick({
+		infinite: false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: true
 	});
 });

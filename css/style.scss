@@ -64,55 +64,30 @@ p {
     color: $second-color;
 }
 
-.preloader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 100000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: white;
-    transition: 0.3s all ease;
+// PRELOADER
+#preloader,
+#pre-loader {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    text-align: center !important;
+    background-color: #fff !important;
+    z-index: 99 !important;
 
-    &.loaded {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .preloader-body {
-        text-align: center;
-
-        p {
-            position: relative;
-            right: -8px;
-        }
-    }
-
-    .cssload-container {
-        width: 100%;
-        height: 36px;
-        text-align: center;
-    }
-
-    .cssload-speeding-wheel {
-        width: 36px;
-        height: 36px;
-        margin: 0 auto;
-        border: 3px solid $first-color;
-        border-radius: 50%;
-        border-left-color: transparent;
-        border-bottom-color: transparent;
-        animation: cssload-spin 0.88s infinite linear;
-    }
-
-    @keyframes cssload-spin {
-        100% {
-            transform: rotate(360deg);
-        }
+    #status {
+        padding: 0 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background-image: url(../images/misc/ajax-loader.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: -100px 0 0 -100px;
     }
 }
 
@@ -357,6 +332,7 @@ p {
     &:hover {
         transform: scale(1.1);
         transition: transform .3s ease-in-out;
+        color: $first-color;
     }
 }
 
@@ -1015,6 +991,12 @@ $gaps: 10,
         margin: 0 !important;
         font-size: .75em !important;
         color: $second-color;
+        text-overflow: ellipsis;
+        min-height: 70px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
 
     &:hover {
@@ -1553,6 +1535,7 @@ $gaps: 10,
     img {
         width: 400px;
         margin: 20px 0;
+        width: 100%;
     }
 }
 
@@ -2081,6 +2064,10 @@ $gaps: 10,
 }
 
 .product-additional {
+    img {
+        width: 100%;
+    }
+    
     .nav {
         background: #e3e3e3;
 
@@ -3289,6 +3276,22 @@ $tabs: 1,
 
     a {
         color: $fifth-color;
+    }
+}
+
+.out-of-stock {
+    font-family: $font1;
+    font-size: 1em;
+    font-weight: 600;
+    background: transparent;
+    text-transform: uppercase;
+    color: $first-color;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+
+    &:hover {
+        color: $first-color;
     }
 }
 

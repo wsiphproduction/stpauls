@@ -94,72 +94,31 @@ p {
   color: #555555;
 }
 
-.preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 100000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  background: white;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
+#preloader,
+#pre-loader {
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center !important;
+  background-color: #fff !important;
+  z-index: 99 !important;
 }
 
-.preloader.loaded {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.preloader .preloader-body {
-  text-align: center;
-}
-
-.preloader .preloader-body p {
-  position: relative;
-  right: -8px;
-}
-
-.preloader .cssload-container {
-  width: 100%;
-  height: 36px;
-  text-align: center;
-}
-
-.preloader .cssload-speeding-wheel {
-  width: 36px;
-  height: 36px;
-  margin: 0 auto;
-  border: 3px solid #b82e24;
-  border-radius: 50%;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  -webkit-animation: cssload-spin 0.88s infinite linear;
-          animation: cssload-spin 0.88s infinite linear;
-}
-
-@-webkit-keyframes cssload-spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes cssload-spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+#preloader #status,
+#pre-loader #status {
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/misc/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
 }
 
 #banner img,
@@ -424,6 +383,7 @@ p {
   transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  color: #b82e24;
 }
 
 .add-cart-alt1-btn {
@@ -1157,6 +1117,12 @@ p {
   margin: 0 !important;
   font-size: .75em !important;
   color: #555555;
+  text-overflow: ellipsis;
+  min-height: 70px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .product-card:hover {
@@ -1717,6 +1683,7 @@ p {
 #home-partner img {
   width: 400px;
   margin: 20px 0;
+  width: 100%;
 }
 
 #home-payment {
@@ -2291,6 +2258,10 @@ p {
     stroke-width: 5;
     fill: #f8332a;
   }
+}
+
+.product-additional img {
+  width: 100%;
 }
 
 .product-additional .nav {
@@ -3553,6 +3524,23 @@ p {
   color: #b81600;
 }
 
+.out-of-stock {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  background: transparent;
+  text-transform: uppercase;
+  color: #b82e24;
+  margin-top: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 20px;
+}
+
+.out-of-stock:hover {
+  color: #b82e24;
+}
+
 @font-face {
   font-family: "FontAwesome";
   src: url("../plugins/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3");
@@ -4005,7 +3993,7 @@ p {
     margin-left: 0px;
   }
   .mb-xs-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
   }
 }
 
@@ -4053,6 +4041,9 @@ p {
   }
   .product-wrap .product-detail .product-btn .product-wishlist svg {
     width: 40px;
+  }
+  .add-cart-btn {
+    font-size: .85rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

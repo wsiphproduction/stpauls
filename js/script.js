@@ -213,8 +213,8 @@ function include(scriptUrl) {
 
 // @description FadeOut to Next Page
 
-$(document).ready(function() {
-    $(document).on("click", "a", function(e) {
+$(document).ready(function () {
+    $(document).on("click", "a", function (e) {
         e.preventDefault();
 
         var link = $(this);
@@ -236,12 +236,15 @@ $(document).ready(function() {
             window.location = href;
             return;
         }
+        if (href.indexOf("images/") == 0) {
+            return;
+        }
         if (!href || href[0] === "#") {
             return;
         }
 
-        setTimeout(function() {
-            $("html").fadeOut(function() {
+        setTimeout(function () {
+            $("html").fadeOut(function () {
                 window.location = href;
             });
         });
