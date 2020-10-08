@@ -341,20 +341,28 @@
             <section id="default-wrapper">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <h3 class="subpage-heading">Options</h3>
-                            <div class="side-menu">
-                                <ul>
-                                    <li class="active"><a href="customer-dashboard.htm">Account Dashboard</a></li>
-                                    <li><a href="#">Account Information</a></li>
-                                    <li><a href="customer-orders.htm">My Orders</a></li>
-                                    <li><a href="#">My Rewards</a></li>
-                                    <li><a href="#">My Product Reviews</a></li>
-                                    <li><a href="#">Log Out</a></li>
-                                </ul>
-                            </div>
+                        <div id="col1" class="col-lg-3">
+                             <nav class="rd-navbar rd-navbar-listing">
+                                <div class="listing-filter-wrap">
+                                    <div class="rd-navbar-listing-close-toggle rd-navbar-static--hidden toggle-original"><span class="lnr lnr-cross"></span> Close</div>
+                                    <h3 class="subpage-heading">Options</h3>
+                                    <div class="side-menu">
+                                        <ul>
+                                            <li class="active"><a href="customer-dashboard.htm">Account Dashboard</a></li>
+                                            <li><a href="#">Account Information</a></li>
+                                            <li><a href="customer-orders.htm">My Orders</a></li>
+                                            <li><a href="#">My Rewards</a></li>
+                                            <li><a href="#">My Product Reviews</a></li>
+                                            <li><a href="#">Log Out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                             </nav>
                         </div>
-                        <div class="col-lg-9">
+                        <div id="col2" class="col-lg-9">
+                            <nav class="rd-navbar">
+                                <div class="rd-navbar-listing-toggle rd-navbar-static--hidden toggle-original" data-rd-navbar-toggle=".listing-filter-wrap"><span class="lnr lnr-list"></span> Options</div>
+                            </nav>
                             <div class="article-content">
                                 <h3 class="subpage-heading">Account Dashboard</h3>
                                 <div class="row">
