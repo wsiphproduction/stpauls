@@ -132,6 +132,9 @@
   #signup-wrapper #log-mem {
     text-align: left !important;
   }
+  .list-product .product-card .product-price {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -299,6 +302,9 @@
   .error404 {
     font-size: 180px;
   }
+  .tbl-responsive {
+    width: 1000px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -453,6 +459,47 @@
   .mb-xs-4 {
     margin-bottom: 0.5rem !important;
   }
+  .product-card {
+    padding: 7px;
+  }
+  .product-card .product-price {
+    font-size: .85rem;
+    font-weight: 800;
+  }
+  .product-card .product-title {
+    font-size: .75rem !important;
+  }
+  .product-link {
+    padding: 0 5px;
+  }
+  .list-product .product-card {
+    padding: 7px 7px 80px;
+  }
+  .list-product .product-card .product-price {
+    font-size: .85rem;
+    font-weight: 800;
+  }
+  .list-product .product-card .product-title {
+    font-size: .75rem !important;
+  }
+  .list-product .product-link {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .col-xs-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .pr-xs-1 {
+    padding-right: 0.25rem !important;
+  }
+  .pl-xs-1 {
+    padding-left: 0.25rem !important;
+  }
 }
 
 @media (max-width: 560px) {
@@ -483,6 +530,13 @@
   .product-wrap .product-detail .product-btn .product-wishlist svg {
     width: 40px;
   }
+  .add-cart-alt1-btn {
+    font-size: .75rem !important;
+    padding: 7px;
+  }
+  .add-cart-alt1-btn img {
+    width: 20px !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -500,8 +554,16 @@
   .product-wrap .product-detail .product-btn .product-wishlist svg {
     width: 40px;
   }
-  .add-cart-btn {
-    font-size: .85rem !important;
+  .out-of-stock {
+    font-size: .75rem !important;
+    padding: 22px 7px;
+  }
+  .add-cart-btn, .add-cart-alt1-btn {
+    font-size: .75rem !important;
+    padding: 7px;
+  }
+  .add-cart-btn img, .add-cart-alt1-btn img {
+    width: 20px !important;
   }
 }
 /*# sourceMappingURL=responsive.css.map */
