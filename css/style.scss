@@ -2718,7 +2718,7 @@ $gaps: 10,
             }
         }
 
-        .fa-youtube-play {
+        .fa-youtube {
             background: #e52d27 !important;
 
             &:before {
@@ -2776,18 +2776,23 @@ $gaps: 10,
     padding: 5px 3px;
     position: fixed;
     bottom: 200px;
-    right: -143px;
+    right: -153px;
     display: block;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 888;
     transition: all 0.2s ease-in-out;
+
+    nav {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
 
     img {
         width: 200px;
     }
 
     &:hover {
-        right: 15px;
+        right: 1px;
     }
 }
 
@@ -3293,6 +3298,130 @@ $tabs: 1,
 
     &:hover {
         color: $first-color;
+    }
+}
+
+// SHORTCUTLINK WRAP
+.rd-navbar-sl {
+    box-shadow: none !important;
+    padding: 0;
+}
+
+.rd-navbar-sl-close-toggle {
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    span {
+        font-size: 1.3em;
+        font-weight: 800;
+        vertical-align: text-top;
+    }
+}
+
+.rd-navbar-sl-toggle {
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    .lnr-list {
+        vertical-align: text-top;
+        font-size: 1.25em;
+        margin-right: 10px;
+    }
+}
+
+.sl-filter-wrap {
+    padding-left: 15px;
+    padding-right: 30px;
+
+    &.active {
+        display: block;
+    }
+
+    .sl-category-title {
+        font-size: .8em;
+        color: lighten($third-color, 20%);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .sl-category {
+        li {
+            font-size: .9em;
+            font-weight: 500;
+            line-height: 2;
+
+            a {
+                color: $second-color;
+
+                &:hover {
+                    color: $first-color;
+                }
+            }
+        }
+    }
+
+    .sl-view-link {
+        font-size: .9em;
+        font-weight: 700;
+        line-height: 2;
+        color: $first-color;
+        text-decoration: underline;
+    }
+
+    .sl-filter-title {
+        font-size: .9em;
+        font-weight: 500;
+        color: $second-color;
+    }
+}
+
+.sl-filter-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background: $first-color;
+    height: 100%;
+    width: 280px;
+    font-size: 16px;
+    box-shadow: 0 1px 12px rgba(136, 136, 136, 0.22);
+    padding: 20px 25px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(110%);
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, transform;
+    transition: 0.32s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    color: white;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: lighten($first-color, 30%);
+        }
+    }
+
+    &.active {
+      transform: translateX(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .gap-70 {
+      height: 50px;
+    }
+}
+
+.page {
+    .sl-filter-wrap {
+        .icon-primary {
+            color: white;
+            width: 30px;
+        }
     }
 }
 

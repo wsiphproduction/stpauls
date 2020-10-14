@@ -212,6 +212,11 @@
 }
 
 @media (max-width: 991px) {
+
+  #sticky-contact {
+    right: -143px;     
+  }
+  
   .banner-caption {
     h2 {
       font-size: 1.15em !important;

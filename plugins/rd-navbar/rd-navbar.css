@@ -3132,10 +3132,11 @@ h3+.card-custom-group-wrap {
 .rd-navbar-static .rd-navbar-items-list>li,
 .rd-navbar-sidebar .rd-navbar-items-list>li {
     position: relative;
-    display: inline-block;
+    display: block;
     padding: 0 17px;
     font-size: 14px;
     line-height: 1.3;
+    width: 100%;
 }
 
 .rd-navbar-static .rd-navbar-items-list>li:last-child,
