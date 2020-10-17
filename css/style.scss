@@ -972,6 +972,7 @@ $gaps: 10,
     width: 100%;
     border: 1px solid #dfdfdf;
     transition: all 0.5s ease-out;
+    position: relative;
 
     img {
         max-width: 100%;
@@ -980,11 +981,28 @@ $gaps: 10,
         margin: 15px auto;
     }
 
+    .product-discount {
+        position: absolute;
+        background: $first-color;
+        color: white;
+        left: 0;
+        top: 0px;
+        padding: 5px;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
     .product-price {
-        font-size: 1.4em;
-        color: $second-color;
+        font-size: 1.2em;
+        color: $first-color;
         font-weight: 600;
         margin-bottom: 0;
+
+        .old {
+            font-weight: 400;
+            color: #888;
+            text-decoration: line-through;
+        }
     }
 
     .product-title {
@@ -992,10 +1010,10 @@ $gaps: 10,
         font-size: .75em !important;
         color: $second-color;
         text-overflow: ellipsis;
-        min-height: 70px;
+        min-height: 45px;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
 
@@ -1497,6 +1515,32 @@ $gaps: 10,
         }
     }
 
+    .category-flex {
+        &-1 {
+            display: flex;
+
+            h2 {
+                flex: 1;
+            }
+
+            &>div {
+                flex: 10%;
+            }
+        }
+
+        &-2 {
+            display: flex;
+
+            h2 {
+                flex: 1;
+            }
+
+            &>div {
+                flex: none;
+            }
+        }
+    }
+
     .category-title {
         color: $second-color;
         font-weight: 400;
@@ -1733,11 +1777,33 @@ $gaps: 10,
             // margin: 15px auto;
         }
 
+        .product-discount {
+            position: absolute;
+            background: $first-color;
+            color: white;
+            left: 0;
+            top: 0px;
+            padding: 5px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
         .product-price {
-            font-size: 1.4em;
-            color: $second-color;
+            font-size: 1.2em;
+            color: $first-color;
             font-weight: 600;
             margin-bottom: 0;
+
+            .old {
+                font-weight: 400;
+                color: #888;
+                text-decoration: line-through;
+            }
+
+            span {
+                display: block;
+                content: "&nbsp;";
+            }
         }
 
         .product-title {
@@ -2068,7 +2134,7 @@ $gaps: 10,
     img {
         width: 100%;
     }
-    
+
     .nav {
         background: #e3e3e3;
 
@@ -3188,10 +3254,6 @@ $tabs: 1,
 .card-body {
     flex: 1 1 auto;
     padding: 1.25rem;
-}
-
-#salesTransaction {
-    font-size: 0.85rem;
 }
 
 .tab-content .tab-pane {
