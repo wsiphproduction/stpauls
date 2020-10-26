@@ -156,7 +156,14 @@
   }
 
   #salesTransaction_wrapper {
-    font-size: 0.8rem;
+      .dataTables_scroll,
+      .dataTables_info {
+        font-size: 0.8rem;
+      }
+
+      .dataTables_info {
+          text-align: left !important;
+      }
   }
 }
 

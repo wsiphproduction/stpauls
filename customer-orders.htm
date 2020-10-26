@@ -358,7 +358,7 @@
                         <div class="col-lg-9">
                             <div class="article-content">
                                 <h3 class="subpage-heading">My Orders</h3>
-                                <table id="salesTransaction" class="table table-md table-hover" style="width:100%">
+                                <table id="salesTransaction" class="table table-md table-hover text-nowrap" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th scope="col">Order#</th>
@@ -706,6 +706,10 @@
     <script>
         $(document).ready(function () {
             $('#salesTransaction').DataTable({
+                "responsive": false,
+                "scrollX": true,
+                "scrollCollapse": true,
+                "searching": false,
                 "columnDefs": [
                     { responsivePriority: 1, targets: 0 },
                     { responsivePriority: 2, targets: -1 }
@@ -713,11 +717,12 @@
                 "order": [[0, 'desc']],
                 "language": {
                     "paginate": {
-                        "previous": "&lsaquo;",
-                        "next": "&rsaquo;"
+                        "previous": "<i class='nr lnr-chevron-left'></i>",
+                        "next": "<i class='nr lnr-chevron-right'></i>"
                     }
                 },
-                scrollX: true
+                "pageLength": 5,
+                "dom": 'rt<"text-left"i>p'
             });
         });
     </script>
