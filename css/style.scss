@@ -327,6 +327,8 @@ p {
         display: inline !important;
         box-shadow: none !important;
         margin-right: 5px !important;
+        width: auto !important;
+        height: auto !important;
     }
 
     &:hover {
@@ -495,11 +497,11 @@ p {
     padding-right: 60px;
 
     &:after {
-        content: "\e874";
+        content: "\ec3a";
         position: absolute;
         top: 35%;
-        right: 30px;
-        font: 600 14px 'Linearicons-Free';
+        right: 15px;
+        font: 600 14px 'Linearicons';
         border: none;
     }
 }
@@ -966,7 +968,7 @@ $gaps: 10,
 }
 
 .product-card {
-    background: #ffffff;
+    background: #f3f3f3;
     padding: 30px;
     text-align: center;
     width: 100%;
@@ -974,11 +976,13 @@ $gaps: 10,
     transition: all 0.5s ease-out;
     position: relative;
 
-    img {
+    .product-img {
         max-width: 100%;
         width: auto !important;
-        height: auto !important;
+        height: 14vw;
         margin: 15px auto;
+        min-height: 250px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     }
 
     .product-discount {
@@ -988,7 +992,7 @@ $gaps: 10,
         left: 0;
         top: 0px;
         padding: 5px;
-        font-size: 11px;
+        font-size: 14px;
         font-weight: bold;
     }
 
@@ -999,6 +1003,7 @@ $gaps: 10,
         margin-bottom: 0;
 
         .old {
+            font-size: 15px;
             font-weight: 400;
             color: #888;
             text-decoration: line-through;
@@ -1755,8 +1760,7 @@ $gaps: 10,
     }
 
     .product-card {
-        // background: #f3f3f3;
-        background: #fff;
+        background: #f3f3f3;
         padding: 30px 30px 100px;
         text-align: center;
         width: 100%;
@@ -1765,7 +1769,7 @@ $gaps: 10,
         position: relative;
         // min-height: 539px;
 
-        img {
+        .product-img {
             // max-width: 80%;
             // width: auto !important;
             // height: auto !important;
@@ -3356,7 +3360,7 @@ $tabs: 1,
     color: $first-color;
     margin-top: 10px;
     transition: all 0.2s ease-in-out;
-    padding: 20px;
+    padding: 7px 20px;
 
     &:hover {
         color: $first-color;
@@ -3468,13 +3472,13 @@ $tabs: 1,
     }
 
     &.active {
-      transform: translateX(0%);
-      opacity: 1;
-      visibility: visible;
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
     }
 
     .gap-70 {
-      height: 50px;
+        height: 50px;
     }
 }
 
@@ -3484,6 +3488,20 @@ $tabs: 1,
             color: white;
             width: 30px;
         }
+    }
+}
+
+#salesTransaction_wrapper {
+
+    .dataTables_scroll,
+    .dataTables_info {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    .dataTables_scroll .lnr {
+        font-size: 1.25rem;
+        font-weight: 700;
     }
 }
 
