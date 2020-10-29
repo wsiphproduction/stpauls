@@ -271,6 +271,10 @@ p {
         border: 2px solid darken($fifth-color, 10%);
         transition: all 0.2s ease-in-out;
     }
+
+    &:focus {
+        color: white;
+    }
 }
 
 .secondary-btn {
@@ -500,7 +504,7 @@ p {
         content: "\ec3a";
         position: absolute;
         top: 35%;
-        right: 15px;
+        right: 25px;
         font: 600 14px 'Linearicons';
         border: none;
     }
@@ -1761,7 +1765,7 @@ $gaps: 10,
 
     .product-card {
         background: #f3f3f3;
-        padding: 30px 30px 100px;
+        padding: 30px 30px 80px;
         text-align: center;
         width: 100%;
         border: 1px solid #dfdfdf;
@@ -1788,7 +1792,7 @@ $gaps: 10,
             left: 0;
             top: 0px;
             padding: 5px;
-            font-size: 11px;
+            font-size: 14px;
             font-weight: bold;
         }
 
@@ -2799,7 +2803,7 @@ $gaps: 10,
 }
 
 .post-footer {
-    background: black;
+    background: #252525;
     padding: 2rem 1rem;
     font-size: 0.9em;
     text-align: center;
@@ -2901,7 +2905,7 @@ $gaps: 10,
     }
 
     &.dark {
-        background: $third-color;
+        background: #252525;
 
         p {
             color: white;

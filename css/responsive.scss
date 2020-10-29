@@ -645,9 +645,7 @@
       width: 24px !important;
     }
   }
-}
 
-@media (max-width: 640px) {
   .privacy-policy {
     bottom: 0px;
     left: 0px;
@@ -678,6 +676,9 @@
       }
     }
   }
+}
+
+@media (max-width: 640px) {
 
   .mb-xs-4 {
     margin-bottom: 0.5rem !important;
