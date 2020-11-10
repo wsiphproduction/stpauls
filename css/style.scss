@@ -3016,6 +3016,39 @@ $gaps: 10,
     background-color: #fff;
     margin: 40px 0;
 
+    &.custom {
+        border: none;
+
+        .tab {
+            &+label {
+                border-radius: 5px !important;
+                background-color: $first-color;
+                color: white;
+                margin-bottom: 10px;
+                border: 2px solid $first-color;
+
+                &:hover {
+                    background: darken($first-color, 10%);
+                    box-shadow: none;
+                }
+            }
+
+            &:checked+label {
+                background-color: #fff;
+                box-shadow: 0 -1px 0 #fff inset;
+                cursor: default;
+                border-color: $first-color;
+                border-width: 2px;
+                color: #333;
+            }
+        }
+
+        .tab__content {
+            border: 1px solid #ced4da;
+            margin-bottom: 10px;
+        }
+    }
+
     &.horizontal {
         label {
             width: 25%;
@@ -3509,4 +3542,24 @@ $tabs: 1,
     }
 }
 
+
+.sub1, .sub2 { display: none; }
+
+:checked ~ .sub1, :checked ~ .sub2 {
+    display: block;
+    margin-left: 40px;
+}
+
+#password-field {
+    padding-right: 50px;
+}
+
+.field-icon {
+    position: absolute;
+    top: 55%;
+    right: 35px;
+    z-index: 2;
+    color: #777;
+}
+    
 @import "responsive";

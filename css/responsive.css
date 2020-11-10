@@ -498,11 +498,17 @@
   .privacy-policy-btn .default-btn {
     margin-left: 0px;
   }
+  div[id^="payment_method"] {
+    font-size: 0.9rem;
+  }
+  div[id^="payment_method"] :checked ~ .sub1, div[id^="payment_method"] :checked ~ .sub2 {
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 640px) {
   .mb-xs-4 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
   .product-card {
     padding: 7px;

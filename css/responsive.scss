@@ -676,12 +676,20 @@
       }
     }
   }
+
+  div[id^="payment_method"] {
+    font-size: 0.9rem;
+
+    :checked ~ .sub1, :checked ~ .sub2 {
+        margin-left: 15px;
+    }
+  }
 }
 
 @media (max-width: 640px) {
 
   .mb-xs-4 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .product-card {

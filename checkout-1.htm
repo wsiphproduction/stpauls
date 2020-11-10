@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="plugins/owl.carousel/owl.carousel.css" />
     <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
     <link rel="stylesheet" href="plugins/owl.carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
     <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
     <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
     <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
@@ -352,7 +352,7 @@
                             <div id="tab-1">
                                 <div class="checkout-content">
                                     <div class="row">
-                                        <div class="col-lg-6 mb-sm-4">
+                                        <div class="col-lg-6 mb-sm-4 mb-xs-4">
                                             <div class="checkout-card form-style fs-sm">
                                                 <div class="form-group form-wrap">
                                                     <p>Name *</p>
@@ -429,7 +429,7 @@
                                             <div class="checkout-card">
                                                 <p class="mb-3">Select a shipping method:</p>
                                                 
-                                                <div class="tab-wrap vertical">
+                                                <div class="tab-wrap custom vertical">
                                                     <input type="radio" id="tab1" name="tabGroup1" class="tab">
                                                     <label for="tab1">Cash On Delivery (COD) <span class="fa fa-check-circle fa-icon ml-2"></span></label>
 
@@ -704,23 +704,172 @@
                                 </div>
                             </div>
                             <div id="tab-3">
-                                <div class="checkout-content">
+                                <div class="checkout-content checkout-card border-0">
                                     <h3>Payment Method</h3>
-                                    @foreach($payment_method as $method)
-                                    <div>
-                                        <input type="radio" name="payment_method" value="{{ $method->id }}" id="method{{ $method->id }}"
-                                            name="groupOfDefaultRadios">
-                                        <label for="method{{ $method->id }}">{{ $method->name }}</label>
-                                        <div class="sub1">
-                                            @foreach($method->paymentList as $list)
-                                            <div>
-                                                <input type="radio" name="payment_option" value="{{$list->name}}" id="paylist{{$list->id}}" />
-                                                <label for="paylist{{$list->id}}">{{ $list->name }}</label>
+                                    <p class="mb-3">Select a payment method:</p>
+
+                                    <div class="tab-wrap custom vertical">
+                                        <input type="radio" id="tab_1" name="tabGroup2" class="tab">
+                                        <label for="tab_1">Credit Card Payment<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                        <div class="tab__content">
+                                            <h3>Credit Card Payment</h3>
+                                            <div class="alert alert-info" role="alert">
+                                                <h4 class="alert-heading">Reminder!</h4>
                                             </div>
-                                            @endforeach
                                         </div>
+                                    
+                                        <input type="radio" id="tab_2" name="tabGroup2" class="tab">
+                                        <label for="tab_2">Online Fund Transfer<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                        <div class="tab__content">
+                                            <h3>Online Fund Transfer</h3>
+                                            <div class="row">
+                                                <div class="col-lg-8 offset-lg-2 col-md-12 p-0">
+                                                    <div class="checkout-card border-0 p-0">
+                                                        <div class="tab-wrap custom vertical">
+                                                            <input type="radio" id="tab__1" name="tabGroup3" class="tab">
+                                                            <label for="tab__1">Metrobank<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                            <div class="tab__content">
+                                                                <h3>Metrobank</h3>
+                                                                <p>Account Name : Society of St. Paul, Inc</p>
+                                                                <p>Account # : 2913291500669</p>
+                                                            </div>
+                                                        
+                                                            <input type="radio" id="tab__2" name="tabGroup3" class="tab">
+                                                            <label for="tab__2">BPI<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                            <div class="tab__content">
+                                                                <h3>BPI</h3>
+                                                                <p>Account Name : Society of St. Paul, Inc.</p>
+                                                                <p>Account # : 3561002753</p>
+                                                            </div>
+                                                        
+                                                            <input type="radio" id="tab__3" name="tabGroup3" class="tab">
+                                                            <label for="tab__3">BDO<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                            <div class="tab__content">
+                                                                <h3>BDO</h3>
+                                                                <p>Account Name : Society of St. Paul, Inc.</p>
+                                                                <p>Account # : 000300020848</p>
+                                                            </div>
+                                                        
+                                                            <input type="radio" id="tab__4" name="tabGroup3" class="tab">
+                                                            <label for="tab__4">BPI Dollar Account (SWIFT CODE : BOPIPHMM)<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+                                                        
+                                                            <div class="tab__content">
+                                                                <h3>BPI Dollar Account (SWIFT CODE : BOPIPHMM)</h3>
+                                                                <p>Account Name : Society of St. Paul, Inc.</p>
+                                                                <p>Account # : 3561002753</p>
+                                                            </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <input type="radio" id="tab_3" name="tabGroup2" class="tab">
+                                        <label for="tab_3">Money Transfer<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                        <div class="tab__content">
+                                            <h3>Money Transfer</h3>
+                                            <div class="row">
+                                                <div class="col-lg-8 offset-lg-2 col-md-12 p-0">
+                                                    <div class="checkout-card border-0 p-0">
+                                                        <div class="tab-wrap custom vertical">
+                                                            <input type="radio" id="tab___1" name="tabGroup4" class="tab">
+                                                            <label for="tab___1">Palawan Express (Suki Card: KA 113921)<span class="fa fa-check-circle fa-icon ml-2"></span></label>
+
+                                                            <div class="tab__content">
+                                                                <h3>Palawan Express (Suki Card: KA 113921)</h3>
+                                                                <p>Account # : 09267407000</p>
+                                                                <p>Recipient : JEUGLEN LEGITIMAS</p>
+                                                            </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- <input type="radio" id="tab_4" name="tabGroup2" class="tab">
+                                        <label for="tab_4">Door-to-door (D2D) <span class="fa fa-check-circle fa-icon ml-2"></span></label>
+                                    
+                                        <div class="tab__content">
+                                            <h3>Door-to-door</h3>
+                                        </div> -->
+                                    
                                     </div>
-                                    @endforeach
+                                    <div id="payment_method_1">
+                                        <input type="radio" name="payment_method" value="1" id="method1">
+                                        <label for="method1">Credit Card Payment</label>
+                                        <div class="sub1"></div>
+                                    </div>   
+                                    <div id="payment_method_2">
+                                        <input type="radio" name="payment_method" value="2" id="method2">
+                                        <label for="method2">Online Fund Transfer</label>
+                                        <div class="sub1">
+                                            <div>
+                                                <label for="paylist1">
+                                                    <input type="radio" name="payment_option" value="Metrobank" id="paylist1"> Metrobank
+                                                    <div class="sub2">
+                                                        <div class="mt-1">
+                                                            <label>Account Name : Society of St. Paul, Inc</label><br>
+                                                            <label>Account # : 2913291500669</label><br>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            
+                                            <div>
+                                                <label for="paylist2"><input type="radio" name="payment_option" value="BPI" id="paylist2"> BPI</label>
+                                                <div class="sub2">
+                                                    <div>
+                                                        <label>Account Name : Society of St. Paul, Inc.</label><br>
+                                                        <label>Account # : 3561002753</label><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="paylist3"><input type="radio" name="payment_option" value="BDO" id="paylist3"> BDO</label>
+                                                <div class="sub2">
+                                                    <div>
+                                                        <label>Account Name : Society of St. Paul, Inc.</label><br>
+                                                        <label>Account # : 000300020848</label><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <input type="radio" name="payment_option" value="BPI Dollar Account (SWIFT CODE : BOPIPHMM)" id="paylist12">
+                                                <label for="paylist12">BPI Dollar Account (SWIFT CODE : BOPIPHMM)</label>
+                                                <div class="sub2">
+                                                    <div>
+                                                        <label>Account Name : Society of St. Paul, Inc</label><br>
+                                                        <label>Account # : 3561002753</label><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                    <div id="payment_method_3">
+                                        <input type="radio" name="payment_method" value="3" id="method3">
+                                        <label for="method3">Money Transfer</label>
+                                        <div class="sub1">
+                                            <div>
+                                                <input type="radio" name="payment_option" value="Palawan Express (Suki Card: KA 113921)" id="paylist13">
+                                                <label for="paylist13">Palawan Express (Suki Card: KA 113921)</label>
+                                                <div class="sub2">
+                                                    <div>
+                                                        <label>Account # : 09267407000</label><br>
+                                                        <label>Recipient : JEUGLEN LEGITIMAS</label><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>       
                                 </div>
                                 <div class="checkout-nav">
                                     <a class="checkout-back-btn" href=""><span class="lnr lnr-chevron-left"></span> Back</a>
