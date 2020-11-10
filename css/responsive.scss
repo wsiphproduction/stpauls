@@ -246,6 +246,24 @@
     }
   }
 
+  .sub-banner-caption {
+      .container {
+          display: block;
+      }
+
+      h2 {
+          font-size: 1.5em;
+      }
+
+      .breadcrumb {
+          justify-content: center;
+      }
+
+      &+#banner {
+          margin-top: 0px;
+      }
+  }
+
   .listing-filter-wrap {
     position: fixed;
     top: 0;
@@ -451,18 +469,6 @@
 @media (max-width: 768px) {
   .banner-caption {
     display: none !important;
-  }
-
-  .sub-banner-caption {
-    background: transparent;
-    display: block !important;
-    position: relative;
-    padding: 4rem 1rem 0;
-
-    h2 {
-      font-size: 1.85em;
-      color: $first-color;
-    }
   }
 
   .crumbs {

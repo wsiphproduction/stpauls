@@ -48,9 +48,9 @@ textarea {
     outline: none;
 }
 
-p {
+/* p {
     margin: 0;
-}
+} */
 
 ul,
 ol {
@@ -5960,6 +5960,7 @@ html.rd-navbar-fixed-linked .page {
     font-weight: 400;
     font-size: 1rem;
     color: #333333;
+    margin-bottom: 0;
 }
 
 .rd-navbar-n-search .rd-n-search .dropdown-menu .dropdown-item .old-price {
@@ -5967,6 +5968,7 @@ html.rd-navbar-fixed-linked .page {
     font-size: 1rem;
     color: #888888;
     text-decoration: line-through;
+    margin-bottom: 0;
 }
 
 .rd-navbar-n-search .rd-n-search .dropdown-menu .dropdown-item img {
