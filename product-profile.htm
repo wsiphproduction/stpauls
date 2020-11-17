@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="plugins/slick/slick.css" />
     <link rel="stylesheet" href="plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
     <link rel="stylesheet" href="plugins/linearicon/linearicon.min.css" />
     <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
     <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
@@ -22,10 +22,6 @@
     <link rel="stylesheet" href="css/tagsinput.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="stylesheet" href="plugins/easyzoom/css/example.css" />
-    <link rel="stylesheet" href="plugins/easyzoom/css/pygments.css" />
-    <link rel="stylesheet" href="plugins/easyzoom/css/easyzoom.css" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,7 +36,8 @@
             <nav class="rd-navbar">
                 <!-- RD Navbar Upper Panel -->
                 <div class="rd-navbar-upper-panel">
-                    <div class="rd-navbar-upper-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap-left"><span></span></div>
+                    <div class="rd-navbar-upper-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden toggle-original"
+                        data-rd-navbar-toggle=".rd-navbar-nav-wrap-left"><span></span></div>
                     <div class="rd-navbar-upper-panel__content">
                         <div class="rd-navbar-upper-panel__left">
                             <div class="rd-navbar-nav-wrap-left">
@@ -83,7 +80,25 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="about.htm">Online Resources</a>
+                                        <a href="about.htm">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="branches.htm">Branches</a>
+                                    </li>
+                                    <li>
+                                        <a href="request-a-title.htm">Request a Title</a>
+                                    </li>
+                                    <li>
+                                        <a href="help.htm">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.htm">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Contact Us</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="">Online Resources</a>
                                     </li>
                                     <li>
                                         <a href="">Sambuhay</a>
@@ -93,7 +108,7 @@
                                     </li>
                                     <li>
                                         <a href="">Periodicals</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <!-- END RD Navbar Nav - TOP -->
                             </div>
@@ -101,7 +116,8 @@
                         <div class="rd-navbar-upper-panel__right">
                             <ul class="list-inline-xxs">
                                 <li>
-                                    <p class="country-list">Philippine-Macau</li>
+                                    <p class="country-list">Philippine-Macau
+                                </li>
                                 <li><img src="images/misc/philippine-flag.jpg" alt=""></li>
                                 <li><img src="images/misc/macau-flag.jpg" alt=""></a>
                                 </li>
@@ -116,11 +132,12 @@
                     <div class="rd-navbar-panel rd-navbar-n-search-wrap">
                         <!-- RD Navbar Toggle -->
                         <div class="rd-navbar-fixed__element-4">
-                            <button class="rd-navbar-n-search__toggle rd-navbar-n-search__toggle_additional" data-rd-navbar-toggle=".rd-navbar-n-search-wrap">
-                </button>
+                            <button class="rd-navbar-n-search__toggle rd-navbar-n-search__toggle_additional"
+                                data-rd-navbar-toggle=".rd-navbar-n-search-wrap">
+                            </button>
                         </div>
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
-              </button>
+                        </button>
                         <!-- END RD Navbar Toggle -->
                         <div class="rd-navbar-panel__content">
                             <div class="rd-navbar-panel__left">
@@ -134,18 +151,201 @@
                             </div>
                             <div class="rd-navbar-panel__center">
                                 <div class="rd-navbar-n-search rd-navbar-search_not-collapsable">
-                                    <form class="rd-n-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
+                                    <form class="rd-n-search" action="search-results.html" method="GET"
+                                        data-search-live="rd-search-results-live">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="rd-navbar-n-search-form-input" type="text" name="s" autocomplete="off">
-                                            <label class="form-label rd-input-label" for="rd-navbar-n-search-form-input">Search a product</label>
+                                            <input class="form-input" id="rd-navbar-n-search-form-input" type="text"
+                                                name="s" autocomplete="off" placeholder="Search a product">
                                             <div class="rd-n-search-results-live" id="rd-n-search-results-live"></div>
+                                            <!-- <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>                                                
+                                            </div> -->
                                         </div>
                                         <button class="rd-n-search__submit" type="submit"></button>
                                     </form>
-                                    <!-- <div class="rd-navbar-fixed--hidden">
-                      <button class="rd-navbar-n-search__toggle" data-custom-toggle=".rd-navbar-search-wrap"
-                        data-custom-toggle-disable-on-blur="true"></button>
-                    </div> -->
                                 </div>
                             </div>
                             <div class="rd-navbar-panel__right">
@@ -154,7 +354,8 @@
                                         <li>
                                             <div class="unit flex-row align-items-center unit-spacing-xs">
                                                 <div class="unit__left">
-                                                    <img class="icon icon-xxs icon-primary" src="images/misc/cart.png" alt="">
+                                                    <img class="icon icon-xxs icon-primary" src="images/misc/cart.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="unit__body">
                                                     <ul class="list-semicolon cart-header-title">
@@ -194,63 +395,6 @@
                                                     <a href="">Lorem ipsum dolor</a>
                                                 </li>
                                                 <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
                                                     <a href="">Corporis, quos, sit</a>
                                                     <ul class="rd-navbar-dropdown">
                                                         <li>
@@ -284,21 +428,55 @@
                                             <a href="">Audio Visuals</a>
                                         </li>
                                         <li>
+                                            <a href="">Corporis, quos, sit</a>
+                                            <ul class="rd-navbar-dropdown">
+                                                <li>
+                                                    <a href="">Lorem ipsum dolor</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Nulla sequi, sint</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Lorem ipsum dolor</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Nulla sequi, sint</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Corporis, quos, sit</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Corporis, quos, sit</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
                                             <a href="news.htm">Devotionals</a>
                                         </li>
                                         <li>
-                                            <a href="">Others</a>
+                                            <a href="">Audio Visuals</a>
+                                        </li>
+                                        <li>
+                                            <a href="news.htm">Devotionals</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Audio Visuals</a>
+                                        </li>
+                                        <li>
+                                            <a href="news.htm">Devotionals</a>
                                         </li>
                                     </ul>
                                     <!-- END RD Navbar Nav -->
                                 </div>
                                 <div class="col-lg-5">
                                     <ul class="list-inline-secondary">
-                                        <li><a href="">Register</a></li>
+                                        <li><a href="signup.htm">Register</a></li>
                                         <li><a href="">Forgot Password</a></li>
                                         <li><a href="">Re-activate Account</a></li>
                                         <li>
-                                            <a class="acct-login-btn" href="">
+                                            <a class="acct-login-btn" href="login.htm">
                                                 <i class="icon icon-xxxs icon-white lnr lnr-user"></i>
                                                 <span class="acct-login-divider"></span>LOGIN
                                             </a>
@@ -310,6 +488,33 @@
 
                     </div>
                     <!-- END RD Navbar Panel -->
+
+                    <div class="rd-navbar-bottom-nav">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a class="item" href="index.htm">
+                                        <span class="lnr lnr-home"></span>
+                                        <span class="text">Home</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="item" href="cart.htm">
+                                        <span class="lnr lnr-cart">
+                                            <span class="counter">3</span>
+                                        </span>
+                                        <span class="text">Cart</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a class="item" href="login.htm">
+                                        <span class="lnr lnr-user"></span>
+                                        <span class="text">Account</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <!-- END RD Navbar -->
@@ -352,51 +557,51 @@
                                 <div class="gap-10"></div>
                                 <div class="rating">
                                     <a id="five-star" href="">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
                                         <span class="rating-count">561</span>
                                     </a>
                                 </div>
                                 <div class="rating">
                                     <a id="four-star" href="">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star"></span>
                                         <span class="rating-count">459</span>
                                     </a>
                                 </div>
                                 <div class="rating">
                                     <a id="three-star" href="">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
                                         <span class="rating-count">200</span>
                                     </a>
                                 </div>
                                 <div class="rating">
                                     <a id="two-star" href="">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
                                         <span class="rating-count">2</span>
                                     </a>
                                 </div>
                                 <div class="rating">
                                     <a id="one-star" href="">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
+                                        <span class="fas fa-star checked"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
                                         <span class="rating-count">12</span>
                                     </a>
                                 </div>
@@ -461,7 +666,7 @@
                                                         <span class="product-pcs">pcs</span>
                                                     </div>
                                                     <div class="product-sku">
-                                                        <i class="fa fa-check high-stock"></i> 25 available stock
+                                                        <i class="fas fa-check high-stock"></i> 25 available stock
                                                     </div>
                                                 </div>
 
@@ -648,52 +853,57 @@
                             <div class="product-related">
                                 <h2 class="listing-title">Related Products</h2>
                                 <div class="gap-10"></div>
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
-                                            <div class="product-card">
-                                                <a href="product-profile.htm">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                    <h3 class="product-price">Php 180.00</h3>
-                                                </a>
-                                                <p class="product-title">The Friend of the Bridegroom</p>
-                                                <form id="addToCart" data-source="addToCart">
-                                                    <button type="button" class="btn add-cart-alt1-btn addToCartButton" data-loading-text="processing...">
-                              <img src="images/misc/cart.png" alt=""> Add to cart
-                            </button>
-                                                </form>
+                                <div class="list-product">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                            <div class="product-link p-0">
+                                                <div class="product-card">
+                                                    <div class="product-discount">
+                                                        50% OFF
+                                                    </div>
+                                                    <a href="product-profile.htm">
+                                                        <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                        <h3 class="product-price"><div class="old">Php 200.00</div>Php 180.00</h3>
+                                                    </a>
+                                                    <p class="product-title">The Friend of the Bridegroom</p>
+                                                    <form id="addToCart" data-source="addToCart">
+                                                        <button type="button" class="btn add-cart-alt1-btn addToCartButton" data-loading-text="processing...">
+                                                            <img src="images/misc/cart.png" alt=""> Add to cart
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
-                                            <div class="product-card">
-                                                <a href="">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                    <h3 class="product-price">Php 180.00</h3>
-                                                </a>
-                                                <p class="product-title">The Friend of the Bridegroom</p>
-                                                <form id="addToCart" data-source="addToCart">
-                                                    <button type="button" class="btn add-cart-alt1-btn addToCartButton" data-loading-text="processing...">
-                              <img src="images/misc/cart.png" alt=""> Add to cart
-                            </button>
-                                                </form>
+                                        <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                            <div class="product-link p-0">
+                                                <div class="product-card">
+                                                    <a href="">
+                                                        <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                        <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
+                                                    </a>
+                                                    <p class="product-title">The Friend of the Bridegroom</p>
+                                                    <form id="addToCart" data-source="addToCart">
+                                                        <button type="button" class="btn add-cart-alt1-btn addToCartButton" data-loading-text="processing...">
+                                                            <img src="images/misc/cart.png" alt=""> Add to cart
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
-                                            <div class="product-card">
-                                                <a href="">
-                                                    <img src="images/misc/book1.jpg" alt="" />
-                                                    <h3 class="product-price">Php 180.00</h3>
-                                                </a>
-                                                <p class="product-title">The Friend of the Bridegroom</p>
-                                                <form id="addToCart" data-source="addToCart">
-                                                    <button type="button" class="btn add-cart-alt1-btn addToCartButton" data-loading-text="processing...">
-                              <img src="images/misc/cart.png" alt=""> Add to cart
-                            </button>
-                                                </form>
+                                        <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                            <div class="product-link p-0">
+                                                <div class="product-card">
+                                                    <a href="">
+                                                        <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                        <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
+                                                    </a>
+                                                    <p class="product-title">The Friend of the Bridegroom</p>
+                                                    <form id="addToCart" data-source="addToCart">
+                                                        <button type="button" class="btn add-cart-alt1-btn addToCartButton" data-loading-text="processing...">
+                                                            <img src="images/misc/cart.png" alt=""> Add to cart
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -880,6 +1090,7 @@
     <script src="plugins/slick/slick.extension.js"></script>
     <script src="plugins/flexmenu/modernizr.custom.js"></script>
     <script src="plugins/flexmenu/flexmenu.min.js"></script>
+    <script src="plugins/ion.rangeslider/js/ion.rangeSlider.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({

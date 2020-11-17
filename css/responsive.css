@@ -259,6 +259,10 @@
     margin-right: 0;
     margin-bottom: 9px;
   }
+  .filter-product .btn-group .dropdown-filter-btn.sort {
+    width: 100%;
+    margin-top: 10px;
+  }
   .form-style {
     width: 100%;
     margin: 0 auto;
@@ -507,6 +511,26 @@
   }
   div[id^="payment_method"] :checked ~ .sub1, div[id^="payment_method"] :checked ~ .sub2 {
     margin-left: 15px;
+  }
+  .news-post {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .news-post-info {
+    padding: 1.25em 0 0;
+    margin-left: 0;
+  }
+  .article-meta-share {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .article-meta-share > * {
+    width: 100%;
   }
 }
 

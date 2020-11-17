@@ -1,10 +1,19 @@
 @import "variable";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: $font2;
     font-size: 1.15rem !important;
     line-height: 1.5;
     color: $second-color;
+}
+
+input:-internal-autofill-selected {
+    background-color: #f8f8f8 !important;
+    background-image: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +32,7 @@ body {
 
 h2 {
     font-family: $font2;
-    font-size: 1.5em;
+    font-size: 1.65em;
     font-weight: 500;
     color: $first-color;
     line-height: 1.5;
@@ -41,6 +50,7 @@ h3 {
 h4 {
     font-family: $font1;
     color: $first-color;
+    font-size: 1.15em;
 }
 
 h6 {
@@ -63,6 +73,22 @@ p {
     line-height: 1.8;
     font-weight: 400;
     color: $second-color;
+}
+
+ol {
+    list-style-type: decimal;
+
+    li {
+        display: list-item;
+        padding-left: 10px;
+        margin-left: 25px;
+        line-height: 1.8;
+
+        &::marker {
+            font-weight: bold;
+            color: $first-color;
+        }
+    }
 }
 
 // PRELOADER
@@ -184,7 +210,7 @@ p {
         font-family: $font2;
         font-size: 2.25em;
         line-height: 1.35;
-        font-weight: 400;
+        font-weight: 500;
         color: $first-color;
         padding: 0;
         margin: 0;
@@ -515,7 +541,7 @@ p {
         content: "\ec3a";
         position: absolute;
         top: 35%;
-        right: 25px;
+        right: 15px;
         font: 600 14px 'Linearicons';
         border: none;
     }
@@ -1137,18 +1163,17 @@ $gaps: 10,
         z-index: 2;
         width: 60px;
         padding: 1rem 1.2rem;
-        color: lighten($third-color, 25%);
+        color: lighten($third-color, 15%);
     }
 
     input[type="text"] {
         font-family: $font1;
         font-size: 1em;
-        border-color: lighten($third-color, 45%);
+        border-color: #ced4da;
         border-radius: 5px !important;
         padding-left: 50px;
         position: relative;
         z-index: 1;
-        color: $third-color;
         margin-right: 15px;
         background: transparent;
 
@@ -1157,10 +1182,6 @@ $gaps: 10,
             box-shadow: none !important;
             border-color: $first-color;
         }
-    }
-
-    ::placeholder {
-        color: lighten($third-color, 50%) !important;
     }
 
     .primary-btn {
@@ -1178,6 +1199,11 @@ $gaps: 10,
     &-item {
         color: $first-color !important;
         font-size: .7em;
+        margin-left: 0;
+
+        &:first-child {
+            padding-left: 0;
+        }
 
         &+.breadcrumb-item {
             padding-left: 5px;
@@ -1289,7 +1315,8 @@ $gaps: 10,
 }
 
 .form-style,
-.form-style-alt {
+.form-style-alt,
+.form-style-login {
 
     &-alt {
         width: 100% !important;
@@ -1373,6 +1400,14 @@ $gaps: 10,
         label {
             font-size: .85em !important;
         }
+    }
+}
+
+.form-style-login {
+    .form-input {
+        font-size: 14px;
+        padding: 17px 15px;
+        line-height: 24px;
     }
 }
 
@@ -1479,9 +1514,242 @@ $gaps: 10,
     }
 }
 
+// NEWS POSTS LAYOUT
+.news-post {
+    display: grid;
+    grid-template-columns: 35% auto;
+    width: 100%;
+    padding: 1.5em;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 1.5em;
+
+    &-img {
+        height: 230px;
+        border-radius: 5px;
+        background-position: center center;
+        background-size: cover;
+
+        img {
+            height: 100%;
+            padding: 0 30px 0 0;
+            margin: 0;
+        }
+    }
+
+    &-info {
+        position: relative;
+        margin-left: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 100%;
+
+        h3 {
+            font-size: 1.15em;
+            margin-bottom: 15px;
+
+            a {
+                color: #333;
+                transition: all 0.2s ease-in-out;
+                text-overflow: ellipsis;
+                max-height: 80px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $first-color;
+                }
+            }
+        }
+
+        &-excerpt {
+            font-size: 0.85em !important;
+            margin-top: 0.5em;
+            margin-bottom: 1.75em;
+            text-overflow: ellipsis;
+            max-height: 80px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            width: 100%;
+        }
+
+        &-meta {
+            font-size: 0.7em !important;
+            padding-top: 5px;
+            margin-bottom: 0px;
+            color: lighten(#555555, 15%);
+
+            a {
+                color: $first-color;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $second-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// ARTICLE CONTENT
+.article-content {
+    position: relative;
+
+    img {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+}
+
+.article-title {
+    text-transform: initial;
+    text-align: left;
+}
+
+.article-opt {
+    margin-bottom: 1.5em;
+
+    a {
+        color: $second-color;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        span {
+            color: $first-color;
+            margin-right: 20px;
+        }
+
+        &:hover {
+            color: $first-color;
+            text-decoration: none;
+
+            &>span {
+                color: $first-color;
+            }
+        }
+    }
+}
+
+.article-meta-share {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #E1E1E1;
+    margin-top: 0;
+    margin-bottom: 2em;
+
+    .article-meta {
+        &-author {
+            color: $first-color;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
+    .article-share {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+
+        &-text {
+            margin-right: 15px;
+            font-family: $font1;
+            font-size: .85em;
+        }
+    }
+
+    .jssocials-shares {
+        display: flex;
+    }
+
+    .jssocials-share {
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .jssocials-share-link {
+        border-radius: 50%;
+        display: block;
+        text-align: center;
+    }
+}
+
+// ARTICLE WIDGET
+.article-widget {
+    padding-right: 50px;
+    margin-bottom: 2em;
+
+    &-title {
+        font-family: $font1;
+        font-size: 1.3em !important;
+    }
+
+    &-badge {
+        margin-top: 0.7em;
+
+        span {
+            font-family: $font1;
+            background: $first-color;
+            border-radius: 4px !important;
+            font-weight: normal !important;
+            font-size: 0.6em !important;
+            padding: 0.5em 0.65em !important;
+            margin: 0 2px 4px 0;
+        }
+    }
+
+    &-search {
+        margin-top: 0.7em;
+    }
+
+    &-news {
+        padding: 1em 0;
+
+        .news-date {
+            font-size: 0.65em !important;
+            line-height: 1.2;
+            margin-bottom: 0 !important;
+        }
+
+        .news-title {
+            font-size: 0.85em !important;
+            line-height: 1.5;
+            margin: 0 !important;
+            margin-top: 15px !important;
+
+            a {
+                color: $second-color;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    color: $first-color;
+                }
+            }
+        }
+    }
+}
+
 // HOMEPAGE
 #home-quote,
 #product-quote {
+    margin-top: -7px;
     padding: 30px 1rem;
     position: relative;
     z-index: 5;
@@ -2033,7 +2301,7 @@ $gaps: 10,
 
             .high-stock {
                 color: #36a300;
-                font-weight: 400;
+                font-weight: 700;
             }
 
             .low-stock {
@@ -2437,6 +2705,7 @@ $gaps: 10,
 
                         p {
                             line-height: 1.2 !important;
+                            margin-bottom: 0;
                         }
                     }
 
@@ -2985,6 +3254,7 @@ $gaps: 10,
 
     p {
         font-size: .8em !important;
+        margin-bottom: 0;
     }
 
     #log-mem {
@@ -3565,10 +3835,11 @@ $tabs: 1,
 
 .field-icon {
     position: absolute;
-    top: 55%;
-    right: 35px;
+    top: 16px;
+    right: 16px;
     z-index: 2;
     color: #777;
+    cursor: pointer;
 }
 
 .sidenav {

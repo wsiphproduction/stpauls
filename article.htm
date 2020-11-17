@@ -8,11 +8,16 @@
     <title>ST PAULS Online | Catholic Online Bookstore in Philippines</title>
     <link rel="shortcut icon" href="images/misc/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="plugins/jssocials/jssocials.css" />
+    <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
     <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" href="plugins/linearicon/css/linearicon.min.css" />
+    <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
+    <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
+    <link rel="stylesheet" href="css/tagsinput.min.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
-    <link rel="stylesheet" href="css/tagsinput.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -86,9 +91,6 @@
                                     </li>
                                     <li>
                                         <a href="news.htm">News</a>
-                                    </li>
-                                    <li>
-                                        <a href="404.htm">404</a>
                                     </li>
                                     <li>
                                         <a href="">Contact Us</a>
@@ -519,27 +521,112 @@
 
         <!-- Page Content -->
         <main>
-
             <section id="default-wrapper">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="error404 text-center">404</div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="jumbotron mb-0">
-                                <h2 class="display-5">Ooopps.! The Page you were looking for, <span class="text-nowrap">couldn't be found.</span></h2>
-                                <hr class="my-4">
-                                <a class="btn btn-lg primary-btn" href="#" tabindex="0">Go Back</a>
+                        <span onclick="closeNav()" class="dark-curtain"></span>
+						<div class="col-lg-12 col-md-5 col-sm-12">
+							<span onclick="openNav()" class="button mb-4 d-lg-none"><span class="lnr lnr-chevron-left mr-2"></span> Options</span>
+						</div>
+                        <div class="col-lg-3">
+                            <div class="tablet-view">
+                                <a href="" class="close-btn d-lg-none" onclick="closeNav()"><span class="lnr lnr-cross"></span></a>
+                                <div class="article-opt">
+                                    <p>
+                                        <a href="news.html"><span><i class="fa fa-long-arrow-alt-left"></i></span>Back to news listing</a>
+                                    </p>
+                                    <p>
+                                        <a href="#"><span><i class="fa fa-share"></i></span>E-mail this article</a>
+                                    </p>
+                                    <p>
+                                        <a href="#"><span><i class="fa fa-print"></i></span>Print this article</a>
+                                    </p>
+                                </div>
+                                <div class="gap-20"></div>
+                                <div class="article-widget">
+                                    <div class="article-widget-title">Tags</div>
+                                    <div class="article-widget-badge">
+                                        <span class="badge badge-secondary">lorem</span>
+                                        <span class="badge badge-secondary">ornare</span>
+                                        <span class="badge badge-secondary">bibendum</span>
+                                        <span class="badge badge-secondary">lorem</span>
+                                        <span class="badge badge-secondary">ornare</span>
+                                        <span class="badge badge-secondary">bibendum</span>
+                                        <span class="badge badge-secondary">lorem</span>
+                                        <span class="badge badge-secondary">bibendum</span>
+                                    </div>
+                                </div>
+                                <div class="gap-20"></div>
+                                <div class="article-widget">
+                                    <div class="article-widget-title">
+                                        Latest News
+                                    </div>
+                                    <div class="article-widget-news">
+                                        <p class="news-date">MAY 18, 2019</p>
+                                        <p class="news-title">
+                                            <a href="article.html">Watching Their Dust: Photographing Players in Pollination</a>
+                                        </p>
+                                    </div>
+                                    <div class="article-widget-news">
+                                        <p class="news-date">MAY 17, 2019</p>
+                                        <p class="news-title">
+                                            <a href="#">What Does It Take for a K-Pop Band to Blow Up in South America?</a>
+                                        </p>
+                                    </div>
+                                    <div class="article-widget-news">
+                                        <p class="news-date">MAY 16, 2019</p>
+                                        <p class="news-title">
+                                            <a href="#">What Trump's Budget Means for the Filet-O-Fish</a>
+                                        </p>
+                                    </div>
+                                    <div class="article-widget-news">
+                                        <p class="news-date">MAY 15, 2019</p>
+                                        <p class="news-title">
+                                            <a href="#">Daily Report: Removing Checks to the Power of the Internet Titans</a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="heading-block">
-                                
+                        </div>
+                        <div class="col-lg-9">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.htm">Home</a></li>
+                                <li class="breadcrumb-item"><a href="news.htm">News</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">We're divided land his creature which have evening subdue</li>
+                            </ol>
+                            <div class="gap-20"></div>
+                            <h2>We're divided land his creature which have evening subdue</h2>
+                            <div class="article-meta-share">
+                                <div class="article-meta">
+                                    <p>
+                                        Posted 3 weeks ago, by
+                                        <span class="article-meta-author">Admin</span>
+                                    </p>
+                                </div>
+                                <div class="article-share">
+                                    <div class="article-share-text">Share:</div>
+                                    <div id="article-social"></div>
+                                </div>
+                            </div>
+                            <div class="article-content">
+                                <img src="images/misc/blog1.jpg" alt="" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
         </main>
         <!-- END Page Content -->
 
@@ -594,8 +681,8 @@
                                 <p>Check out other St. Paul’s portal</p>
                                 <div class="btn-group">
                                     <button type="button" class="btn dropdown-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Philippine-Macau
-                    </button>
+                                        Philippine-Macau
+                                    </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#">Argentina</a>
                                         <a class="dropdown-item" href="#">Australia</a>
@@ -667,11 +754,13 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/slick/slick.js"></script>
-    <script src="plugins/slick/slick.extension.js"></script>
     <script src="plugins/rd-navbar/dist/js/jquery.rd-navbar.js"></script>
     <script src="plugins/materialize/js/materialize.js"></script>
     <script src="plugins/aos/dist/aos.js"></script>
+    <script src="plugins/jssocials/jssocials.js"></script>
+    <script src="plugins/jssocials/jssocials-extension.js"></script>
+    <script src="plugins/slick/slick.js"></script>
+    <script src="plugins/slick/slick.extension.js"></script>
     <script src="plugins/flexmenu/modernizr.custom.js"></script>
     <script src="plugins/flexmenu/flexmenu.min.js"></script>
     <script type="text/javascript">

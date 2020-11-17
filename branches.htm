@@ -8,8 +8,10 @@
     <title>ST PAULS Online | Catholic Online Bookstore in Philippines</title>
     <link rel="shortcut icon" href="images/misc/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" href="plugins/linearicon/css/linearicon.min.css" />
+    <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
     <link rel="stylesheet" href="css/tagsinput.min.css" />
@@ -517,23 +519,389 @@
         </header>
         <!-- END Page Head -->
 
+        <!-- Banner Section -->
+        <div class="banner-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12" style="padding:0;">
+                        <div class="sub-banner-caption">
+                            <div class="container">
+                                <h2>Branches</h2>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.htm">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Branches</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div id="banner" class="slick-slider">
+                            <div class="hero-slide">
+                                <img src="images/banners/sub/subbanner.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Banner Section -->
+
         <!-- Page Content -->
         <main>
 
             <section id="default-wrapper">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="error404 text-center">404</div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="jumbotron mb-0">
-                                <h2 class="display-5">Ooopps.! The Page you were looking for, <span class="text-nowrap">couldn't be found.</span></h2>
-                                <hr class="my-4">
-                                <a class="btn btn-lg primary-btn" href="#" tabindex="0">Go Back</a>
+                        <span onclick="closeNav()" class="dark-curtain"></span>
+						<div class="col-lg-12 col-md-5 col-sm-12">
+							<span onclick="openNav()" class="button mb-4 d-lg-none"><span class="lnr lnr-chevron-left mr-2"></span> Quicklinks</span>
+						</div>
+                        <div class="col-lg-3">
+                            <div class="tablet-view">
+                                <a href="" class="close-btn d-lg-none" onclick="closeNav()"><span class="lnr lnr-cross"></span></a>
+                                <h2>Branches</h2>
+                                <div class="side-menu">
+                                    <ul>
+                                        <li><a href="#superstore">ST PAULS Superstore</a></li>
+                                        <li><a href="#ncr">NCR Branches</a></li>
+                                        <li><a href="#south-luzon">South Luzon Branches</a></li>
+                                        <li><a href="#central-luzon">Central Luzon Branches</a></li>
+                                        <li><a href="#central-visayas">Central Visayas Branches</a></li>
+                                        <li><a href="#western-visayas">Western Visayas Branches</a></li>
+                                        <li><a href="#northern-mindanao">Northern Mindanao Branch</a></li>
+                                        <li><a href="#southern-mindanao">Southern Mindanao Branches</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="heading-block">
-                                
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="article-content">
+                                <p>ST PAULS branches are strategically located all over the Philippines to serve you even better! Visit our Religious bookstore branches nationwide! You can also check out our <strong>Religious Books Online Philippines</strong> OR you can <strong>Buy Book Online Philippines</strong>.</p>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="superstore">ST PAULS Superstore</h2>
+                                <div class="card">
+                                    <img class="m-0" src="images/branches/Makati Superstore.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4>ST PAULS Superstore</h4>
+                                        <small>7708 St. Paul Road, San Antonio Village, 1203 Makati City</small><br>
+                                        <small>Tels. (02) 8-896-6702 / 8-895-6861</small><br>
+                                        <small>Trunk line: 8-895-9701-04 loc. 700 to 705</small><br>
+                                        <small>superstore@stpauls.ph</small>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="ncr">NCR Branches</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS ALIMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Ali Mall</h4>
+                                                <small>2nd Flr., Phase 2, Ali Mall Complex, </small><br>
+                                                <small>Cubao, 1109 Quezon City</small><br>
+                                                <small>Tel. (02) 8-441-2137 or (02) 8-912-7841</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/New Gateway Front.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Gateway Mall</h4>
+                                                <small>Space No. 311, Level 3, Gateway Mall, Araneta Center, </small><br>
+                                                <small>Cubao, 0810 Quezon City</small><br>
+                                                <small>Tel. (02) 8-911-3380 or (02) 8-376-6536</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS MALL OF ASIA.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Mall of Asia</h4>
+                                                <small>No. 294, 2nd Flr., Entertainment Mall Bldg., SM Mall of Asia, Bay Blvd., 1304 Pasay City</small><br>
+                                                <small>Tel. (02) 8-556-0251 or (02) 8-823-1373</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS MEGAMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Megamall</h4>
+                                                <small>Unit 109, G/F, Bldg-A, SM Megamall, Julia Vargas Ave., 1554 Mandaluyong City</small><br>
+                                                <small>Tel. (02) 8-634-1295 or (02) 8-631- 0536</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS SOUTHMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Southmall</h4>
+                                                <small>Unit 1083-0084 Lower Ground Flr. Zapote Road, Alabang, Las Piñas City</small><br>
+                                                <small>Tel. (02) 8-806-6867 or (02) 8-511-0941</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS South Park.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Ayala Malls South Park</h4>
+                                                <small>Unit G051-G052 Ground Flr. Ayala Malls South Park, Alabang, Muntinlupa City</small><br>
+                                                <small>Tel. (02) 7-792-9953</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS MEGAMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Bicutan</h4>
+                                                <small>Unit A021, Lower G/F, SM City Bicutan, Doña Soledad Ave., cor. West Service Rd., Bicutan, 1631 Parañaque City</small><br>
+                                                <small>Tel. (02) 8-836-9758 or (02) 8-511-1762</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS MANILA.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Manila</h4>
+                                                <small>Unit 005, Lower G/F, SM City Manila, Concepción St., cor. Arroceros & San Marcelino Sts., 1004 Manila</small><br>
+                                                <small>Tel. (02) 8-522-8233</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS SM NORTH.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM City North Edsa</h4>
+                                                <small>2nd Flr., SM West Mall, SM City North Edsa,</small><br>
+                                                <small>1106 Quezon City</small><br>
+                                                <small>Tel. (02) 8-929-4925 or (02) 8-441-4263</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS ALIMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM San Lazaro</h4>
+                                                <small>Unit 069, Lower G/F SM City San Lazaro, F. Huertas cor. A.H. Lacson Sts., Sta. Cruz, 1003 Manila</small><br>
+                                                <small>Tel. (02) 8-353-4823 or (02) 8-353-1238</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS STA MESA.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Sta. Mesa</h4>
+                                                <small>G/F, SM City Sta. Mesa, Sta. Mesa, </small><br>
+                                                <small>Aurora Blvd., 1016 Manila</small><br>
+                                                <small>Tel. (02) 8-716-1559 or (02) 8-353-0794</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/Fairview Terraces.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Fairview Terraces</h4>
+                                                <small>Space 2090, 2nd Floor, Fairview Terraces,</small><br>
+                                                <small>Ayala Malls, Quezon City</small><br>
+                                                <small>Tel. (02) 8-426-5491</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="south-luzon">South Luzon Branches</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS BACOOR.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Bacoor</h4>
+                                                <small>Unit 12, Lower G/F, SM City Bacoor, </small><br>
+                                                <small>Bacoor, 4102 Cavite</small><br>
+                                                <small>Tel. (046) 417-2346 or (046) 417-1529</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS DASMARINAS.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Dasmariñas</h4>
+                                                <small>Unit E 020-021, Lower G/F, SM City Govenor's Drive, Brgy. Sampaloc 4114 Dasmariñas, Cavite</small><br>
+                                                <small>Tel. (046) 416-1278</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="central-luzon">Central Luzon Branches</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches//ST PAULS PAMPANGA.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Pampanga</h4>
+                                                <small>Unit 153, G/F, SM City Pampanga, San Fernando & Mexico, 2021 Pampanga</small><br>
+                                                <small>Tel. (045) 455-3380</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS MARQUEE.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Marquee Mall</h4>
+                                                <small>Space 1054 Level 1 Marque Mall, Francisco G. Nepomuceno Ave., Pulong Maragul, Angeles City</small><br>
+                                                <small>Tel. no.(045) 304-1011</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/New Gateway Front.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Harbor Point Mall, Subic</h4>
+                                                <small>Near Manila Avenue Entrance, Ground Level Harbor Point, Subic Bay Freeport Zone 2009 Subic, Zambales</small><br>
+                                                <small>Tel. (047) 8-251-1051</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="central-visayas">Central Visayas Branches</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS ALIMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Ayala Center Cebu</h4>
+                                                <small>Stall #306 3rd Level, Archbishop Reyes Ave., Ayala Center Cebu, 6000 Cebu City</small><br>
+                                                <small>Tel. (032) 231-7486</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS CEBU.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Cebu</h4>
+                                                <small>SM City Cebu, North Reclamation Area cor. San Jose dela Montana & MJ Cuenco Sts., 6000 Cebu City</small><br>
+                                                <small>Tel. (032) 232-0760</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS SOUTHMALL.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Bohol</h4>
+                                                <small>Department Store Area, Island City Mall, Dao District, 6300 Tagbilaran City, Bohol</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS SM Seaside Cebu.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Seaside Cebu</h4>
+                                                <small>No. 3095,  3rd Flr., SM Seaside City, Cebu City</small><br>
+                                                <small>Tel. (032) 232-1407</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="western-visayas">Western Visayas Branches</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS ILOILO.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Iloilo</h4>
+                                                <small>Unit 49, Upper G/F, SM City Iloilo, Benigno Ave., Mandurriao, 5000 Iloilo City</small><br>
+                                                <small>Tel. (033) 320-8251</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS MARYMART.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Marymart</h4>
+                                                <small>Marymart Center III Iloilo, Valeria St., 5000 Iloilo City</small><br>
+                                                <small>Tel. (033) 335-0636</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="northern-mindanao">Northern Mindanao Branch</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS CAGAYAN DE ORO.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS Cagayan De Oro</h4>
+                                                <small>Ground Floor West Concourse, Lim Ket Kai Mall, Limketkai Center, Lapasan, Cagayan De Oro City</small><br>
+                                                <small>Tel. (088) 856-1904</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>&nbsp;</p>
+
+                                <h2 id="southern-mindanao">Southern Mindanao Branches</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/ST PAULS DAVAO.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS SM Davao</h4>
+                                                <small>Unit 165, G/F, SM City Davao, Quimpo Blvd., Ecoland, Matina, 8021 Davao City</small><br>
+                                                <small>Tel. (082) 282-2881</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <img class="m-0" src="images/branches/New Gateway Front.jpg" alt="">
+                                            <div class="card-body">
+                                                <h4>ST PAULS South Cotabato</h4>
+                                                <small>Department Store, KCC Mall, Lagao St., 9500 General Santos City, South Cotabato</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -57,9 +57,9 @@
 
         /** creation of the list template*/
         template: function(data) {
-                var rating = '<i class="fa fa-star selected" data-rate="1"></i>';
+                var rating = '<i class="fas fa-star selected" data-rate="1"></i>';
                 for(var i =1; i < data[1].value; i++) {
-                    rating += '<i class="fa fa-star selected" data-rate="1"></i>';
+                    rating += '<i class="fas fa-star selected" data-rate="1"></i>';
                 }
                 var list = '<li>';
                 list += '<div class="profile-rating-wrapper">';
