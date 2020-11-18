@@ -2650,6 +2650,11 @@ h3+.card-custom-group-wrap {
 .rd-navbar a:hover {
     color: #06a0e4;
     color: var(--first-color);
+    text-decoration: none;
+}
+
+.rd-navbar a:focus {
+    text-decoration: none;
 }
 
 .rd-navbar-fullwidth .rd-navbar-nav>.rd-navbar-submenu .rd-navbar-dropdown,

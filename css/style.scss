@@ -75,6 +75,16 @@ p {
     color: $second-color;
 }
 
+a {
+    color: $first-color;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+        color: $first-color;
+    }
+}
+
 ol {
     list-style-type: decimal;
 
@@ -241,6 +251,7 @@ ol {
     &:active,
     &:focus {
         box-shadow: none !important;
+        text-decoration: none;
     }
 
     &-md {
@@ -1392,8 +1403,7 @@ $gaps: 10,
     &.fs-sm {
         .form-input {
             font-size: 0.85em !important;
-            min-height: 45px !important;
-            padding: 10px;
+            padding: 15px;
         }
 
         p,
@@ -3021,7 +3031,7 @@ $gaps: 10,
         }
     }
 
-    p {
+    p, a {
         color: white;
     }
 
@@ -3874,6 +3884,12 @@ $tabs: 1,
   z-index: 999;
   display: none;
   z-index: 99999;
+}
+
+form {
+    p {
+        margin-bottom: 0;
+    }
 }
     
 @import "responsive";

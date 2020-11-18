@@ -105,6 +105,16 @@ p {
   color: #555555;
 }
 
+a {
+  color: #b82e24;
+  cursor: pointer;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: #b82e24;
+}
+
 ol {
   list-style-type: decimal;
 }
@@ -284,6 +294,7 @@ ol li::marker {
 .btn:active, .btn:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+  text-decoration: none;
 }
 
 .btn-md {
@@ -1553,8 +1564,7 @@ ol li::marker {
 .form-style-alt.fs-sm .form-input,
 .form-style-login.fs-sm .form-input {
   font-size: 0.85em !important;
-  min-height: 45px !important;
-  padding: 10px;
+  padding: 15px;
 }
 
 .form-style.fs-sm p,
@@ -3249,7 +3259,7 @@ ol li::marker {
   text-decoration: underline;
 }
 
-.pre-footer p {
+.pre-footer p, .pre-footer a {
   color: white;
 }
 
@@ -4144,6 +4154,10 @@ ol li::marker {
   z-index: 999;
   display: none;
   z-index: 99999;
+}
+
+form p {
+  margin-bottom: 0;
 }
 
 @font-face {

@@ -92,7 +92,7 @@
                                         <a href="news.htm">News</a>
                                     </li>
                                     <li>
-                                        <a href="">Contact Us</a>
+                                        <a href="contact.htm">Contact Us</a>
                                     </li>
                                     <!-- <li>
                                         <a href="">Online Resources</a>
@@ -789,6 +789,41 @@
         AOS.init();
     </script>
     <script src="plugins/jssocials/jssocials.min.js"></script>
+    <script src="js/script.js"></script><script src="js/jquery-3.4.1.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/slick/slick.js"></script>
+    <script src="plugins/slick/slick.extension.js"></script>
+    <script src="plugins/rd-navbar/dist/js/jquery.rd-navbar.js"></script>
+    <script src="plugins/materialize/js/materialize.js"></script>
+    <script src="plugins/aos/dist/aos.js"></script>
+    <script src="plugins/flexmenu/modernizr.custom.js"></script>
+    <script src="plugins/flexmenu/flexmenu.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                linkTitle: "",
+                linkText: "Others"
+            });
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            }
+        });
+        $(window).resize(function () {
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            } else {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    linkTitle: "",
+                    linkText: "Others"
+                });
+            }
+        });
+    </script>
+    
     <script src="js/script.js"></script>
 </body>
 
