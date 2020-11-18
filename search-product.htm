@@ -8,20 +8,19 @@
     <title>ST PAULS Online | Catholic Online Bookstore in Philippines</title>
     <link rel="shortcut icon" href="images/misc/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="plugins/jssocials/jssocials.css" />
     <link rel="stylesheet" href="plugins/jssocials/jssocials-theme-flat.min.css" />
-    <link rel="stylesheet" href="plugins/owl.carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="plugins/linearicon/linearicon.min.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
+    <link rel="stylesheet" href="plugins/responsive-tabs/css/responsive-tabs.css" />
+    <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="css/tagsinput.min.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
-    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" href="plugins/ion.rangeslider/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <script src="js/jquery-3.4.1.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -36,50 +35,39 @@
             <nav class="rd-navbar">
                 <!-- RD Navbar Upper Panel -->
                 <div class="rd-navbar-upper-panel">
-                    <div class="rd-navbar-upper-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap-left"><span></span></div>
+                    <div class="rd-navbar-upper-panel__toggle rd-navbar-fixed__element-1 rd-navbar-static--hidden toggle-original"
+                        data-rd-navbar-toggle=".rd-navbar-nav-wrap-left"><span></span></div>
                     <div class="rd-navbar-upper-panel__content">
                         <div class="rd-navbar-upper-panel__left">
                             <div class="rd-navbar-nav-wrap-left">
                                 <!-- RD Navbar Nav - TOP -->
                                 <ul class="rd-navbar-nav-l">
-                                    <li class="active">
-                                        <a href="index.htm">Portal</a>
-                                        <ul class="rd-navbar-dropdown">
-                                            <li>
-                                                <a href="">Lorem ipsum dolor</a>
-                                                <ul class="rd-navbar-dropdown">
-                                                    <li>
-                                                        <a href="">Lorem ipsum dolor</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Nulla sequi, sint</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="">Corporis, quos, sit</a>
-                                                        <ul class="rd-navbar-dropdown">
-                                                            <li>
-                                                                <a href="">Lorem ipsum dolor</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">Nulla sequi, sint</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="">Corporis, quos, sit</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="">Nulla sequi, sint</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Corporis, quos, sit</a>
-                                            </li>
-                                        </ul>
+                                    <li>
+                                        <a href="index.htm">Home</a>
                                     </li>
                                     <li>
-                                        <a href="about.htm">Online Resources</a>
+                                        <a href="about.htm">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="branches.htm">Branches</a>
+                                    </li>
+                                    <li>
+                                        <a href="request-a-title.htm">Request a Title</a>
+                                    </li>
+                                    <li>
+                                        <a href="help.htm">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.htm">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.htm">404</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.htm">Contact Us</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="">Online Resources</a>
                                     </li>
                                     <li>
                                         <a href="">Sambuhay</a>
@@ -89,7 +77,7 @@
                                     </li>
                                     <li>
                                         <a href="">Periodicals</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <!-- END RD Navbar Nav - TOP -->
                             </div>
@@ -97,7 +85,8 @@
                         <div class="rd-navbar-upper-panel__right">
                             <ul class="list-inline-xxs">
                                 <li>
-                                    <p class="country-list">Philippine-Macau</li>
+                                    <p class="country-list">Philippine-Macau
+                                </li>
                                 <li><img src="images/misc/philippine-flag.jpg" alt=""></li>
                                 <li><img src="images/misc/macau-flag.jpg" alt=""></a>
                                 </li>
@@ -112,11 +101,12 @@
                     <div class="rd-navbar-panel rd-navbar-n-search-wrap">
                         <!-- RD Navbar Toggle -->
                         <div class="rd-navbar-fixed__element-4">
-                            <button class="rd-navbar-n-search__toggle rd-navbar-n-search__toggle_additional" data-rd-navbar-toggle=".rd-navbar-n-search-wrap">
-                </button>
+                            <button class="rd-navbar-n-search__toggle rd-navbar-n-search__toggle_additional"
+                                data-rd-navbar-toggle=".rd-navbar-n-search-wrap">
+                            </button>
                         </div>
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
-              </button>
+                        </button>
                         <!-- END RD Navbar Toggle -->
                         <div class="rd-navbar-panel__content">
                             <div class="rd-navbar-panel__left">
@@ -130,18 +120,201 @@
                             </div>
                             <div class="rd-navbar-panel__center">
                                 <div class="rd-navbar-n-search rd-navbar-search_not-collapsable">
-                                    <form class="rd-n-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
+                                    <form class="rd-n-search" action="search-results.html" method="GET"
+                                        data-search-live="rd-search-results-live">
                                         <div class="form-wrap">
-                                            <input class="form-input" id="rd-navbar-n-search-form-input" type="text" name="s" autocomplete="off">
-                                            <label class="form-label rd-input-label" for="rd-navbar-n-search-form-input">Search a product</label>
+                                            <input class="form-input" id="rd-navbar-n-search-form-input" type="text"
+                                                name="s" autocomplete="off" placeholder="Search a product">
                                             <div class="rd-n-search-results-live" id="rd-n-search-results-live"></div>
+                                            <!-- <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="old-price">Php 180.00</p>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <img src="images/misc/book1.jpg" alt="">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <h2>The Friend of the Bridegroom</h2>
+                                                            <p class="price">Php 150.00</p>
+                                                        </div>
+                                                    </div>
+                                                </a>                                                
+                                            </div> -->
                                         </div>
                                         <button class="rd-n-search__submit" type="submit"></button>
                                     </form>
-                                    <!-- <div class="rd-navbar-fixed--hidden">
-                      <button class="rd-navbar-n-search__toggle" data-custom-toggle=".rd-navbar-search-wrap"
-                        data-custom-toggle-disable-on-blur="true"></button>
-                    </div> -->
                                 </div>
                             </div>
                             <div class="rd-navbar-panel__right">
@@ -150,7 +323,8 @@
                                         <li>
                                             <div class="unit flex-row align-items-center unit-spacing-xs">
                                                 <div class="unit__left">
-                                                    <img class="icon icon-xxs icon-primary" src="images/misc/cart.png" alt="">
+                                                    <img class="icon icon-xxs icon-primary" src="images/misc/cart.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="unit__body">
                                                     <ul class="list-semicolon cart-header-title">
@@ -175,106 +349,345 @@
                                     <!-- RD Navbar Nav -->
                                     <ul class="rd-navbar-nav">
                                         <li class="active">
-                                            <a href="index.htm">New Titles</a>
+                                            <a href="index.htm">New Products</a>
                                         </li>
                                         <li>
                                             <a href="product-listing.htm">Books</a>
+	 			    		                <ul class="rd-navbar-dropdown">
+                                                <li>
+                                                    <a href="">Apologia</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Asceticism</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Asceticsm Books</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">New Way Of The Cross</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Prayer Leaflets</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Biblical Initiatives</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Biography</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Catechetics</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">General References</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Academic Materials</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Retreat Materials</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Vatican Documents</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Hagiography</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Homiletics</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Inspirationals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Literature for Children</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Liturgy</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Mariology</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Meditations</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Mission</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Mystical Theology</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Periodicals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Prayer Books</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Straight From The Heart</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Sacred Theology</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Sambuhay Novena</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Booklets</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Divine Master</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Holy Men</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Holy Women</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Tagalog Nobena</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Spirituality</a>
+                                                </li>
+                                            </ul>
+	  			 	                    </li>
+                                        <li>
+                                            <a href="">Bible</a>
+                                            <ul class="rd-navbar-dropdown">
+                                                <li>
+                                                    <a href="">Bible</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Bible for Children</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Cebuano</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">English</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">English and Filipino</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Filipino</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+	  		                                <a href="">Devotionals</a>
+	 			    		                <ul class="rd-navbar-dropdown">
+                                                <li>
+                                                    <a href="">Advent Candles</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Advent Wreaths</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Baby Jesus</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Belen Set</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Calendars</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Candle Holders</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Chibi Miniatures</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Cross, Medals and Pins</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Miraculous Medals</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Pins</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Saint Benedict</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Guardian Angels</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Miniature Guardian Angels</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Hanging Crucifix</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Holy Family</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Holy Rosary</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Bracelet Rosaries</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Ring Rosary</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Rosaries and Chaplets</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Jesus Christ</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Miniatures</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Last Supper</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Lent</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Life Size Statues</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Liturgical Materials</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Certificates</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Devotions</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Holy Mass</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Liturgical Vestments</a>
+                                                            <ul class="rd-navbar-dropdown">
+                                                                <li>
+                                                                    <a href="">Stole and Chasuble</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Sacramentals</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Liturgical Song Book</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Marian Statues</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Miniature Marian Images</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Men Saints</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Miniature Men Saints</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Plaques</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Religious Frames</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Sacred Vessels</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Chalice</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Ciboria</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Cruets</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Monstrance</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Reliquary</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Tabernacle</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="">Santo NiÃ±o</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Standing Crucifix</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Table Decor</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Way of The Cross</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Women Saints</a>
+                                                    <ul class="rd-navbar-dropdown">
+                                                        <li>
+                                                            <a href="">Miniature Women Saints</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+	  			 	                    </li>
+                                        <li>
+                                            <a href="">Corporis, quos, sit</a>
                                             <ul class="rd-navbar-dropdown">
                                                 <li>
                                                     <a href="">Lorem ipsum dolor</a>
                                                 </li>
                                                 <li>
                                                     <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Lorem ipsum dolor</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Nulla sequi, sint</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Corporis, quos, sit</a>
                                                     <ul class="rd-navbar-dropdown">
                                                         <li>
                                                             <a href="">Lorem ipsum dolor</a>
                                                         </li>
                                                         <li>
                                                             <a href="">Nulla sequi, sint</a>
-                                                            <ul class="rd-navbar-dropdown">
-                                                                <li>
-                                                                    <a href="">Lorem ipsum dolor</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="">Nulla sequi, sint</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="">Corporis, quos, sit</a>
-                                                                </li>
-                                                            </ul>
                                                         </li>
                                                         <li>
                                                             <a href="">Corporis, quos, sit</a>
                                                         </li>
                                                     </ul>
                                                 </li>
+                                                <li>
+                                                    <a href="">Corporis, quos, sit</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="">Bible</a>
+                                            <a href="news.htm">Devotionals</a>
                                         </li>
                                         <li>
                                             <a href="">Audio Visuals</a>
@@ -283,18 +696,21 @@
                                             <a href="news.htm">Devotionals</a>
                                         </li>
                                         <li>
-                                            <a href="">Others</a>
+                                            <a href="">Audio Visuals</a>
+                                        </li>
+                                        <li>
+                                            <a href="news.htm">Devotionals</a>
                                         </li>
                                     </ul>
                                     <!-- END RD Navbar Nav -->
                                 </div>
                                 <div class="col-lg-5">
                                     <ul class="list-inline-secondary">
-                                        <li><a href="">Register</a></li>
-                                        <li><a href="">Forgot Password</a></li>
-                                        <li><a href="">Re-activate Account</a></li>
+                                        <li><a href="signup.htm">Register</a></li>
+                                        <li><a href="forgot-password.htm">Forgot Password</a></li>
+                                        <li><a href="reactivate.htm">Re-activate Account</a></li>
                                         <li>
-                                            <a class="acct-login-btn" href="">
+                                            <a class="acct-login-btn" href="login.htm">
                                                 <i class="icon icon-xxxs icon-white lnr lnr-user"></i>
                                                 <span class="acct-login-divider"></span>LOGIN
                                             </a>
@@ -319,7 +735,7 @@
                                 <div class="col-4">
                                     <a class="item" href="cart.htm">
                                         <span class="lnr lnr-cart">
-                        <span class="counter">3</span>
+                                            <span class="counter">3</span>
                                         </span>
                                         <span class="text">Cart</span>
                                     </a>
@@ -433,7 +849,7 @@
                             <p class="font-weight-bold mb-3">4 results found for the keyword '<i>sample</i>'</p>
                             <!-- START SEARCH RESULT -->
                             <div class="filter-product">
-                                <div class="row">
+                                <div class="row align-items-center">
                                     <div id="col2" class="col-6">
                                         <nav class="rd-navbar">
                                             <div class="rd-navbar-listing-toggle rd-navbar-static--hidden toggle-original" data-rd-navbar-toggle=".listing-filter-wrap"><span class="lnr lnr-list"></span> Filter</div>
@@ -450,9 +866,9 @@
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                        <div class="btn-group">
-                                            <p class="filter-item-count ml-auto">6817 Item/s found</p>
-                                            <button type="button" class="btn dropdown-filter-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="btn-group align-items-center">
+                                            <p class="filter-item-count ml-auto mt-auto mb-auto">6817 Item/s found</p>
+                                            <button type="button" class="btn dropdown-filter-btn dropdown-toggle sort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Sort by
                         </button>
                                             <div class="dropdown-menu dropdown-menu-right">
@@ -467,12 +883,15 @@
                             <div class="gap-20"></div>
                             <div class="list-product">
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
+                                                <div class="product-discount">
+                                                    50% OFF
+                                                </div>
                                                 <a href="product-profile.htm">
-                                                    <div class="prodImg"><img src="images/misc/book1.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old">Php 200.00</div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -483,12 +902,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book2.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -499,12 +918,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book1.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -515,12 +934,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book2.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -531,12 +950,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book1.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -547,12 +966,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book2.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -563,12 +982,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book1.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -579,12 +998,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book2.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -595,12 +1014,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 item">
-                                        <div class="product-link">
+                                    <div class="col-md-4 col-sm-6 col-xs-6 pl-xs-1 pr-xs-1 item">
+                                        <div class="product-link p-0">
                                             <div class="product-card">
                                                 <a href="">
-                                                    <div class="prodImg"><img src="images/misc/book1.jpg" alt="" /></div>
-                                                    <h3 class="product-price">Php 180.00</h3>
+                                                    <div class="prodImg"><img class="product-img" src="images/misc/book1.jpg" alt="" /></div>
+                                                    <h3 class="product-price"><div class="old"><br></div>Php 180.00</h3>
                                                 </a>
                                                 <p class="product-title">The Friend of the Bridegroom</p>
                                                 <form id="addToCart" data-source="addToCart">
@@ -663,13 +1082,13 @@
                                 <h6 class="footer-title">Connect with Us</h6>
                                 <ul class="footer-social-links">
                                     <li>
-                                        <a href="#"><span class="fa fa-facebook-f"></span> Facebook</a>
+                                        <a href="#"><span class="fab fa-facebook-f mr-2"></span> Facebook</a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="fa fa-twitter"></span> Twitter</a>
+                                        <a href="#"><span class="fab fa-twitter mr-2"></span> Twitter</a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="fa fa-youtube-play"></span> Youtube</a>
+                                        <a href="#"><span class="fab fa-youtube mr-2"></span> Youtube</a>
                                     </li>
                                 </ul>
                                 <div class="gap-20"></div>
@@ -733,6 +1152,57 @@
             </div>
         </footer>
         <!-- END Page Footer -->
+
+        <nav class="rd-navbar rd-navbar-sl">
+            <div class="sl-filter-wrap">
+                <div class="rd-navbar-sl-close-toggle toggle-original"><span class="lnr lnr-cross"></span> Close</div>
+                <div class="gap-20"></div>
+                <ul class="rd-navbar-items-list">
+                    <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                            <div class="unit__left"><span class="icon icon-md icon-primary fab fa-facebook-f"></span></div>
+                            <div class="unit__body"><a href="#">Facebook</a></div>
+                        </div>
+                        <div class="gap-20"></div>
+                    </li>
+                    <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                            <div class="unit__left"><span class="icon icon-md icon-primary fab fa-facebook-messenger"></span></div>
+                            <div class="unit__body"><a href="#">Messenger</a></div>
+                        </div>
+                        <div class="gap-20"></div>
+                    </li>
+                    <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                            <div class="unit__left"><span class="icon icon-md icon-primary fab fa-twitter"></span></div>
+                            <div class="unit__body"><a href="#">Twitter</a></div>
+                        </div>
+                        <div class="gap-20"></div>
+                    </li>
+                    <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                            <div class="unit__left"><span class="icon icon-md icon-primary fab fa-youtube"></span></div>
+                            <div class="unit__body"><a href="#">Youtube</a></div>
+                        </div>
+                        <div class="gap-20"></div>
+                    </li>
+                    <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                            <div class="unit__left"><span class="icon icon-md icon-primary fab fa-viber"></span></div>
+                            <div class="unit__body"><a href="#">Viber</a></div>
+                        </div>
+                        <div class="gap-20"></div>
+                    </li>
+                     <li>
+                        <div class="unit flex-row align-items-center unit-spacing-xs">
+                            <div class="unit__left"><span class="icon icon-md icon-primary fab fa-whatsapp"></span></div>
+                            <div class="unit__body"><a href="#">Whatsapp</a></div>
+                        </div>
+                        <div class="gap-20"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <!-- <div class="privacy-policy dark">
@@ -753,7 +1223,11 @@
     </div>
 
     <div id="sticky-contact" class="sticky-hover">
-        <img src="images/misc/stpauls_contactus.png" />
+        <nav class="rd-navbar">
+            <div class="rd-navbar-sl-toggle toggle-original" data-rd-navbar-toggle=".sl-filter-wrap">
+                <img src="images/misc/stpauls_contactus.png" />
+            </div>
+        </nav>
     </div>
 
     <script type="text/javascript">
@@ -765,6 +1239,45 @@
     </script>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/better-rating.js"></script>
+    <script src="plugins/bootstrap/js/popper.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/rd-navbar/dist/js/jquery.rd-navbar.js"></script>
+    <script src="plugins/materialize/js/materialize.js"></script>
+    <script src="plugins/aos/dist/aos.js"></script>
+    <script src="plugins/jssocials/jssocials.js"></script>
+    <script src="plugins/jssocials/jssocials-extension.js"></script>
+    <script src="plugins/slick/slick.js"></script>
+    <script src="plugins/slick/slick.extension.js"></script>
+    <script src="plugins/flexmenu/modernizr.custom.js"></script>
+    <script src="plugins/flexmenu/flexmenu.min.js"></script>
+    <script src="plugins/ion.rangeslider/js/ion.rangeSlider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                linkTitle: "",
+                linkText: "Others"
+            });
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            }
+        });
+        $(window).resize(function () {
+            if ($(window).width() <= 991) {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    undo: "true"
+                });
+            } else {
+                $('header nav .rd-navbar-nav-wrap .rd-navbar-nav').flexMenu({
+                    linkTitle: "",
+                    linkText: "Others"
+                });
+            }
+        });
+    </script>
+    
     <script src="js/script.js"></script>
 </body>
 
