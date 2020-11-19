@@ -607,6 +607,13 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 .rating {
 	margin-bottom: 5px;
 
+	a {
+		&:hover,
+		&:focus {
+			text-decoration: none !important;
+		}
+	}
+
 	.fa-star {
 		font-size: 1.3em;
 		color: #cacaca;
@@ -681,7 +688,9 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 .item-sale-prev,
 .item-sale-next,
 .recently-viewed-prev,
-.recently-viewed-next {
+.recently-viewed-next,
+.related-product-prev,
+.related-product-next {
 	background: $first-color;
 	color: $fourth-color;
 	padding: 7px 13px;
@@ -691,11 +700,13 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 	&:hover {
 		background: darken($first-color, 10%);
 		color: $fourth-color;
+		text-decoration: none;
 	}
 
 	&:focus {
 		background: $first-color;
 		color: $fourth-color;
+		text-decoration: none;
 	}
 }
 

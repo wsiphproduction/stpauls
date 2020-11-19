@@ -104,12 +104,14 @@
   }
   .product-prev,
   .product-next,
-  .owl-reco-title-prev,
-  .owl-reco-title-next,
-  .owl-item-sale-prev,
-  .owl-item-sale-next,
-  .owl-recently-viewed-prev,
-  .owl-recently-viewed-next {
+  .reco-title-prev,
+  .reco-title-next,
+  .item-sale-prev,
+  .item-sale-next,
+  .recently-viewed-prev,
+  .recently-viewed-next,
+  .related-product-prev,
+  .related-product-next {
     font-size: 1.1em !important;
   }
 }
@@ -397,7 +399,9 @@
   .item-sale-prev,
   .item-sale-next,
   .recently-viewed-prev,
-  .recently-viewed-next {
+  .recently-viewed-next,
+  .related-product-prev,
+  .related-product-next {
     font-size: 1em !important;
     padding: 5px 11px;
     margin: 0 1px;
