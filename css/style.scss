@@ -30,6 +30,11 @@ input:-internal-autofill-selected {
 	border-radius: 2px;
 }
 
+input::-ms-reveal,
+input::-ms-clear {
+	display: none;
+}
+
 h2 {
 	font-family: $font2;
 	font-size: 1.65em;
@@ -75,17 +80,6 @@ p {
 	color: $second-color;
 }
 
-a {
-	color: $first-color;
-	cursor: pointer;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-		color: $first-color;
-	}
-}
-
 ol {
 	list-style-type: decimal;
 
@@ -100,6 +94,16 @@ ol {
 			color: $first-color;
 		}
 	}
+}
+
+.text {
+	&-md {
+		font-size: 1.5em;
+	}
+}
+
+.text-first-color {
+	color: $first-color;
 }
 
 // PRELOADER
@@ -553,7 +557,7 @@ ol {
 		content: "\ec3a";
 		position: absolute;
 		top: 35%;
-		right: 15px;
+		right: 25px;
 		font: 600 14px "Linearicons";
 		border: none;
 	}
@@ -1300,6 +1304,16 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 .contact-details {
 	font-family: $font1;
 
+	a {
+		color: $first-color;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: $first-color;
+		}
+	}
 	p,
 	label {
 		font-size: 1em;
@@ -1391,7 +1405,7 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 	select.form-input {
 		-webkit-appearance: none;
 		-moz-appearance: none;
-		background: transparent;
+		background: whites;
 		background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
 		background-repeat: no-repeat;
 		background-position-x: 98%;
@@ -1399,7 +1413,7 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 		border: 1px solid #dfdfdf;
 		border-radius: 2px;
 		margin-right: 2rem;
-		padding: 1rem;
+		padding: 0.8rem;
 		padding-right: 2rem;
 	}
 
@@ -1411,7 +1425,7 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 	&.fs-sm {
 		.form-input {
 			font-size: 0.85em !important;
-			padding: 15px;
+			padding: 10px 15px;
 		}
 
 		p,
@@ -3832,11 +3846,20 @@ $tabs: 1, 2, 3, 4;
 	.dataTables_info {
 		font-size: 0.95rem;
 		font-weight: 500;
+
+		.translate-y {
+			transform: translateY(-3px);
+		}
 	}
 
 	.dataTables_scroll .lnr {
 		font-size: 1.25rem;
 		font-weight: 700;
+		transition: all 0.5s ease;
+
+		&:hover {
+			color: $first-color;
+		}
 	}
 }
 
@@ -3851,7 +3874,7 @@ $tabs: 1, 2, 3, 4;
 	margin-left: 40px;
 }
 
-#password-field {
+.password-field {
 	padding-right: 50px;
 }
 

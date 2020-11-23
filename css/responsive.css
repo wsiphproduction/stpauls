@@ -350,6 +350,9 @@
   .product-card .product-img {
     min-height: 200px;
   }
+  .contact-details > div:first-child {
+    padding-right: 15px;
+  }
 }
 
 @media (max-width: 768px) {
