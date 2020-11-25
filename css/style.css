@@ -1977,7 +1977,6 @@ ol li::marker {
 #home-body,
 #default-wrapper {
   padding: 70px 1rem;
-  position: relative;
   z-index: 5;
 }
 
@@ -3933,16 +3932,16 @@ ol li::marker {
 
 .success-icon {
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   background: #c2e7ae;
   margin: 0 auto;
 }
 
 .success-icon .lnr {
   color: #60b033;
-  font-size: 60px;
-  line-height: 150px;
+  font-size: 40px;
+  line-height: 100px;
   text-align: center;
   display: block;
 }
@@ -3955,16 +3954,16 @@ ol li::marker {
 
 .error-icon {
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   background: #f6a3a3;
   margin: 0 auto;
 }
 
 .error-icon .lnr {
   color: #d21414;
-  font-size: 60px;
-  line-height: 150px;
+  font-size: 40px;
+  line-height: 100px;
   text-align: center;
   display: block;
 }
@@ -4138,26 +4137,21 @@ ol li::marker {
   width: 30px;
 }
 
-#salesTransaction_wrapper .dataTables_scroll,
+#salesTransaction_wrapper #salesTransaction,
 #salesTransaction_wrapper .dataTables_info {
-  font-size: 0.95rem;
+  font-size: 0.95rem !important;
   font-weight: 500;
 }
 
-#salesTransaction_wrapper .dataTables_scroll .translate-y,
-#salesTransaction_wrapper .dataTables_info .translate-y {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-#salesTransaction_wrapper .dataTables_scroll .lnr {
+#salesTransaction_wrapper #salesTransaction .lnr {
   font-size: 1.25rem;
   font-weight: 700;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  color: #b82e24;
 }
 
-#salesTransaction_wrapper .dataTables_scroll .lnr:hover {
+#salesTransaction_wrapper #salesTransaction .lnr:hover {
   color: #b82e24;
 }
 
@@ -4226,6 +4220,105 @@ form p {
 
 .dataTables_scrollHead .table {
   margin-bottom: 0;
+}
+
+.c-icon {
+  display: inline-block;
+  width: 31px;
+  height: 24px;
+  background-size: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.c-icon-peso {
+  background-image: url(../images/misc/cash-peso-red.svg);
+}
+
+.c-icon-peso:hover {
+  background-image: url(../images/misc/cash-peso-red.svg);
+}
+
+.c-icon-peso-red {
+  background-image: url(../images/misc/cash-peso-red.svg);
+}
+
+.legend .lnr {
+  font-size: 1.5em;
+}
+
+.order-info {
+  font-size: 0.9em;
+}
+
+.order-info h2 {
+  font-size: 2.5rem;
+}
+
+.order-info hr {
+  margin: 10px 0;
+}
+
+.order-info-btn-group a {
+  margin-left: 15px;
+}
+
+.translate-y {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.dataTable.stripe tbody tr.odd {
+  background-color: #efefef;
+}
+
+.dataTable.stripe tbody tr.odd + tr.child td {
+  background-color: #efefef;
+  width: 100%;
+}
+
+.dataTable.stripe tbody tr.child li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dataTable.stripe tbody tr.child li[data-dtr-index="4"] > span:first-child {
+  margin-bottom: 15px;
+}
+
+.dataTable.stripe tbody tr.child:hover {
+  background: inherit !important;
+}
+
+.dataTable.stripe tbody tr[role="row"] > td:first-child {
+  font-weight: 700;
+}
+
+.dataTable.stripe tbody tr[role="row"] > td:first-child:before {
+  top: 15px !important;
+  left: 10px !important;
+}
+
+.dataTable.stripe tbody tr[role="row"]:hover {
+  background-color: #dceefd !important;
+}
+
+.dataTable.stripe tbody tr[role="row"]:hover + tr.child td {
+  background-color: #dceefd !important;
+}
+
+.dataTable.collapsed tbody tr[role="row"] > td:first-child {
+  padding-left: 40px !important;
+}
+
+.dataTable.collapsed .child .order-info-btn-group a {
+  margin-right: 15px;
+  margin-left: 0;
 }
 
 @font-face {
@@ -4366,12 +4459,11 @@ form p {
   .list-product .product-card .product-price {
     font-size: 1.1rem;
   }
-  #salesTransaction_wrapper .dataTables_scroll,
-  #salesTransaction_wrapper .dataTables_info {
-    font-size: 0.8rem;
-  }
   #salesTransaction_wrapper .dataTables_info {
     text-align: left !important;
+  }
+  .order-info h2 {
+    font-size: 2rem;
   }
 }
 
@@ -4916,6 +5008,9 @@ form p {
   .product-card a .product-img {
     margin: 5px auto 0 !important;
     min-height: 165px;
+  }
+  .order-info h2 {
+    font-size: 1.65rem;
   }
 }
 

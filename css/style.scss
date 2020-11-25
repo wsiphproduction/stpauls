@@ -1801,7 +1801,6 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 #home-body,
 #default-wrapper {
 	padding: 70px 1rem;
-	position: relative;
 	z-index: 5;
 
 	.category-section {
@@ -3633,15 +3632,15 @@ $tabs: 1, 2, 3, 4;
 // MESSAGE
 .success-icon {
 	border-radius: 50%;
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	background: #c2e7ae;
 	margin: 0 auto;
 
 	.lnr {
 		color: #60b033;
-		font-size: 60px;
-		line-height: 150px;
+		font-size: 40px;
+		line-height: 100px;
 		text-align: center;
 		display: block;
 	}
@@ -3655,15 +3654,15 @@ $tabs: 1, 2, 3, 4;
 
 .error-icon {
 	border-radius: 50%;
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	background: #f6a3a3;
 	margin: 0 auto;
 
 	.lnr {
 		color: #d21414;
-		font-size: 60px;
-		line-height: 150px;
+		font-size: 40px;
+		line-height: 100px;
 		text-align: center;
 		display: block;
 	}
@@ -3842,20 +3841,17 @@ $tabs: 1, 2, 3, 4;
 }
 
 #salesTransaction_wrapper {
-	.dataTables_scroll,
+	#salesTransaction,
 	.dataTables_info {
-		font-size: 0.95rem;
+		font-size: 0.95rem !important;
 		font-weight: 500;
-
-		.translate-y {
-			transform: translateY(-3px);
-		}
 	}
 
-	.dataTables_scroll .lnr {
+	#salesTransaction .lnr {
 		font-size: 1.25rem;
 		font-weight: 700;
 		transition: all 0.5s ease;
+		color: $first-color;
 
 		&:hover {
 			color: $first-color;
@@ -3929,6 +3925,132 @@ form {
 
 .dataTables_scrollHead .table {
 	margin-bottom: 0;
+}
+
+.c-icon {
+	display: inline-block;
+	width: 31px;
+	height: 24px;
+	background-size: cover;
+	transition: all 0.5s ease;
+}
+
+.c-icon-peso {
+	background-image: url(../images/misc/cash-peso-red.svg);
+
+	&:hover {
+		background-image: url(../images/misc/cash-peso-red.svg);
+	}
+}
+
+.c-icon-peso-red {
+	background-image: url(../images/misc/cash-peso-red.svg);
+}
+
+.legend {
+	.lnr {
+		font-size: 1.5em;
+	}
+}
+
+.order-info {
+	font-size: 0.9em;
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	hr {
+		margin: 10px 0;
+	}
+
+	&-btn-group {
+		a {
+			margin-left: 15px;
+		}
+	}
+}
+
+.translate-y {
+	transform: translateY(-3px);
+}
+
+.dataTable {
+	&.stripe {
+		tbody {
+			tr {
+				&.odd {
+					background-color: #efefef;
+
+					& + tr.child {
+						td {
+							background-color: #efefef;
+							width: 100%;
+						}
+					}
+				}
+
+				&.child {
+					li {
+						display: flex;
+						flex-direction: column;
+
+						&[data-dtr-index="4"] {
+							& > span:first-child {
+								margin-bottom: 15px;
+							}
+						}
+					}
+
+					&:hover {
+						background: inherit !important;
+					}
+				}
+
+				&[role="row"] {
+					& > td {
+						&:first-child {
+							font-weight: 700;
+
+							&:before {
+								top: 15px !important;
+								left: 10px !important;
+							}
+						}
+					}
+
+					&:hover {
+						background-color: #dceefd !important;
+
+						& + tr.child {
+							td {
+								background-color: #dceefd !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.collapsed {
+		tbody {
+			tr[role="row"] {
+				& > td:first-child {
+					padding-left: 40px !important;
+				}
+			}
+		}
+
+		.child {
+			.order-info-btn-group {
+				a {
+					margin-right: 15px;
+					margin-left: 0;
+				}
+			}
+		}
+	}
 }
 
 @import "responsive";

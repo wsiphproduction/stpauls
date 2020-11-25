@@ -137,12 +137,11 @@
   .list-product .product-card .product-price {
     font-size: 1.1rem;
   }
-  #salesTransaction_wrapper .dataTables_scroll,
-  #salesTransaction_wrapper .dataTables_info {
-    font-size: 0.8rem;
-  }
   #salesTransaction_wrapper .dataTables_info {
     text-align: left !important;
+  }
+  .order-info h2 {
+    font-size: 2rem;
   }
 }
 
@@ -687,6 +686,9 @@
   .product-card a .product-img {
     margin: 5px auto 0 !important;
     min-height: 165px;
+  }
+  .order-info h2 {
+    font-size: 1.65rem;
   }
 }
 

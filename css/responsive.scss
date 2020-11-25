@@ -156,13 +156,14 @@
 	}
 
 	#salesTransaction_wrapper {
-		.dataTables_scroll,
-		.dataTables_info {
-			font-size: 0.8rem;
-		}
-
 		.dataTables_info {
 			text-align: left !important;
+		}
+	}
+
+	.order-info {
+		h2 {
+			font-size: 2rem;
 		}
 	}
 }
@@ -914,6 +915,12 @@
 				margin: 5px auto 0 !important;
 				min-height: 165px;
 			}
+		}
+	}
+
+	.order-info {
+		h2 {
+			font-size: 1.65rem;
 		}
 	}
 }
