@@ -1573,6 +1573,7 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 		position: relative;
 		margin-left: 30px;
 		display: flex;
+		flex-direction: column;
 		flex-wrap: wrap;
 		align-content: space-between;
 		height: 100%;
