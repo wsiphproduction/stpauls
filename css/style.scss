@@ -202,6 +202,29 @@ ol {
 	}
 }
 
+.banner-button {
+	position: relative;
+	padding: 20px 15px;
+	z-index: 99;
+
+	.btn {
+		&:before {
+			content: "";
+			height: 1px;
+			width: 100%;
+			background-color: white;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			z-index: -1;
+		}
+	}
+}
+
+#banner .slick-track {
+	background-color: #252525;
+}
+
 // SUB-BANNER
 .sub-banner-caption {
 	display: flex !important;
