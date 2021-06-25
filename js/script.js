@@ -36,13 +36,6 @@ $(document).ready(function () {
 			window.location = href;
 			return;
 		}
-		if (
-			href.indexOf("#pills-book") == 0 ||
-			href.indexOf("#pills-bible") == 0 ||
-			href.indexOf("#pills-devotional") == 0
-		) {
-			return;
-		}
 		if (href.indexOf("images/") == 0) {
 			return;
 		}
@@ -280,3 +273,36 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 991px)");
 myFunction(x);
 x.addListener(myFunction);
+
+
+var maxField = 10; //Input fields increment limitation
+var addButton = $('.add_button'); //Add button selector
+var wrapper = $('.field_wrapper'); //Input field wrapper
+var fieldHTML = '<div class="input-group"><input type="text" class="promo-input form-control" name="promo" id="promo"><div class="input-group-append"><a  class="btn promo-btn remove_button" type="button"><i class="fa fa-minus"></i></a></div></div>'; //New input field html 
+var x = 1; //Initial field counter is 1
+//Once add button is clicked
+$(addButton).click(function(){
+	//Check maximum number of input fields
+	if(x < maxField){ 
+		x++; //Increment field counter
+		$(wrapper).append(fieldHTML); //Add field html
+	}
+});
+//Once remove button is clicked
+$(wrapper).on('click', '.remove_button', function(e){
+	e.preventDefault();
+	$(this).parent('div').parent('div').remove(); //Remove field html
+	x--; //Decrement field counter
+});
+
+$(".coupon-transaction-btn").on('click', function(){
+	$(this).parent().parent().siblings().children('.coupon-transaction-desc').slideToggle();
+	$(this).parent().parent().siblings().children('.coupon-transaction-tc').slideToggle();
+	$(this).parent().parent().siblings().children('.coupon-transaction-valid').slideToggle();
+	$(this).parent().parent().siblings().children('.coupon-transaction-date').slideToggle();
+	$(this).parent().parent().siblings().children('.coupon-transaction-order').slideToggle();
+	$(this).parent().parent().parent().siblings().children().slideToggle();
+	$(this).children().toggleClass('fa-plus fa-minus');
+});
+
+

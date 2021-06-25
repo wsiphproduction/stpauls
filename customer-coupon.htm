@@ -8,8 +8,12 @@
     <title>ST PAULS Online | Catholic Online Bookstore in Philippines</title>
     <link rel="shortcut icon" href="images/misc/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" href="plugins/linearicon/css/linearicon.min.css" />
+    <link rel="stylesheet" href="plugins/linearicon/css/linearicons.min.css" />
+    <link rel="stylesheet" href="plugins/datatables/Responsive-2.2.3/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="plugins/datatables/datatables.min.css" />
     <link rel="stylesheet" href="plugins/rd-navbar/rd-navbar.css" />
     <link rel="stylesheet" href="plugins/aos/dist/aos.min.css" />
     <link rel="stylesheet" href="css/tagsinput.min.css" />
@@ -700,14 +704,13 @@
                                 </div>
                                 <div class="col-lg-5">
                                     <ul class="list-inline-secondary">
-                                        <li><a href="signup.htm">Register</a></li>
-                                        <li><a href="forgot-password.htm">Forgot Password</a></li>
-                                        <li><a href="reactivate.htm">Re-activate Account</a></li>
+                                        <li><a href="">Change Password</a></li>
                                         <li>
-                                            <a class="acct-login-btn" href="login.htm">
-                                                <i class="icon icon-xxxs icon-white lnr lnr-user"></i>
-                                                <span class="acct-login-divider"></span>LOGIN
-                                            </a>
+                                            <a class="acc-menu active-user dropdown-toggle" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                                            <div class="acc-dropdown-menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#"><span class="lnr lnr-user mr-2"></span>Manage Account</a>
+                                                <a class="dropdown-item" href="index.htm"><span class="lnr lnr-exit mr-2"></span>Log Out</a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -751,472 +754,118 @@
 
         <!-- Page Content -->
         <main>
-
-            <section id="cart-wrapper">
+            <section id="default-wrapper">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-9">
-                            <div class="cart-title">
-                                <h2>My Cart</h2>
-                            </div>
-
-                            <ul class="cart-wrap">
-                                <li class="item">
-                                    <div class="remove-item">
-                                        <a href="#" class="remove">Remove <span class="lnr lnr-cross"></span></a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 col-sm-4">
-                                            <div class="img-wrap">
-                                                <a href="product-profile.htm"><img src="images/misc/book1.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <div class="info-wrap">
-                                                <div class="cart-description">
-                                                    <h3 class="cart-product-title"><a href="product-profile.htm">The Friend of the Bridegroom</a></h3>
-                                                    <ol class="breadcrumb">
-                                                        <li class="breadcrumb-item active" aria-current="page">Books</li>
-                                                        <li class="breadcrumb-item active" aria-current="page">General References</li>
-                                                    </ol>
-                                                </div>
-                                                <div class="cart-quantity">
-                                                    <label for="quantity">Quantity</label>
-                                                    <div class="quantity">
-                                                        <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
-                                                    </div>
-                                                </div>
-                                                <div class="cart-info">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <table>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Total Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="cart-product-price">₱ 160.00</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="remove-item">
-                                        <a href="#" class="remove">Remove <span class="lnr lnr-cross"></span></a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 col-sm-4">
-                                            <div class="img-wrap">
-                                                <a href="product-profile.htm"><img src="images/misc/book1.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <div class="info-wrap">
-                                                <div class="cart-description">
-                                                    <h3 class="cart-product-title"><a href="product-profile.htm">The Friend of the Bridegroom</a></h3>
-                                                    <ol class="breadcrumb">
-                                                        <li class="breadcrumb-item active" aria-current="page">Books</li>
-                                                        <li class="breadcrumb-item active" aria-current="page">General References</li>
-                                                    </ol>
-                                                </div>
-                                                <div class="cart-quantity">
-                                                    <label for="quantity">Quantity</label>
-                                                    <div class="quantity">
-                                                        <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
-                                                    </div>
-                                                </div>
-                                                <div class="cart-info">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <table>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Total Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="cart-product-price">₱ 160.00</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="remove-item">
-                                        <a href="#" class="remove">Remove <span class="lnr lnr-cross"></span></a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 col-sm-4">
-                                            <div class="img-wrap">
-                                                <a href="product-profile.htm"><img src="images/misc/book1.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <div class="info-wrap">
-                                                <div class="cart-description">
-                                                    <h3 class="cart-product-title"><a href="product-profile.htm">The Friend of the Bridegroom</a></h3>
-                                                    <ol class="breadcrumb">
-                                                        <li class="breadcrumb-item active" aria-current="page">Books</li>
-                                                        <li class="breadcrumb-item active" aria-current="page">General References</li>
-                                                    </ol>
-                                                </div>
-                                                <div class="cart-quantity">
-                                                    <label for="quantity">Quantity</label>
-                                                    <div class="quantity">
-                                                        <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
-                                                    </div>
-                                                </div>
-                                                <div class="cart-info">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <table>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Total Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="cart-product-price">₱ 160.00</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="remove-item">
-                                        <a href="#" class="remove">Remove <span class="lnr lnr-cross"></span></a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 col-sm-4">
-                                            <div class="img-wrap">
-                                                <a href="product-profile.htm"><img src="images/misc/book1.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9">
-                                            <div class="info-wrap">
-                                                <div class="cart-description">
-                                                    <h3 class="cart-product-title"><a href="product-profile.htm">The Friend of the Bridegroom</a></h3>
-                                                    <ol class="breadcrumb">
-                                                        <li class="breadcrumb-item active" aria-current="page">Books</li>
-                                                        <li class="breadcrumb-item active" aria-current="page">General References</li>
-                                                    </ol>
-                                                </div>
-                                                <div class="cart-quantity">
-                                                    <label for="quantity">Quantity</label>
-                                                    <div class="quantity">
-                                                        <input type="number" name="quantity" min="1" max="25" step="1" value="1" data-inc="1">
-                                                    </div>
-                                                </div>
-                                                <div class="cart-info">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <table>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Total Weight (g)</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <p>100</p>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="cart-product-price">₱ 160.00</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
                         <div class="col-lg-3">
-							<div class="cart-title">
-                                <h2>Coupon</h2>
+                            <h3 class="subpage-heading">Options</h3>
+                            <div class="side-menu">
+                                <ul>
+                                    <li><a href="customer-dashboard.htm">Account Dashboard</a></li>
+                                    <li><a href="#">Account Information</a></li>
+                                    <li class="active"><a href="customer-coupon.htm">Claimed Coupons</a></li>
+                                    <li><a href="customer-orders.htm">My Orders</a></li>
+                                    <li><a href="#">My Rewards</a></li>
+                                    <li><a href="#">My Product Reviews</a></li>
+                                    <li><a href="index.htm">Log Out</a></li>
+                                </ul>
                             </div>
-							<div class="summary-wrap">
-                                <div class="promo-code">
-                                    <label for="promo">Enter promo code or <span class="white-spc">gift card</span></label>
-                                    <div class="input-group">
-                                        <input type="text" class="promo-input form-control" name="promo" id="promo">
-                                    </div>
-									<div class="field_wrapper"></div>
-									
-									<a class="mt-2 mb-2 text-primary" data-toggle="modal" href="#myModal" style="font-size:12px;"> or click here to  Select from My Coupons</a>
-									
-									<div class="mt-2">
-										<a class="add_button btn btn-success promo-btn" title="Add field"><i class="fa fa-plus"></i></a>
-										<button class="btn promo-btn" type="button">Apply</button>
-									</div>
-									
-									<!-- Modal start -->
-									<div class="coupon-modal">
-										<div class="modal overmodal" id="myModal">
-											<div class="modal-dialog modal-dialog-centered modal-md">
-											  <div class="modal-content">
-												<div class="modal-header">
-												  <h4 class="modal-title">Available Coupon</h4>    
-												  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												</div><div class="container"></div>
-												<div class="modal-body">
-													<div class="coupon-item p-2 border border-info rounded mb-1">
-													  <div class="coupon-item-btns float-right mt-1 mr-2">
-														  <a class="nav-link p-0 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i></a>
-															<div class="dropdown-menu">
-															  <a class="dropdown-item small" href="#">Use Coupon</a>
-															  <a class="dropdown-item small" data-toggle="modal" href="#myModal2">Terms & Condition</a>
-														  </div>
-													  </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="article-content">
+                                <h3 class="subpage-heading">My Coupons</h3>
 
-													  <div class="coupon-item-name bg-info text-white rounded">
-														  <h5 class="p-1">HAPPY50</h5>
-													  </div>
-													  <div class="coupon-item-desc mb-1">
-														  <small><strong>Jan 1, 2021 - Dec 31, 2021</strong></small>
-														  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</p>
-													  </div>
-													</div>
 
-													<div class="coupon-item p-2 border border-secondary rounded mb-1">
-													  <div class="coupon-item-btns float-right mt-1 mr-2">
-														  <a class="nav-link p-0 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i></a>
-															<div class="dropdown-menu">
-															  <a class="dropdown-item small" href="#">Use Coupon</a>
-															  <a class="dropdown-item small" data-toggle="modal" href="#myModal2">Terms & Condition</a>
-														  </div>
-													  </div>
+                                <div class="gap-20"></div>
 
-													  <div class="coupon-item-name bg-secondary text-white rounded">
-														  <h5 class="p-1">HAPPY50</h5>
-													  </div>
-													  <div class="coupon-item-desc mb-1">
-														  <small><strong>Jan 1, 2021 - Dec 31, 2021</strong></small>
-														  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</p>
-													  </div>
-													</div>
-
-													<div class="coupon-item p-2 border border-secondary rounded mb-1">
-													  <div class="coupon-item-btns float-right mt-1 mr-2">
-														  <a class="nav-link p-0 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i></a>
-															<div class="dropdown-menu">
-															  <a class="dropdown-item small" href="#">Use Coupon</a>
-															  <a class="dropdown-item small" data-toggle="modal" href="#myModal2">Terms & Condition</a>
-														  </div>
-													  </div>
-
-													  <div class="coupon-item-name bg-secondary text-white rounded">
-														  <h5 class="p-1">HAPPY50</h5>
-													  </div>
-													  <div class="coupon-item-desc mb-1">
-														  <small><strong>Jan 1, 2021 - Dec 31, 2021</strong></small>
-														  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</p>
-													  </div>
-													</div>
-												</div>
-											  </div>
-											</div>
+                                <div class="coupon-transaction mb-5" style="font-size:16px;">
+									<div class="coupon-transaction-label border">
+										<div class="coupon-transaction-left">
+											<div class="coupon-transaction-name">Name</div>
 										</div>
-										<div class="modal overmodal" id="myModal2" data-backdrop="static">
-											<div class="modal-dialog modal-dialog-centered modal-md">
-											  <div class="modal-content">
-												<div class="modal-header">
-												  <h4 class="modal-title">Terms & Condition</h4>
-												  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												</div><div class="container"></div>
-												<div class="modal-body">
-												  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</p>
 
+										<div class="coupon-transaction-right">
+											<div class="coupon-transaction-desc">Description</div>
+											<div class="coupon-transaction-tc">T&C</div>
+											<div class="coupon-transaction-valid">Validity</div>
+											<div class="coupon-transaction-date">Date Claimed</div>
+											<div class="coupon-transaction-order">Order #</div>
+										</div>
+									</div>
+
+									<div class="coupon-transaction-items border">
+										<div class="coupon-transaction-item">
+											<div class="coupon-transaction-left">
+												<div class="coupon-transaction-view px-1">
+													<button class="btn btn-default p-0 coupon-transaction-btn"><i class="fa fa-plus text-success"></i></button>
 												</div>
-												<div class="modal-footer">
-												  <a href="#" data-dismiss="modal" class="btn btn-sm">Close</a>
-												  <a href="#" class="btn btn-primary btn-sm">Use Coupon</a>
+												<div class="coupon-transaction-name">
+													<span>Nico Robin</span>
 												</div>
-											  </div>
+											</div>
+
+											<div class="coupon-transaction-right">
+												<div class="coupon-transaction-desc">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</div>
+												<div class="coupon-transaction-tc">
+													<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+													  View Terms & Condition
+													</button>
+
+													<!-- Modal -->
+													<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+													  <div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+														  <div class="modal-header">
+															<h5 class="modal-title" id="exampleModalLongTitle">Terms & Condition</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															  <span aria-hidden="true">&times;</span>
+															</button>
+														  </div>
+														  <div class="modal-body align-left">
+															Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh
+														  </div>
+														</div>
+													  </div>
+													</div>
+												</div>
+												<div class="coupon-transaction-valid">Jan. 2-10, 2021</div>
+												<div class="coupon-transaction-date">Jan. 3, 2021</div>
+												<div class="coupon-transaction-order">1234567</div>
 											</div>
 										</div>
 									</div>
-									<!-- Modal end -->
-                                </div>
-								
-								<div class="subtotal">
-									<div class="coupon-item">
-									  <div class="coupon-item-btns float-right mt-1 mr-2">
-										  <a class="nav-link p-0 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i></a>
-											<div class="dropdown-menu">
-											  <a class="dropdown-item small" href="#">Remove</a>
-											  <a class="dropdown-item small" data-toggle="modal" data-target="#exampleModalCenter">Terms & Condition</a>
-										  </div>
-									  </div>
 
-										<!-- Modal -->
-										<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-										  <div class="modal-dialog modal-dialog-centered modal-md">
-											  <div class="modal-content">
-												<div class="modal-header">
-												  <h4 class="modal-title">Terms & Condition</h4>
-												  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												</div><div class="container"></div>
-												<div class="modal-body">
-												  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</p>
+									<div class="coupon-transaction-items border">
+										<div class="coupon-transaction-item">
+											<div class="coupon-transaction-left">
+												<div class="coupon-transaction-view px-1">
+													<button class="btn btn-default p-0 coupon-transaction-btn"><i class="fa fa-plus text-success"></i></button>
 												</div>
-												<div class="modal-footer">
-												  <a href="#" data-dismiss="modal" class="btn btn-sm">Close</a>
-												  <a href="#" class="btn btn-primary btn-sm">Remove Coupon</a>
+												<div class="coupon-transaction-name">
+													<span>Nico Robin</span>
 												</div>
-											  </div>
+											</div>
+
+											<div class="coupon-transaction-right">
+												<div class="coupon-transaction-desc">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</div>
+												<div class="coupon-transaction-tc">
+													<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">
+													  View Terms & Condition
+													</button>
+												</div>
+												<div class="coupon-transaction-valid">Jan. 2-10, 2021</div>
+												<div class="coupon-transaction-date">Jan. 3, 2021</div>
+												<div class="coupon-transaction-order">1234567</div>
 											</div>
 										</div>
-
-									  <div class="coupon-item-name text-white" style="background:#b82e24;">
-										  <h6 class="p-1 mb-1">HAPPY50</h6>
-									  </div>
-									  <div class="coupon-item-desc mb-1">
-										  <small><strong>Jan 1, 2021 - Dec 31, 2021</strong></small>
-										  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam</p>
-									  </div>
 									</div>
 								</div>
 								
-								<div class="subtotal">
-									<div class="coupon-item">
-									  <div class="coupon-item-btns float-right mt-1 mr-2">
-										  <a class="nav-link p-0 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i></a>
-											<div class="dropdown-menu">
-											  <a class="dropdown-item small" href="#">Remove</a>
-											  <a class="dropdown-item small" data-toggle="modal" data-target="#exampleModalCenter">Terms & Condition</a>
-										  </div>
-									  </div>
-
-										<!-- Modal -->
-										<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-										  <div class="modal-dialog modal-dialog-centered modal-md">
-											  <div class="modal-content">
-												<div class="modal-header">
-												  <h4 class="modal-title">Terms & Condition</h4>
-												  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-												</div><div class="container"></div>
-												<div class="modal-body">
-												  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam non. Aliquam in accumsan nibh</p>
-												</div>
-												<div class="modal-footer">
-												  <a href="#" data-dismiss="modal" class="btn btn-sm">Close</a>
-												  <a href="#" class="btn btn-primary btn-sm">Remove Coupon</a>
-												</div>
-											  </div>
-											</div>
-										</div>
-
-									  <div class="coupon-item-name text-white" style="background:#b82e24;">
-										  <h6 class="p-1 mb-1">HAPPY50</h6>
-									  </div>
-									  <div class="coupon-item-desc mb-1">
-										  <small><strong>Jan 1, 2021 - Dec 31, 2021</strong></small>
-										  <p class="m-0">Maecenas egestas mollis eros, et hendrerit justo aliquam</p>
-									  </div>
-									</div>
-								</div>
                             </div>
-							
-                            <div class="cart-title mt-2">
-                                <h2>Summary</h2>
-                            </div>
-                            <div class="summary-wrap">
-                                <div class="subtotal">
-                                    <div class="table">
-                                        <div class="table-row">
-                                            <div class="table-cell">
-                                                Subtotal
-                                            </div>
-                                            <div class="table-cell">
-                                                ₱ 799.00
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grand-total">
-                                    <div class="table">
-                                        <div class="table-row">
-                                            <div class="table-cell">
-                                                Grand Total
-                                            </div>
-                                            <div class="table-cell">
-                                                ₱ 799.00
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shipping-message">Shipping fees will apply <span class="white-spc">upon checkout</span></div>
-                                <div class="cart-btn">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <a class="btn btn-lg tertiary-btn" href="checkout.htm">Proceed to Checkout</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-							
                         </div>
                     </div>
                 </div>
             </section>
-
         </main>
         <!-- END Page Content -->
 
@@ -1364,7 +1013,7 @@
         </nav>
     </div>
 
-    <!-- <div class="privacy-policy dark">
+    <!-- <div class="privacy-policy">
       <div class="privacy-policy-desc">
         <p class="title">Privacy-Policy</p>
         <p>
@@ -1434,6 +1083,84 @@
     </script>
     
     <script src="js/script.js"></script>
+    <script src="plugins/datatables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#salesTransaction').DataTable({
+                "responsive": true,
+                "scrollX": true,
+                "scrollCollapse": true,
+                "searching": false,
+                "columnDefs": [
+                    { responsivePriority: 1, targets: 0 },
+                    { responsivePriority: 2, targets: -1 }
+                ],
+                "order": [[0, 'desc']],
+                "language": {
+                    "paginate": {
+                        "previous": "<i class='nr lnr-chevron-left'></i>",
+                        "next": "<i class='nr lnr-chevron-right'></i>"
+                    }
+                },
+                "pageLength": 5,
+                "dom": 'rt<"text-left"i>p'
+            });
+
+            table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+
+            $(window).resize(function () {
+                table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+
+                $("#salesTransaction tr.child").hover(function() {
+                    $(this).find('td').css("background-color", "#dceefd");
+                    $(this).prev().css("background-color", "#dceefd");
+                },
+                function() {
+                    $(this).find('td').removeAttr("style");
+                    $(this).prev().removeAttr("style");
+                });
+            });
+
+            $('#salesTransaction').on( 'page.dt', function () {
+                setInterval(function(){
+                    table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+
+                    $("#salesTransaction tr.child").hover(function() {
+                        $(this).find('td').css("background-color", "#dceefd");
+                        $(this).prev().css("background-color", "#dceefd");
+                    },
+                    function() {
+                        $(this).find('td').removeAttr("style");
+                        $(this).prev().removeAttr("style");
+                    });
+                }, 500);
+            });
+
+            $('#salesTransaction').on( 'order.dt', function () {
+                setInterval(function(){
+                    table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+
+                    $("#salesTransaction tr.child").hover(function() {
+                        $(this).find('td').css("background-color", "#dceefd");
+                        $(this).prev().css("background-color", "#dceefd");
+                    },
+                    function() {
+                        $(this).find('td').removeAttr("style");
+                        $(this).prev().removeAttr("style");
+                    });
+                }, 500);
+            });
+
+            $("#salesTransaction tr.child").hover(function() {
+                $(this).find('td').css("background-color", "#dceefd");
+                $(this).prev().css("background-color", "#dceefd");
+            },
+            function() {
+                $(this).find('td').removeAttr("style");
+                $(this).prev().removeAttr("style");
+            });
+        });
+    </script>
 </body>
 
 </html>

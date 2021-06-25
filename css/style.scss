@@ -202,29 +202,6 @@ ol {
 	}
 }
 
-.banner-button {
-	position: relative;
-	padding: 20px 15px;
-	z-index: 99;
-
-	.btn {
-		&:before {
-			content: "";
-			height: 1px;
-			width: 100%;
-			background-color: white;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			z-index: -1;
-		}
-	}
-}
-
-#banner .slick-track {
-	background-color: #252525;
-}
-
 // SUB-BANNER
 .sub-banner-caption {
 	display: flex !important;
@@ -1596,7 +1573,6 @@ $gaps: 10, 20, 30, 40, 50, 60, 70, 70, 80, 90, 100;
 		position: relative;
 		margin-left: 30px;
 		display: flex;
-		flex-direction: column;
 		flex-wrap: wrap;
 		align-content: space-between;
 		height: 100%;
@@ -4073,6 +4049,60 @@ form {
 					margin-left: 0;
 				}
 			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------
+	Claimed Transaction
+-----------------------------------------------------------------*/
+.coupon-transaction {
+	.coupon-transaction-label {width:100%;text-align:center;font-weight:bold;display:flex;flex-direction:row;
+		> div {padding:0.3rem;}
+	}
+	.coupon-transaction-left, .coupon-transaction-right, .coupon-transaction-bottom {display:flex;flex-direction:row;}
+	.coupon-transaction-left {width:16%;
+		> div {padding:0.5rem;}
+	}
+	.coupon-transaction-right {width:84%;
+		> div {padding:0.5rem;}
+	}
+	.coupon-transaction-bottom {display:flex;flex-direction:row;}
+	.coupon-transaction-item {width:100%;text-align:center;display:flex;flex-direction:row;}
+	.coupon-transaction-view {display:none;}
+	.coupon-transaction-name {}
+	.coupon-transaction-desc {width:20%;text-align:left;}
+	.coupon-transaction-tc {width:20%;}
+	.coupon-transaction-valid {width:20%;}
+	.coupon-transaction-date {width:20%;}
+	.coupon-transaction-order {width:20%;}
+}
+
+@media screen and (max-width:768px) {
+	.coupon-transaction {
+		.coupon-transaction-label {display:none;}
+		.coupon-transaction-items {position:relative;margin-bottom:6px;
+			&:nth-child(even) {background:snow;}
+		}
+		.coupon-transaction-item {flex-direction:column;}
+		.coupon-transaction-left {width:100%;}
+		.coupon-transaction-right {flex-direction:column;width:100%;text-align:left;border-top:1px solid gainsboro;}
+		
+		.coupon-transaction-view {display:block;}
+		.coupon-transaction-desc {width:100%;display:none;
+			&:before {content:"Description: ";font-weight:bold;}
+		}
+		.coupon-transaction-tc {width:100%;display:none;
+			&:before {content:"T&C: ";font-weight:bold;}
+		}
+		.coupon-transaction-valid {width:100%;display:none;
+			&:before {content:"Validity: ";font-weight:bold;}
+		}
+		.coupon-transaction-date {width:100%;display:none;
+			&:before {content:"Date: ";font-weight:bold;}
+		}
+		.coupon-transaction-order {width:100%;display:none;
+			&:before {content:"Order: ";font-weight:bold;}
 		}
 	}
 }
